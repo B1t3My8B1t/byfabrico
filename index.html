@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Under Construction</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0a0a0a;
+      --yellow: #f5c400;
+      --white: #f0ece4;
+      --stripe-size: 48px;
+    }
+
+    html, body {
+      height: 100%;
+      background-color: var(--black);
+      color: var(--white);
+      font-family: 'Space Mono', monospace;
+      overflow: hidden;
+    }
+
+    /* Animated diagonal stripes top bar */
+    .tape {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 18px;
+      background: repeating-linear-gradient(
+        -45deg,
+        var(--yellow) 0px,
+        var(--yellow) var(--stripe-size),
+        var(--black) var(--stripe-size),
+        var(--black) calc(var(--stripe-size) * 2)
+      );
+      background-size: calc(var(--stripe-size) * 4) 100%;
+      animation: slide 1.2s linear infinite;
+      z-index: 10;
+    }
+
+    .tape.bottom {
+      top: auto;
+      bottom: 0;
+    }
+
+    @keyframes slide {
+      from { background-position: 0 0; }
+      to   { background-position: calc(var(--stripe-size) * 4) 0; }
+    }
+
+    /* Grid overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(245,196,0,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(245,196,0,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Scanline flicker */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 3px,
+        rgba(0,0,0,0.08) 3px,
+        rgba(0,0,0,0.08) 4px
+      );
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    main {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 80px 24px;
+      gap: 0;
+    }
+
+    /* Icon */
+    .icon {
+      font-size: 72px;
+      line-height: 1;
+      animation: bob 3s ease-in-out infinite;
+      filter: drop-shadow(0 0 24px rgba(245,196,0,0.4));
+      margin-bottom: 24px;
+    }
+
+    @keyframes bob {
+      0%, 100% { transform: translateY(0) rotate(-4deg); }
+      50%       { transform: translateY(-12px) rotate(4deg); }
+    }
+
+    /* Heading */
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(64px, 12vw, 160px);
+      letter-spacing: 0.05em;
+      line-height: 0.9;
+      text-align: center;
+      color: var(--yellow);
+      text-shadow:
+        4px 4px 0 rgba(245,196,0,0.15),
+        0 0 80px rgba(245,196,0,0.2);
+      animation: flicker 6s ease-in-out infinite;
+      margin-bottom: 12px;
+    }
+
+    @keyframes flicker {
+      0%, 95%, 100% { opacity: 1; }
+      96%            { opacity: 0.7; }
+      97%            { opacity: 1; }
+      98%            { opacity: 0.85; }
+    }
+
+    .subtitle {
+      font-size: clamp(10px, 1.5vw, 13px);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(240,236,228,0.45);
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    /* Progress bar */
+    .progress-wrap {
+      width: min(480px, 90vw);
+      margin-bottom: 12px;
+    }
+
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(240,236,228,0.35);
+      margin-bottom: 8px;
+    }
+
+    .progress-track {
+      height: 6px;
+      background: rgba(245,196,0,0.12);
+      border: 1px solid rgba(245,196,0,0.2);
+      border-radius: 0;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--yellow);
+      box-shadow: 0 0 12px rgba(245,196,0,0.6);
+      animation: load 3.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    @keyframes load {
+      0%   { width: 0%; }
+      40%  { width: 62%; }
+      70%  { width: 71%; }
+      100% { width: 74%; }
+    }
+
+    /* Status chips */
+    .status-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .chip {
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border: 1px solid rgba(245,196,0,0.25);
+      color: rgba(240,236,228,0.4);
+      position: relative;
+      cursor: default;
+      transition: all 0.2s;
+    }
+
+    .chip:hover {
+      border-color: var(--yellow);
+      color: var(--yellow);
+      background: rgba(245,196,0,0.05);
+    }
+
+    .chip.active {
+      border-color: var(--yellow);
+      color: var(--yellow);
+    }
+
+    .chip.active::before {
+      content: '';
+      display: inline-block;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--yellow);
+      margin-right: 8px;
+      box-shadow: 0 0 6px var(--yellow);
+      animation: pulse 1.4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.3; }
+    }
+
+    /* Corner brackets */
+    .corner {
+      position: fixed;
+      width: 32px; height: 32px;
+      z-index: 3;
+      opacity: 0.4;
+    }
+    .corner.tl { top: 28px; left: 16px; border-top: 1px solid var(--yellow); border-left: 1px solid var(--yellow); }
+    .corner.tr { top: 28px; right: 16px; border-top: 1px solid var(--yellow); border-right: 1px solid var(--yellow); }
+    .corner.bl { bottom: 28px; left: 16px; border-bottom: 1px solid var(--yellow); border-left: 1px solid var(--yellow); }
+    .corner.br { bottom: 28px; right: 16px; border-bottom: 1px solid var(--yellow); border-right: 1px solid var(--yellow); }
+
+    /* Footer line */
+    .footer {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 9px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(240,236,228,0.2);
+      white-space: nowrap;
+      z-index: 3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tape"></div>
+  <div class="tape bottom"></div>
+
+  <div class="corner tl"></div>
+  <div class="corner tr"></div>
+  <div class="corner bl"></div>
+  <div class="corner br"></div>
+
+  <main>
+    <div class="icon">🚧</div>
+
+    <h1>Under<br>Construction</h1>
+
+    <p class="subtitle">Something bold is being built</p>
+
+    <div class="progress-wrap">
+      <div class="progress-label">
+        <span>Build progress</span>
+        <span id="pct">0%</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="fill"></div>
+      </div>
+    </div>
+
+    <div class="status-row">
+      <div class="chip active">In development</div>
+      <div class="chip">Design</div>
+      <div class="chip">Testing</div>
+      <div class="chip">Launch</div>
+    </div>
+  </main>
+
+  <div class="footer">© 2026 — Check back soon</div>
+
+  <script>
+    // Animate percentage counter to match CSS animation
+    const pct = document.getElementById('pct');
+    const target = 74;
+    const duration = 3500;
+    const start = performance.now();
+
+    function easeOut(t) {
+      return 1 - Math.pow(1 - t, 3);
+    }
+
+    function update(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const value = Math.round(easeOut(progress) * target);
+      pct.textContent = value + '%';
+      if (progress < 1) requestAnimationFrame(update);
+    }
+
+    requestAnimationFrame(update);
+  </script>
+</body>
+</html>
