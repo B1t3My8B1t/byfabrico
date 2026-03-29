@@ -12,6 +12,8 @@
   <meta name="robots" content="index, follow"/>
   <meta name="author" content="Fabrico Design & Build"/>
   <link rel="canonical" href="https://www.byfabrico.com/"/>
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="l5Ef7IyQsGnR6DtPVmwk0Dmv2jVxK8q93cDfxtPIAfM" />
   <!-- Disable Cloudflare email obfuscation -->
   <meta name="cf-2fa-verify" content="disable"/>
   <meta http-equiv="x-cloudflare-email" content="off"/>
@@ -42,6 +44,55 @@
     "areaServed": ["London", "Berkshire", "Kensington", "Chelsea", "Mayfair", "Notting Hill", "Maidenhead"],
     "sameAs": ["https://www.instagram.com/fabrico_design_build"],
     "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "47" }
+  }
+  </script>
+
+  <!-- FAQ Schema — generates rich snippets in Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What areas does Fabrico cover?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Fabrico covers all of London including Chelsea, Kensington, Mayfair, Notting Hill, Belgravia, Fulham, and Battersea, as well as Berkshire areas including Maidenhead, Windsor, Marlow, Ascot, Cookham, and Henley-on-Thames." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does a full house renovation cost in London?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A full house renovation in London typically ranges from £100,000 to over £1M depending on size, specification and location. Fabrico provides detailed cost plans after an initial consultation. Contact us on 07940 219 219 for a free quote." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Fabrico handle planning permission for loft conversions and extensions?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Fabrico manages the full process from initial design through planning consent, building regulations, construction and final handover." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a loft conversion take?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A typical dormer loft conversion takes 8–12 weeks from start on site. Fabrico provides live project tracking so clients can follow progress at every stage." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Fabrico insured and accredited?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Fabrico Design & Build is fully insured, CHAS compliant, and carries 5-star client reviews across all completed projects." }
+      }
+    ]
+  }
+  </script>
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.byfabrico.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.byfabrico.com/#services" },
+      { "@type": "ListItem", "position": 3, "name": "Projects", "item": "https://www.byfabrico.com/#projects" },
+      { "@type": "ListItem", "position": 4, "name": "Contact", "item": "https://www.byfabrico.com/#contact" }
+    ]
   }
   </script>
 
@@ -540,6 +591,8 @@
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#areas">Areas</a></li>
         <li><a href="#process">Process</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -956,8 +1009,160 @@
   </section>
 
   <!-- ══════════════════════════════════════════════
-       CONTACT & FORM
+       AREAS SERVED — Local SEO Section
   ══════════════════════════════════════════════ -->
+  <section class="areas-section" id="areas">
+    <div class="sec-kicker">Coverage</div>
+    <h2 style="color:var(--white)">Where We <em style="color:rgba(255,255,255,0.35)">Work</em></h2>
+    <div class="areas-grid">
+      <div class="areas-col">
+        <h4>London</h4>
+        <div class="areas-list">
+          <div class="area-row"><span class="area-name">Chelsea & Kensington</span><span class="area-badge">SW3 · SW7</span></div>
+          <div class="area-row"><span class="area-name">Mayfair & Belgravia</span><span class="area-badge">W1 · SW1</span></div>
+          <div class="area-row"><span class="area-name">Notting Hill & Holland Park</span><span class="area-badge">W11 · W14</span></div>
+          <div class="area-row"><span class="area-name">Fulham & Battersea</span><span class="area-badge">SW6 · SW11</span></div>
+          <div class="area-row"><span class="area-name">Knightsbridge & Brompton</span><span class="area-badge">SW1X · SW3</span></div>
+          <div class="area-row"><span class="area-name">Richmond & Wandsworth</span><span class="area-badge">TW9 · SW18</span></div>
+          <div class="area-row"><span class="area-name">Hampstead & Islington</span><span class="area-badge">NW3 · N1</span></div>
+        </div>
+      </div>
+      <div class="areas-col">
+        <h4>Berkshire & Home Counties</h4>
+        <div class="areas-list">
+          <div class="area-row"><span class="area-name">Maidenhead & Cookham</span><span class="area-badge">SL6</span></div>
+          <div class="area-row"><span class="area-name">Windsor & Ascot</span><span class="area-badge">SL4 · SL5</span></div>
+          <div class="area-row"><span class="area-name">Marlow & Henley</span><span class="area-badge">SL7 · RG9</span></div>
+          <div class="area-row"><span class="area-name">Reading & Wokingham</span><span class="area-badge">RG1 · RG40</span></div>
+          <div class="area-row"><span class="area-name">Gerrards Cross & Beaconsfield</span><span class="area-badge">SL9</span></div>
+          <div class="area-row"><span class="area-name">Surrey & Oxfordshire</span><span class="area-badge">On request</span></div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:48px; padding-top:40px; border-top:1px solid rgba(255,255,255,0.06); display:flex; gap:48px; flex-wrap:wrap;">
+      <div>
+        <div style="font-family:'Bodoni Moda',serif; font-size:36px; color:var(--white); line-height:1;">200+</div>
+        <div style="font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-top:6px;">Projects Completed</div>
+      </div>
+      <div>
+        <div style="font-family:'Bodoni Moda',serif; font-size:36px; color:var(--white); line-height:1;">£50M+</div>
+        <div style="font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-top:6px;">Value Delivered</div>
+      </div>
+      <div>
+        <div style="font-family:'Bodoni Moda',serif; font-size:36px; color:var(--white); line-height:1;">9</div>
+        <div style="font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-top:6px;">Years Est. 2017</div>
+      </div>
+      <div>
+        <div style="font-family:'Bodoni Moda',serif; font-size:36px; color:var(--white); line-height:1;">5★</div>
+        <div style="font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-top:6px;">Client Rated</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       FAQ SECTION — Targets Google rich snippets
+  ══════════════════════════════════════════════ -->
+  <section style="padding:80px 60px; border-bottom:1px solid var(--rule-thick); background:var(--off);" id="faq">
+    <div class="sec-kicker">Common Questions</div>
+    <h2>Frequently <em>Asked</em></h2>
+    <div style="margin-top:52px; display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid var(--rule-thick);" class="faq-grid">
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">How much does a full London renovation cost?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Typically £100k–£1M+ depending on size, specification, and borough. After your free consultation, we provide a detailed cost plan broken down by trade and phase — no surprises.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Do you handle planning permission?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes — we manage everything from architects' drawings and planning applications through to building regs sign-off and structural calculations. One point of contact throughout.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">How long does a loft conversion take?<span class="faq-icon">+</span></div>
+        <div class="faq-a">A standard dormer conversion runs 8–12 weeks on site. Mansard and hip-to-gable projects may take 12–16 weeks. You can track every milestone live via our client app.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">What areas do you cover?<span class="faq-icon">+</span></div>
+        <div class="faq-a">All London postcodes, with particular depth in SW3, SW7, W1, W11, SW1, SW6. Also the full Berkshire corridor — Maidenhead, Windsor, Ascot, Marlow, Cookham, and beyond.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Are you insured and accredited?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Fully insured with £5M public liability, CHAS compliant, and 5-star rated by clients. All specialist subcontractors are vetted and held to our own quality standards.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">How do I start a project with Fabrico?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Call 07940 219 219, email info@byfabrico.com, or complete the enquiry form below. We'll arrange a free site visit within 48 hours and follow up with a written proposal.</div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .faq-item {
+      padding: 28px 32px; border-right: 1px solid var(--rule-thick);
+      border-bottom: 1px solid var(--rule-thick);
+      cursor: pointer; transition: background 0.2s;
+    }
+    .faq-item:nth-child(even) { border-right: none; }
+    .faq-item:hover { background: var(--white); }
+    .faq-q { font-family: 'Bodoni Moda', serif; font-size: 16px; color: var(--ink); display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .faq-icon { font-size: 22px; color: var(--teal); flex-shrink: 0; line-height: 1; transition: transform 0.25s; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-a { font-size: 12px; line-height: 1.85; color: var(--mid); margin-top: 16px; max-height: 0; overflow: hidden; transition: max-height 0.4s ease, margin-top 0.3s; }
+    .faq-item.open .faq-a { max-height: 200px; }
+    @media (max-width: 960px) {
+      .faq-grid { grid-template-columns: 1fr !important; }
+      .faq-item { border-right: none !important; }
+      section#faq { padding: 60px 24px !important; }
+    }
+  </style>
+
+  <!-- ══════════════════════════════════════════════
+       TESTIMONIALS
+  ══════════════════════════════════════════════ -->
+  <section class="testi-layout" id="reviews">
+    <div class="sec-kicker">Client Reviews</div>
+    <h2>What Our <em>Clients Say</em></h2>
+    <div class="testi-grid">
+      <div class="testi-cell">
+        <div class="testi-stars">★★★★★</div>
+        <blockquote>"Fabrico transformed our Chelsea townhouse completely. The attention to detail in the bespoke joinery and speed of the project was remarkable. Truly the best builders we have ever worked with."</blockquote>
+        <div class="testi-name">James & Sarah T.</div>
+        <div class="testi-loc">Chelsea, SW3 — Full Renovation & Loft</div>
+        <div class="testi-verified"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> Verified Client</div>
+      </div>
+      <div class="testi-cell">
+        <div class="testi-stars">★★★★★</div>
+        <blockquote>"From planning through to handover, Fabrico were professional, transparent and delivered exactly what they promised. The live tracking app kept us informed at every stage."</blockquote>
+        <div class="testi-name">Marcus L.</div>
+        <div class="testi-loc">Mayfair, W1 — Luxury Apartment Refurbishment</div>
+        <div class="testi-verified"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> Verified Client</div>
+      </div>
+      <div class="testi-cell">
+        <div class="testi-stars">★★★★★</div>
+        <blockquote>"Our Cookham new build came in on budget and on time. The German kitchen, underfloor heating, and landscaping are all to an incredibly high standard. Could not recommend Fabrico more highly."</blockquote>
+        <div class="testi-name">The Hartley Family</div>
+        <div class="testi-loc">Cookham, Berkshire — 2,500 sqft New Build</div>
+        <div class="testi-verified"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> Verified Client</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram CTA Banner -->
+  <div class="ig-banner">
+    <div>
+      <div style="font-size:9px; letter-spacing:0.4em; text-transform:uppercase; color:rgba(46,138,113,0.8); margin-bottom:10px;">Follow Our Work</div>
+      <div style="font-family:'Bodoni Moda',serif; font-size:clamp(22px,3vw,36px); color:var(--white); font-weight:300;">See every project on <em style="color:rgba(255,255,255,0.35)">Instagram</em></div>
+      <div style="font-size:12px; color:rgba(255,255,255,0.4); margin-top:8px;">Live site updates, before &amp; afters, and design inspiration daily</div>
+    </div>
+    <a href="https://instagram.com/fabrico_design_build" target="_blank" rel="noopener" class="ig-cta">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      @fabrico_design_build
+    </a>
+  </div>
+  <style>
+    .ig-banner { background:var(--near-black); padding:60px; display:flex; align-items:center; justify-content:space-between; border-top:1px solid rgba(255,255,255,0.06); flex-wrap:wrap; gap:24px; }
+    .ig-cta { display:flex; align-items:center; gap:12px; padding:16px 32px; border:1px solid rgba(255,255,255,0.15); color:rgba(255,255,255,0.8); text-decoration:none; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; transition:all 0.25s; }
+    .ig-cta:hover { border-color:var(--teal-light); color:var(--teal-light); }
+    @media (max-width:960px) { .ig-banner { padding:40px 24px; } }
+  </style>
+
   <section class="contact-layout" id="contact">
     <div class="contact-left">
       <div class="sec-kicker">Get In Touch</div>
@@ -1028,7 +1233,6 @@
       <!-- Formspree integration — replace YOUR_FORM_ID with your Formspree ID -->
       <form class="cform" id="contact-form" action="https://formspree.io/f/mdapeygw" method="POST">
         <input type="hidden" name="_subject" value="New Enquiry — Fabrico Design & Build"/>
-        <input type="hidden" name="_cc" value="Gurminder@byfabrico.com"/>
         <input type="hidden" name="services_selected" id="hidden-services" value=""/>
         <div class="frow">
           <div class="fg"><label>First Name *</label><input type="text" name="first_name" placeholder="John" required/></div>
@@ -1149,4 +1353,59 @@
       const selected = [];
       document.querySelectorAll('#form-pills .form-svc-pill.active').forEach(p => selected.push(p.dataset.val));
       const hidden = document.getElementById('hidden-services');
-      if(hidden) hidden.value = selected.joi
+      if(hidden) hidden.value = selected.join(', ');
+    }
+
+    // ── Form submission (Formspree AJAX)
+    const form = document.getElementById('contact-form');
+    if (form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        updateHiddenServices();
+        const btn = form.querySelector('.btn-sub');
+        btn.textContent = 'Sending…';
+        btn.disabled = true;
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          });
+          if (res.ok) {
+            form.reset();
+            document.querySelectorAll('#form-pills .form-svc-pill').forEach(p => p.classList.remove('active'));
+            document.getElementById('form-success').style.display = 'block';
+            btn.textContent = 'Sent ✓';
+          } else {
+            btn.textContent = 'Error — try again';
+            btn.disabled = false;
+          }
+        } catch {
+          btn.textContent = 'Error — try again';
+          btn.disabled = false;
+        }
+      });
+    }
+
+    // ── Intersection Observer for fade-in animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.proc-step, .svc-cell, .testi-cell, .feat').forEach(el => {
+      el.classList.add('fade-in-el');
+      observer.observe(el);
+    });
+  </script>
+
+  <style>
+    /* ── Fade-in animation for observer */
+    .fade-in-el { opacity: 0; transform: translateY(16px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .fade-in-el.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</body>
+</html>
