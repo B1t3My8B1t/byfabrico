@@ -194,8 +194,24 @@
     .feat-label { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--faint); }
 
     /* ══════════════════════════════════════════════
-       SECTION PATTERN
+       PROJECT GROUPS
     ══════════════════════════════════════════════ */
+    .proj-group-label { padding: 48px 60px 20px; }
+    .proj-group-tag { font-size: 8px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--teal); margin-bottom: 6px; }
+    .proj-group-title { font-family: 'Bodoni Moda', serif; font-size: 28px; font-weight: 300; color: var(--ink); margin-bottom: 4px; }
+    .proj-group-sub { font-size: 11px; color: var(--faint); }
+    .proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--rule-thick); border-left: 1px solid var(--rule-thick); margin: 0 60px 0; }
+    .proj-grid .proj-cell { border-right: 1px solid var(--rule-thick); border-bottom: 1px solid var(--rule-thick); }
+    .proj-grid .proj-cell.double { grid-row: span 2; }
+    .proj-grid .proj-img-wrap { min-height: 240px; }
+    .proj-grid .proj-cell.double .proj-img-wrap { min-height: 480px; }
+    #projects { padding-bottom: 80px; }
+    @media (max-width: 960px) {
+      .proj-group-label { padding: 40px 24px 16px; }
+      .proj-grid { grid-template-columns: 1fr 1fr; margin: 0 24px; }
+      .proj-grid .proj-cell.double { grid-row: span 1; }
+      .proj-grid .proj-img-wrap { min-height: 180px; }
+    }
     .sec-head { padding: 80px 60px 0; display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 52px; }
     .sec-kicker { font-size: 9px; letter-spacing: 0.45em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
     h2 { font-family: 'Bodoni Moda', serif; font-size: clamp(34px, 4.2vw, 56px); font-weight: 300; line-height: 1.05; }
@@ -470,7 +486,7 @@
         <span class="logo-dot"></span>Fabrico
       </a>
       <div class="header-contact">
-        <a href="mailto:info@byfabrico.com">info@byfabrico.com</a>
+        <a href="/cdn-cgi/l/email-protection#d3babdb5bc93b1aab5b2b1a1bab0bcfdb0bcbe"><span class="__cf_email__" data-cfemail="274e49414867455e414645554e44480944484a">[email&#160;protected]</span></a>
       </div>
     </div>
     <div class="header-nav">
@@ -479,7 +495,6 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#process">Process</a></li>
-        <li><a href="#areas">Areas</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <a href="#contact" class="nav-cta">Book Consultation</a>
@@ -501,14 +516,10 @@
           <a href="#enquire" class="btn-line">Start a Project</a>
         </div>
       </div>
-      <div class="hero-footer-row">
-        <div class="hero-stat"><div class="hero-stat-n">2017</div><div class="hero-stat-l">Founded</div></div>
-        <div class="hero-stat"><div class="hero-stat-n">200+</div><div class="hero-stat-l">Projects</div></div>
-        <div class="hero-stat"><div class="hero-stat-n">£50M+</div><div class="hero-stat-l">Value Delivered</div></div>
-      </div>
+
     </div>
     <div class="hero-visual">
-      <img src="Patio.jpg" alt="Fabrico high-end renovation project Chelsea London SW3"/>
+      <img src="IMG_2514.jpg" alt="Fabrico high-end renovation project Chelsea London SW3"/>
       <div class="hero-visual-badge">Chelsea, SW3</div>
       <div class="hero-visual-label">
         <span>Full Renovation & Extension</span>
@@ -517,36 +528,7 @@
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════════
-       AREAS TICKER
-  ══════════════════════════════════════════════ -->
-  <div class="ticker-wrap" aria-hidden="true">
-    <div class="ticker-inner">
-      <span>Chelsea</span><span class="dot">·</span><span>Kensington</span><span class="dot">·</span>
-      <span>Mayfair</span><span class="dot">·</span><span>Notting Hill</span><span class="dot">·</span>
-      <span>Fulham</span><span class="dot">·</span><span>Battersea</span><span class="dot">·</span>
-      <span>Berkshire</span><span class="dot">·</span><span>Maidenhead</span><span class="dot">·</span>
-      <span>Windsor</span><span class="dot">·</span><span>Marlow</span><span class="dot">·</span>
-      <span>Knightsbridge</span><span class="dot">·</span><span>Belgravia</span><span class="dot">·</span>
-      <span>Wandsworth</span><span class="dot">·</span><span>Richmond</span><span class="dot">·</span>
-      <!-- repeat for seamless loop -->
-      <span>Chelsea</span><span class="dot">·</span><span>Kensington</span><span class="dot">·</span>
-      <span>Mayfair</span><span class="dot">·</span><span>Notting Hill</span><span class="dot">·</span>
-      <span>Fulham</span><span class="dot">·</span><span>Battersea</span><span class="dot">·</span>
-      <span>Berkshire</span><span class="dot">·</span><span>Maidenhead</span><span class="dot">·</span>
-      <span>Windsor</span><span class="dot">·</span><span>Marlow</span><span class="dot">·</span>
-      <span>Knightsbridge</span><span class="dot">·</span><span>Belgravia</span><span class="dot">·</span>
-      <span>Wandsworth</span><span class="dot">·</span><span>Richmond</span><span class="dot">·</span>
-    </div>
-  </div>
 
-  <!-- FEATURE STRIP -->
-  <div class="feature-strip">
-    <div class="feat"><div class="feat-num">15+</div><div class="feat-label">Years Combined Experience</div></div>
-    <div class="feat"><div class="feat-num">200+</div><div class="feat-label">Projects Completed</div></div>
-    <div class="feat"><div class="feat-num">£50M+</div><div class="feat-label">Construction Value</div></div>
-    <div class="feat"><div class="feat-num">100%</div><div class="feat-label">Client Satisfaction</div></div>
-  </div>
 
   <!-- ══════════════════════════════════════════════
        ABOUT
@@ -576,7 +558,7 @@
         </div>
       </div>
       <div class="about-right">
-        <img src="IMG_2443.jpg" alt="Fabrico craftmanship and quality construction"/>
+        <img src="Patio.jpg" alt="Fabrico craftmanship and quality construction"/>
       </div>
     </div>
   </section>
@@ -736,108 +718,127 @@
       </div>
     </div>
     <div class="projects-layout">
-      <div class="proj-table">
-        <div class="proj-cell double">
-          <div class="proj-img-wrap">
-            <img src="Patio.jpg" alt="Chelsea SW3 full renovation and basement extension by Fabrico London"/>
-          </div>
-          <div class="proj-cell-label">
-            <div class="proj-cell-tag">Full Renovation & Extension</div>
-            <div class="proj-cell-title">Chelsea, SW3</div>
-            <div class="proj-cell-sub">New Basement · Loft · Rear Extension · Bespoke Fit-Out</div>
-          </div>
-        </div>
-        <div class="proj-cell">
-          <div class="proj-img-wrap">
-            <img src="IMG_2443.jpg" alt="The Little Boltons SW5 apartment refurbishment by Fabrico"/>
-          </div>
-          <div class="proj-cell-label">
-            <div class="proj-cell-tag">Apartment Refurbishment</div>
-            <div class="proj-cell-title">The Little Boltons</div>
-            <div class="proj-cell-sub">London SW5 — 1,500 sqft</div>
-          </div>
-        </div>
-        <div class="proj-cell">
-          <div class="proj-img-wrap">
-            <img src="Patio.jpg" alt="George Street Mayfair luxury refurbishment by Fabrico"/>
-          </div>
-          <div class="proj-cell-label">
-            <div class="proj-cell-tag">Luxury Refurbishment</div>
-            <div class="proj-cell-title">George Street, Mayfair</div>
-            <div class="proj-cell-sub">W1S — 1,958 sqft · Stone Baths · Lutron AV</div>
-          </div>
-        </div>
-        <div class="proj-cell">
-          <div class="proj-img-wrap">
-            <img src="IMG_2443.jpg" alt="Cookham Berkshire new build home by Fabrico"/>
-          </div>
-          <div class="proj-cell-label">
-            <div class="proj-cell-tag">New Build</div>
-            <div class="proj-cell-title">Cookham, Berkshire</div>
-            <div class="proj-cell-sub">Maidenhead SL6 — 2,500 sqft Design & Build</div>
-          </div>
-        </div>
-        <div class="proj-cell">
-          <div class="proj-img-wrap">
-            <img src="Patio.jpg" alt="Bespoke joinery and German kitchen interior fit-out by Fabrico"/>
-          </div>
-          <div class="proj-cell-label">
-            <div class="proj-cell-tag">Interior Fit-Out</div>
-            <div class="proj-cell-title">Bespoke Joinery</div>
-            <div class="proj-cell-sub">German Kitchens · Custom Cabinetry · Handmade Doors</div>
-          </div>
-        </div>
-        <div class="proj-cell">
-          <div class="proj-img-wrap">
-            <img src="IMG_2443.jpg" alt="Structural works underpinning and foundations by Fabrico"/>
-          </div>
-          <div class="proj-cell-label">
-            <div class="proj-cell-tag">Structural Works</div>
-            <div class="proj-cell-title">Structural Services</div>
-            <div class="proj-cell-sub">Underpinning · Foundations · RSJ · Piling</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ══════════════════════════════════════════════
-       TESTIMONIALS
-  ══════════════════════════════════════════════ -->
-  <section class="testi-layout">
-    <div class="sec-kicker">Client Testimonials</div>
-    <h2>What Our <em>Clients Say</em></h2>
-    <div class="testi-grid">
-      <div class="testi-cell">
-        <div class="testi-stars">★★★★★</div>
-        <blockquote>"I cannot recommend Fabrico enough — absolutely fantastic. At all times they were super professional and knowledgeable. I was delighted with the results."</blockquote>
-        <div class="testi-name">Mr. J. Reynolds</div>
-        <div class="testi-loc">Chelsea, London</div>
-        <div class="testi-verified">
-          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-          Verified Client
+      <!-- CHELSEA -->
+      <div class="proj-group-label">
+        <div class="proj-group-tag">Full Renovation & Extension</div>
+        <div class="proj-group-title">Chelsea, SW3</div>
+        <div class="proj-group-sub">New Basement · Loft · Rear Extension · Bespoke Fit-Out</div>
+      </div>
+      <div class="proj-grid">
+        <div class="proj-cell double">
+          <div class="proj-img-wrap"><img src="chelsea_01.jpg" alt="Chelsea SW3 renovation by Fabrico"/></div>
+        </div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="chelsea_02.jpg" alt="Chelsea SW3 renovation by Fabrico"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="chelsea_03.jpg" alt="Chelsea SW3 renovation by Fabrico"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="chelsea_04.jpg" alt="Chelsea SW3 renovation by Fabrico"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="chelsea_05.jpg" alt="Chelsea SW3 renovation by Fabrico"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="chelsea_06.jpg" alt="Chelsea SW3 renovation by Fabrico"/></div></div>
+      </div>
+
+      <!-- GEORGE STREET MAYFAIR -->
+      <div class="proj-group-label">
+        <div class="proj-group-tag">Luxury Refurbishment</div>
+        <div class="proj-group-title">George Street, Mayfair</div>
+        <div class="proj-group-sub">W1S — 1,958 sqft · Stone Baths · Lutron AV</div>
+      </div>
+      <div class="proj-grid">
+        <div class="proj-cell double">
+          <div class="proj-img-wrap"><img src="georgestreet.jpg" alt="George Street Mayfair by Fabrico"/></div>
+        </div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="georgestreet01.jpg" alt="George Street Mayfair by Fabrico"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="georgestreet02.jpg" alt="George Street Mayfair by Fabrico"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="georgestreet03.jpg" alt="George Street Mayfair by Fabrico"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="georgestreet04.jpg" alt="George Street Mayfair by Fabrico"/></div></div>
+      </div>
+
+      <!-- THE LITTLE BOLTONS -->
+      <div class="proj-group-label">
+        <div class="proj-group-tag">Apartment Refurbishment</div>
+        <div class="proj-group-title">The Little Boltons, SW5</div>
+        <div class="proj-group-sub">London SW5 — 1,500 sqft</div>
+      </div>
+      <div class="proj-grid">
+        <div class="proj-cell double">
+          <div class="proj-img-wrap"><img src="thelittleboltons_01.jpg" alt="The Little Boltons SW5 by Fabrico"/></div>
+        </div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="thelittleboltons_02.jpg" alt="The Little Boltons SW5 by Fabrico"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="thelittleboltons_03.jpg" alt="The Little Boltons SW5 by Fabrico"/></div></div>
+      </div>
+
+      <!-- COOKHAM NEW BUILD -->
+      <div class="proj-group-label">
+        <div class="proj-group-tag">New Build</div>
+        <div class="proj-group-title">Cookham, Berkshire</div>
+        <div class="proj-group-sub">Maidenhead SL6 — 2,500 sqft Design & Build</div>
+      </div>
+      <div class="proj-grid">
+        <div class="proj-cell double">
+          <div class="proj-img-wrap"><img src="cookham_01.jpg" alt="Cookham Berkshire new build by Fabrico"/></div>
+        </div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="cookham_02.jpg" alt="Cookham new build by Fabrico"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="cookham_03.jpg" alt="Cookham new build by Fabrico"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="cookham_04.jpg" alt="Cookham new build by Fabrico"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="cookham_05.jpg" alt="Cookham new build by Fabrico"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="cookham_06.jpg" alt="Cookham new build by Fabrico"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="cookham_07.jpg" alt="Cookham new build by Fabrico"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="cookham_08.jpg" alt="Cookham new build by Fabrico"/></div></div>
+      </div>
+
+      <!-- RENOVATIONS -->
+      <div class="proj-group-label">
+        <div class="proj-group-tag">Full Renovations</div>
+        <div class="proj-group-title">Renovations</div>
+        <div class="proj-group-sub">Back-to-brick refurbishments across London</div>
+      </div>
+      <div class="proj-grid">
+        <div class="proj-cell double">
+          <div class="proj-img-wrap"><img src="Renovations.jpg" alt="Fabrico renovation project"/></div>
+        </div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="Renovations_01.jpg" alt="Fabrico renovation project"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="Renovations_02.jpg" alt="Fabrico renovation project"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="Renovations_03.jpg" alt="Fabrico renovation project"/></div></div>
+      </div>
+
+      <!-- NEW BUILDS -->
+      <div class="proj-group-label">
+        <div class="proj-group-tag">New Builds</div>
+        <div class="proj-group-title">New Build Homes</div>
+        <div class="proj-group-sub">Bespoke homes designed and built to exacting standards</div>
+      </div>
+      <div class="proj-grid">
+        <div class="proj-cell double">
+          <div class="proj-img-wrap"><img src="NewBuilds.jpg" alt="Fabrico new build home"/></div>
         </div>
       </div>
-      <div class="testi-cell">
-        <div class="testi-stars">★★★★★</div>
-        <blockquote>"Their combined construction and design capability has been particularly useful. A real eye for detail — delivered exactly as envisioned, on time and on budget."</blockquote>
-        <div class="testi-name">Mr & Mrs Thornton</div>
-        <div class="testi-loc">Notting Hill, London</div>
-        <div class="testi-verified">
-          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-          Verified Client
-        </div>
+
+      <!-- STRUCTURAL -->
+      <div class="proj-group-label">
+        <div class="proj-group-tag">Structural Works</div>
+        <div class="proj-group-title">Structural Services</div>
+        <div class="proj-group-sub">Underpinning · Foundations · RSJ · Piling</div>
       </div>
-      <div class="testi-cell">
-        <div class="testi-stars">★★★★★</div>
-        <blockquote>"Fabrico came up with innovative solutions for maximising space, and worked extremely closely with all trades to ensure the end result was exactly what we wanted."</blockquote>
-        <div class="testi-name">Mr & Mrs Hartley</div>
-        <div class="testi-loc">Kensington, London</div>
-        <div class="testi-verified">
-          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-          Verified Client
-        </div>
+      <div class="proj-grid">
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="structural_01.jpg" alt="Fabrico structural works"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="structural_02.jpg" alt="Fabrico structural works"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="structural_03.jpg" alt="Fabrico structural works"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="structural_04.png" alt="Fabrico structural works"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="structural_05.png" alt="Fabrico structural works"/></div></div>
       </div>
+
+      <!-- END TO END SERVICE -->
+      <div class="proj-group-label">
+        <div class="proj-group-tag">End-to-End Service</div>
+        <div class="proj-group-title">Full Project Management</div>
+        <div class="proj-group-sub">From planning to handover — complete transparency throughout</div>
+      </div>
+      <div class="proj-grid">
+        <div class="proj-cell double">
+          <div class="proj-img-wrap"><img src="end_to_end_service_01.png" alt="Fabrico end to end project management"/></div>
+        </div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="end_to_end_service_02.png" alt="Fabrico end to end project management"/></div></div>
+      </div>
+
     </div>
   </section>
 
@@ -886,42 +887,6 @@
   </section>
 
   <!-- ══════════════════════════════════════════════
-       AREAS SERVED
-  ══════════════════════════════════════════════ -->
-  <section class="areas-section" id="areas">
-    <div class="sec-kicker">Where We Work</div>
-    <h2>London &amp; <em>Berkshire</em></h2>
-    <div class="areas-grid">
-      <div class="areas-col">
-        <h4>Central & West London</h4>
-        <div class="areas-list">
-          <div class="area-row"><span class="area-name">Chelsea, SW3</span><span class="area-badge">Active</span></div>
-          <div class="area-row"><span class="area-name">Kensington, W8</span><span class="area-badge">Active</span></div>
-          <div class="area-row"><span class="area-name">Mayfair, W1</span><span class="area-badge">Active</span></div>
-          <div class="area-row"><span class="area-name">Notting Hill, W11</span><span class="area-badge">Active</span></div>
-          <div class="area-row"><span class="area-name">Belgravia, SW1</span><span class="area-badge">Active</span></div>
-          <div class="area-row"><span class="area-name">Fulham, SW6</span><span class="area-badge">Active</span></div>
-          <div class="area-row"><span class="area-name">Battersea, SW11</span><span class="area-badge">Active</span></div>
-          <div class="area-row"><span class="area-name">Wandsworth, SW18</span><span class="area-badge">Active</span></div>
-        </div>
-      </div>
-      <div class="areas-col">
-        <h4>Berkshire & Home Counties</h4>
-        <div class="areas-list">
-          <div class="area-row"><span class="area-name">Maidenhead, SL6</span><span class="area-badge">Active</span></div>
-          <div class="area-row"><span class="area-name">Windsor, SL4</span><span class="area-badge">Active</span></div>
-          <div class="area-row"><span class="area-name">Marlow, SL7</span><span class="area-badge">Active</span></div>
-          <div class="area-row"><span class="area-name">Cookham</span><span class="area-badge">Active</span></div>
-          <div class="area-row"><span class="area-name">Henley-on-Thames</span><span class="area-badge">Active</span></div>
-          <div class="area-row"><span class="area-name">Ascot, SL5</span><span class="area-badge">Active</span></div>
-          <div class="area-row"><span class="area-name">Reading, RG1</span><span class="area-badge">Enquire</span></div>
-          <div class="area-row"><span class="area-name">Richmond, TW10</span><span class="area-badge">Active</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════════
        CONTACT & FORM
   ══════════════════════════════════════════════ -->
   <section class="contact-layout" id="contact">
@@ -940,7 +905,7 @@
         </div>
         <div class="c-row">
           <div class="c-row-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div class="c-row-content"><div class="c-row-label">Email</div><a href="/cdn-cgi/l/email-protection#365f58505976544f505754445f55591855595b"><span class="__cf_email__" data-cfemail="9ef7f0f8f1defce7f8fffcecf7fdf1b0fdf1f3">[email&#160;protected]</span></a></div>
+          <div class="c-row-content"><div class="c-row-label">Email</div><a href="mailto:info@byfabrico.com">info@byfabrico.com</a></div>
         </div>
         <div class="c-row">
           <div class="c-row-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
@@ -1016,10 +981,10 @@
         <div class="fg"><label>Tell Us About Your Project</label><textarea name="message" placeholder="Describe your vision, location, rough budget and timeline..."></textarea></div>
         <div class="form-actions">
           <button type="submit" class="btn-sub">Send Enquiry</button>
-          <span class="form-note">We aim to respond within 48 hours</span>
+          <span class="form-note">We respond within 24 hours</span>
         </div>
         <div class="form-success" id="form-success">
-          ✓ Thank you — your enquiry has been sent. We will be in touch within 24 hours.
+          ✓ Thank you — your enquiry has been sent. Gurminder will be in touch within 24 hours.
         </div>
       </form>
     </div>
@@ -1054,7 +1019,6 @@
           <li><a href="#about">About Us</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#process">Our Process</a></li>
-          <li><a href="#areas">Areas Covered</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="#">Privacy Policy</a></li>
         </ul>
@@ -1064,7 +1028,7 @@
         <ul>
           <li><a href="tel:07940219219">07940 219 219</a></li>
           <li><a href="tel:02038838288">0203 883 8288</a></li>
-          <li><a href="/cdn-cgi/l/email-protection#6b02050d042b09120d0a091902080445080406"><span class="__cf_email__" data-cfemail="d0b9beb6bf90b2a9b6b1b2a2b9b3bffeb3bfbd">[email&#160;protected]</span></a></li>
+          <li><a href="/cdn-cgi/l/email-protection#afc6c1c9c0efcdd6c9cecdddc6ccc081ccc0c2"><span class="__cf_email__" data-cfemail="a2cbccc4cde2c0dbc4c3c0d0cbc1cd8cc1cdcf">[email&#160;protected]</span></a></li>
           <li><a href="https://instagram.com/fabrico_design_build" target="_blank" rel="noopener">@fabrico_design_build</a></li>
         </ul>
       </div>
@@ -1135,21 +1099,3 @@
             form.style.opacity = '0.4';
             document.getElementById('form-success').style.display = 'block';
             btn.textContent = 'Sent ✓';
-          } else {
-            btn.textContent = 'Try Again';
-            btn.disabled = false;
-            alert('There was a problem sending your enquiry. Please call us directly on 07940 219 219.');
-          }
-        } catch(err) {
-          btn.textContent = 'Try Again';
-          btn.disabled = false;
-          alert('There was a problem sending your enquiry. Please call us directly on 07940 219 219.');
-        }
-      });
-    }
-
-    // ── Intersection observer — fade in elements
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if(e.isIntersecting){
-          e.t
