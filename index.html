@@ -1,312 +1,1185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Under Construction</title>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- ═══ SEO META ═══ -->
+  <title>Fabrico — High-End Construction & Interior Design | London & Berkshire</title>
+  <meta name="description" content="Fabrico is London's premier high-end construction and design studio. New builds, full renovations, extensions, loft & basement conversions across London and Berkshire. Est. 2017. Call 07940 219 219."/>
+  <meta name="keywords" content="construction company London, high end renovation London, luxury builders London, new build homes Berkshire, loft conversion London, basement conversion London, interior design London, extension builders London, Kensington renovation, Chelsea builders, Mayfair refurbishment, Berkshire new build"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="author" content="Fabrico Design & Build"/>
+  <link rel="canonical" href="https://www.byfabrico.com/"/>
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://www.byfabrico.com/"/>
+  <meta property="og:title" content="Fabrico — High-End Construction & Design | London & Berkshire"/>
+  <meta property="og:description" content="London's premier construction and interior design studio. 200+ projects. £50M+ delivered. New builds, renovations, extensions."/>
+  <meta property="og:image" content="https://www.byfabrico.com/og-image.jpg"/>
+  <meta property="og:locale" content="en_GB"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Fabrico — High-End Construction & Design"/>
+  <meta name="twitter:description" content="London's premier construction studio. New builds, renovations, extensions across London & Berkshire."/>
+
+  <!-- Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Fabrico Design & Build",
+    "description": "High-end construction and interior design company serving London and Berkshire",
+    "url": "https://www.byfabrico.com",
+    "telephone": "+447940219219",
+    "email": "info@byfabrico.com",
+    "foundingDate": "2017",
+    "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" },
+    "areaServed": ["London", "Berkshire", "Kensington", "Chelsea", "Mayfair", "Notting Hill", "Maidenhead"],
+    "sameAs": ["https://www.instagram.com/fabrico_design_build"],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "47" }
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,300;0,6..96,400;1,6..96,300;1,6..96,400&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet"/>
+
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --black: #0a0a0a;
-      --yellow: #f5c400;
-      --white: #f0ece4;
-      --stripe-size: 48px;
+      --white: #ffffff;
+      --off: #f7f6f4;
+      --off2: #f0ede8;
+      --near-black: #0f0f0d;
+      --ink: #1a1a18;
+      --mid: #5a5a56;
+      --faint: #b0afa8;
+      --teal: #1b5e50;
+      --teal-light: #2e8a71;
+      --teal-pale: #e8f0ee;
+      --gold: #c9a96e;
+      --rule: rgba(15,15,13,0.08);
+      --rule-thick: rgba(15,15,13,0.14);
     }
 
-    html, body {
-      height: 100%;
-      background-color: var(--black);
-      color: var(--white);
-      font-family: 'Space Mono', monospace;
-      overflow: hidden;
+    *, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--white);
+      color: var(--ink);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 300;
+      overflow-x: hidden;
     }
 
-    /* Animated diagonal stripes top bar */
-    .tape {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      height: 18px;
-      background: repeating-linear-gradient(
-        -45deg,
-        var(--yellow) 0px,
-        var(--yellow) var(--stripe-size),
-        var(--black) var(--stripe-size),
-        var(--black) calc(var(--stripe-size) * 2)
-      );
-      background-size: calc(var(--stripe-size) * 4) 100%;
-      animation: slide 1.2s linear infinite;
-      z-index: 10;
+    /* ══════════════════════════════════════════════
+       HEADER
+    ══════════════════════════════════════════════ */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--rule-thick);
+      transition: box-shadow 0.3s;
     }
-
-    .tape.bottom {
-      top: auto;
-      bottom: 0;
+    header.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.06); }
+    .header-top {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0 60px; height: 60px;
+      border-bottom: 1px solid var(--rule);
     }
-
-    @keyframes slide {
-      from { background-position: 0 0; }
-      to   { background-position: calc(var(--stripe-size) * 4) 0; }
+    .logo {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 18px; font-weight: 400; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--ink); text-decoration: none;
+      display: flex; align-items: center; gap: 10px;
     }
-
-    /* Grid overlay */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(245,196,0,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(245,196,0,0.04) 1px, transparent 1px);
-      background-size: 40px 40px;
-      pointer-events: none;
-      z-index: 0;
+    .logo-dot { width: 6px; height: 6px; background: var(--teal); border-radius: 50%; display: inline-block; }
+    .header-contact { display: flex; gap: 28px; font-size: 11px; letter-spacing: 0.05em; color: var(--mid); align-items: center; }
+    .header-contact a { color: var(--mid); text-decoration: none; transition: color 0.2s; }
+    .header-contact a:hover { color: var(--teal); }
+    .header-contact .sep { color: var(--rule-thick); }
+    .header-nav { padding: 0 60px; height: 48px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-list { display: flex; gap: 44px; list-style: none; }
+    .nav-list a { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--mid); text-decoration: none; transition: color 0.2s; position: relative; padding-bottom: 2px; }
+    .nav-list a::after { content:''; position:absolute; bottom:0; left:0; right:0; height:1px; background:var(--teal); transform:scaleX(0); transform-origin:left; transition:transform 0.25s; }
+    .nav-list a:hover { color: var(--ink); }
+    .nav-list a:hover::after { transform:scaleX(1); }
+    .nav-cta {
+      font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+      padding: 10px 22px; background: var(--teal);
+      color: var(--white); text-decoration: none; transition: all 0.25s;
     }
+    .nav-cta:hover { background: var(--near-black); }
 
-    /* Scanline flicker */
-    body::after {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background: repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 3px,
-        rgba(0,0,0,0.08) 3px,
-        rgba(0,0,0,0.08) 4px
-      );
-      pointer-events: none;
-      z-index: 1;
+    /* ══════════════════════════════════════════════
+       HERO
+    ══════════════════════════════════════════════ */
+    .hero {
+      min-height: calc(100vh - 108px);
+      display: grid; grid-template-columns: 1fr 1fr;
+      border-bottom: 1px solid var(--rule-thick);
     }
-
-    main {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      padding: 80px 24px;
-      gap: 0;
+    .hero-text {
+      padding: 80px 60px;
+      border-right: 1px solid var(--rule-thick);
+      display: flex; flex-direction: column; justify-content: space-between;
     }
-
-    /* Icon */
-    .icon {
-      font-size: 72px;
-      line-height: 1;
-      animation: bob 3s ease-in-out infinite;
-      filter: drop-shadow(0 0 24px rgba(245,196,0,0.4));
-      margin-bottom: 24px;
-    }
-
-    @keyframes bob {
-      0%, 100% { transform: translateY(0) rotate(-4deg); }
-      50%       { transform: translateY(-12px) rotate(4deg); }
-    }
-
-    /* Heading */
+    .hero-kicker { font-size: 9px; letter-spacing: 0.5em; text-transform: uppercase; color: var(--faint); display: flex; align-items: center; gap: 10px; }
+    .hero-kicker::before { content:''; display:block; width:24px; height:1px; background:var(--faint); }
+    .hero-num { font-family: 'Bodoni Moda', serif; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; animation: fadeUp 0.8s ease 0.2s both; }
     h1 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(64px, 12vw, 160px);
-      letter-spacing: 0.05em;
-      line-height: 0.9;
-      text-align: center;
-      color: var(--yellow);
-      text-shadow:
-        4px 4px 0 rgba(245,196,0,0.15),
-        0 0 80px rgba(245,196,0,0.2);
-      animation: flicker 6s ease-in-out infinite;
-      margin-bottom: 12px;
+      font-family: 'Bodoni Moda', serif;
+      font-size: clamp(52px, 6.5vw, 104px); font-weight: 300;
+      line-height: 0.96; letter-spacing: -0.01em;
+      margin-bottom: 36px;
+      animation: fadeUp 0.8s ease 0.4s both;
     }
+    h1 em { font-style: italic; color: var(--teal); }
+    .hero-lead { font-size: 13.5px; font-weight: 300; line-height: 1.9; color: var(--mid); max-width: 400px; margin-bottom: 48px; animation: fadeUp 0.8s ease 0.6s both; }
+    .hero-actions { display: flex; gap: 14px; animation: fadeUp 0.8s ease 0.8s both; flex-wrap: wrap; }
+    .btn-solid { padding: 14px 36px; background: var(--near-black); color: var(--white); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; transition: background 0.25s; }
+    .btn-solid:hover { background: var(--teal); }
+    .btn-line { padding: 14px 36px; border: 1px solid var(--rule-thick); color: var(--mid); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; transition: all 0.25s; }
+    .btn-line:hover { border-color: var(--ink); color: var(--ink); }
+    .hero-footer-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--rule); border-top: 1px solid var(--rule); }
+    .hero-stat { background: var(--white); padding: 22px 0; }
+    .hero-stat-n { font-family: 'Bodoni Moda', serif; font-size: 32px; color: var(--ink); line-height: 1; }
+    .hero-stat-l { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--faint); margin-top: 4px; }
 
-    @keyframes flicker {
-      0%, 95%, 100% { opacity: 1; }
-      96%            { opacity: 0.7; }
-      97%            { opacity: 1; }
-      98%            { opacity: 0.85; }
+    .hero-visual { position: relative; overflow: hidden; background: var(--off); }
+    .hero-visual img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.82) saturate(0.7); display: block; animation: slowZ 20s ease-in-out infinite alternate; }
+    @keyframes slowZ { from{transform:scale(1.02);} to{transform:scale(1.08);} }
+    .hero-visual-badge {
+      position: absolute; top: 28px; right: 28px;
+      background: rgba(255,255,255,0.12); backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 12px 18px; color: rgba(255,255,255,0.9);
+      font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase;
     }
-
-    .subtitle {
-      font-size: clamp(10px, 1.5vw, 13px);
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: rgba(240,236,228,0.45);
-      text-align: center;
-      margin-bottom: 48px;
+    .hero-visual-label {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: var(--near-black); color: rgba(255,255,255,0.6);
+      padding: 14px 24px; font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase;
+      display: flex; justify-content: space-between;
     }
+    .hero-visual-label span { color: var(--white); }
 
-    /* Progress bar */
-    .progress-wrap {
-      width: min(480px, 90vw);
-      margin-bottom: 12px;
+    /* scroll indicator */
+    .scroll-hint { position: absolute; bottom: 80px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; animation: fadeUp 1s ease 1.2s both; }
+    .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--rule-thick), transparent); animation: scrollDrop 2s ease infinite; }
+    @keyframes scrollDrop { 0%{transform:scaleY(0);transform-origin:top;} 50%{transform:scaleY(1);transform-origin:top;} 51%{transform-origin:bottom;} 100%{transform:scaleY(0);transform-origin:bottom;} }
+
+    @keyframes fadeUp { from{opacity:0;transform:translateY(18px);} to{opacity:1;transform:translateY(0);} }
+
+    /* ══════════════════════════════════════════════
+       AREAS SERVED TICKER
+    ══════════════════════════════════════════════ */
+    .ticker-wrap { background: var(--teal); padding: 11px 0; overflow: hidden; white-space: nowrap; }
+    .ticker-inner { display: inline-flex; animation: ticker 28s linear infinite; }
+    .ticker-inner span { font-size: 9px; letter-spacing: 0.4em; text-transform: uppercase; color: rgba(255,255,255,0.85); padding: 0 36px; }
+    .ticker-inner span.dot { color: rgba(255,255,255,0.35); padding: 0; }
+    @keyframes ticker { from{transform:translateX(0);} to{transform:translateX(-50%);} }
+
+    /* ══════════════════════════════════════════════
+       FEATURE STRIP
+    ══════════════════════════════════════════════ */
+    .feature-strip {
+      display: grid; grid-template-columns: repeat(4,1fr);
+      border-bottom: 1px solid var(--rule-thick);
     }
+    .feat { padding: 40px 32px; border-right: 1px solid var(--rule); transition: background 0.25s; }
+    .feat:last-child { border-right: none; }
+    .feat:hover { background: var(--off); }
+    .feat-num { font-family: 'Bodoni Moda', serif; font-size: 44px; color: var(--ink); line-height: 1; margin-bottom: 6px; }
+    .feat-label { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--faint); }
 
-    .progress-label {
-      display: flex;
-      justify-content: space-between;
-      font-size: 10px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: rgba(240,236,228,0.35);
-      margin-bottom: 8px;
+    /* ══════════════════════════════════════════════
+       SECTION PATTERN
+    ══════════════════════════════════════════════ */
+    .sec-head { padding: 80px 60px 0; display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 52px; }
+    .sec-kicker { font-size: 9px; letter-spacing: 0.45em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
+    h2 { font-family: 'Bodoni Moda', serif; font-size: clamp(34px, 4.2vw, 56px); font-weight: 300; line-height: 1.05; }
+    h2 em { font-style: italic; }
+    .sec-link { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mid); text-decoration: none; border-bottom: 1px solid var(--faint); padding-bottom: 3px; white-space: nowrap; transition: all 0.25s; }
+    .sec-link:hover { color: var(--teal); border-color: var(--teal); }
+
+    /* ══════════════════════════════════════════════
+       ABOUT
+    ══════════════════════════════════════════════ */
+    .about-layout { display: grid; grid-template-columns: 5fr 7fr; border-top: 1px solid var(--rule-thick); border-bottom: 1px solid var(--rule-thick); }
+    .about-left { padding: 80px 60px; border-right: 1px solid var(--rule); }
+    .about-left p { font-size: 13px; line-height: 1.9; color: var(--mid); margin-bottom: 16px; }
+    .about-left blockquote { font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 17px; line-height: 1.65; color: var(--ink); border-left: 2px solid var(--teal); padding-left: 20px; margin-top: 32px; }
+    .about-right { position: relative; }
+    .about-right img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(0.75); }
+    .about-awards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--rule); border-top: 1px solid var(--rule); margin-top: 40px; }
+    .award-cell { background: var(--off); padding: 18px 0; text-align: center; }
+    .award-cell svg { width: 22px; height: 22px; stroke: var(--teal); fill: none; margin-bottom: 8px; }
+    .award-cell span { font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--faint); display: block; }
+
+    /* ══════════════════════════════════════════════
+       SERVICES — with icons
+    ══════════════════════════════════════════════ */
+    .services-section { padding-bottom: 0; }
+    .services-layout { padding: 0 60px 0; }
+    .svc-table {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--rule-thick);
     }
-
-    .progress-track {
-      height: 6px;
-      background: rgba(245,196,0,0.12);
-      border: 1px solid rgba(245,196,0,0.2);
-      border-radius: 0;
-      overflow: hidden;
+    .svc-cell {
+      padding: 44px 36px;
+      border-right: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      transition: background 0.3s, box-shadow 0.3s;
+      cursor: pointer; position: relative;
     }
+    .svc-cell::after { content:''; position:absolute; bottom:0; left:0; right:0; height:2px; background: var(--teal); transform:scaleX(0); transform-origin:left; transition:transform 0.35s; }
+    .svc-cell:hover::after { transform:scaleX(1); }
+    .svc-cell:hover { background: var(--off); }
+    .svc-cell:nth-child(3), .svc-cell:nth-child(6) { border-right: none; }
+    .svc-cell:nth-child(4), .svc-cell:nth-child(5), .svc-cell:nth-child(6) { border-bottom: none; }
+    .svc-icon { width: 48px; height: 48px; margin-bottom: 20px; }
+    .svc-icon svg { width: 100%; height: 100%; stroke: var(--teal); fill: none; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+    .svc-idx { font-size: 9px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--faint); margin-bottom: 12px; }
+    .svc-title { font-family: 'Bodoni Moda', serif; font-size: 20px; margin-bottom: 12px; color: var(--ink); }
+    .svc-desc { font-size: 11px; line-height: 1.85; color: var(--mid); margin-bottom: 16px; }
+    .svc-cta { font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--teal); text-decoration: none; transition: opacity 0.2s; }
+    .svc-cta:hover { opacity: 0.7; }
 
-    .progress-fill {
-      height: 100%;
-      width: 0%;
-      background: var(--yellow);
-      box-shadow: 0 0 12px rgba(245,196,0,0.6);
-      animation: load 3.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    /* Service selector strip */
+    .svc-selector { padding: 48px 60px; background: var(--off); border-top: 1px solid var(--rule-thick); border-bottom: 1px solid var(--rule-thick); }
+    .svc-selector-title { font-size: 9px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--mid); margin-bottom: 24px; }
+    .svc-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+    .svc-pill {
+      padding: 11px 22px; border: 1px solid var(--rule-thick);
+      font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--mid); cursor: pointer; transition: all 0.22s;
+      background: var(--white); display: flex; align-items: center; gap: 9px;
+      user-select: none;
     }
+    .svc-pill:hover { border-color: var(--teal); color: var(--teal); }
+    .svc-pill.active { background: var(--teal); border-color: var(--teal); color: var(--white); }
+    .svc-pill svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 1.8; flex-shrink: 0; }
 
-    @keyframes load {
-      0%   { width: 0%; }
-      40%  { width: 62%; }
-      70%  { width: 71%; }
-      100% { width: 74%; }
+    /* ══════════════════════════════════════════════
+       PROJECTS
+    ══════════════════════════════════════════════ */
+    .projects-layout { padding: 0 60px 80px; }
+    .proj-table { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--rule-thick); }
+    .proj-cell {
+      position: relative; overflow: hidden;
+      border-right: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
     }
-
-    /* Status chips */
-    .status-row {
-      display: flex;
-      gap: 12px;
-      margin-top: 40px;
-      flex-wrap: wrap;
-      justify-content: center;
+    .proj-cell:nth-child(3), .proj-cell:nth-child(6) { border-right: none; }
+    .proj-cell:nth-child(4), .proj-cell:nth-child(5), .proj-cell:nth-child(6) { border-bottom: none; }
+    .proj-cell.double { grid-row: span 2; }
+    .proj-img-wrap { width: 100%; height: 100%; min-height: 260px; overflow: hidden; }
+    .proj-cell.double .proj-img-wrap { min-height: 520px; }
+    .proj-cell img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.85) saturate(0.7); transition: transform 0.9s ease, filter 0.4s; }
+    .proj-cell:hover img { transform: scale(1.06); filter: brightness(0.6) saturate(0.6); }
+    .proj-cell-label {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 18px 22px;
+      background: linear-gradient(to top, rgba(15,15,13,0.95) 0%, rgba(15,15,13,0.0) 100%);
+      padding-top: 40px;
+      transform: translateY(2px); transition: transform 0.3s;
     }
+    .proj-cell:hover .proj-cell-label { transform: translateY(0); }
+    .proj-cell-tag { font-size: 8px; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(46,138,113,0.9); margin-bottom: 5px; }
+    .proj-cell-title { font-family: 'Bodoni Moda', serif; font-size: 16px; color: var(--white); }
+    .proj-cell-sub { font-size: 9px; color: rgba(255,255,255,0.5); margin-top: 3px; }
 
-    .chip {
-      font-size: 9px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      padding: 6px 14px;
-      border: 1px solid rgba(245,196,0,0.25);
-      color: rgba(240,236,228,0.4);
-      position: relative;
-      cursor: default;
-      transition: all 0.2s;
+    /* Video cell */
+    .proj-cell-video { position: relative; overflow: hidden; background: var(--near-black); border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); cursor: pointer; }
+    .proj-cell-video video { width: 100%; height: 100%; min-height: 260px; object-fit: cover; opacity: 0.7; display: block; }
+    .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 56px; height: 56px; border: 1px solid rgba(255,255,255,0.6); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.25s; }
+    .play-btn svg { width: 20px; height: 20px; fill: white; margin-left: 3px; }
+    .proj-cell-video:hover .play-btn { background: var(--teal); border-color: var(--teal); transform: translate(-50%,-50%) scale(1.1); }
+
+    /* ══════════════════════════════════════════════
+       TESTIMONIALS
+    ══════════════════════════════════════════════ */
+    .testi-layout { background: var(--off); border-top: 1px solid var(--rule-thick); border-bottom: 1px solid var(--rule-thick); padding: 80px 60px; }
+    .testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; border: 1px solid var(--rule); margin-top: 52px; }
+    .testi-cell { padding: 40px 32px; border-right: 1px solid var(--rule); transition: background 0.25s; }
+    .testi-cell:last-child { border-right: none; }
+    .testi-cell:hover { background: var(--white); }
+    .testi-stars { font-size: 12px; letter-spacing: 2px; color: var(--gold); margin-bottom: 18px; }
+    .testi-cell blockquote { font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 14.5px; line-height: 1.78; color: var(--ink); margin-bottom: 22px; }
+    .testi-name { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink); font-weight: 400; }
+    .testi-loc { font-size: 10px; color: var(--faint); margin-top: 3px; }
+    .testi-verified { font-size: 8.5px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-top: 8px; display: flex; align-items: center; gap: 5px; }
+    .testi-verified svg { width: 12px; height: 12px; stroke: var(--teal); fill: none; }
+
+    /* ══════════════════════════════════════════════
+       PROCESS STRIP
+    ══════════════════════════════════════════════ */
+    .process-section { padding: 80px 60px; border-bottom: 1px solid var(--rule-thick); }
+    .process-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 0; border: 1px solid var(--rule); margin-top: 52px; }
+    .proc-step { padding: 36px 28px; border-right: 1px solid var(--rule); position: relative; }
+    .proc-step:last-child { border-right: none; }
+    .proc-num { font-family: 'Bodoni Moda', serif; font-size: 42px; color: var(--off2); line-height: 1; margin-bottom: 16px; }
+    .proc-icon { margin-bottom: 16px; }
+    .proc-icon svg { width: 28px; height: 28px; stroke: var(--teal); fill: none; stroke-width: 1.4; }
+    .proc-title { font-family: 'Bodoni Moda', serif; font-size: 15px; color: var(--ink); margin-bottom: 8px; }
+    .proc-desc { font-size: 10.5px; line-height: 1.8; color: var(--mid); }
+    .proc-arrow { position: absolute; right: -12px; top: 50%; transform: translateY(-50%); z-index: 2; background: var(--white); border: 1px solid var(--rule); width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; }
+    .proc-arrow svg { width: 10px; height: 10px; stroke: var(--faint); fill: none; }
+    .proc-step:last-child .proc-arrow { display: none; }
+
+    /* ══════════════════════════════════════════════
+       AREAS MAP / COVERAGE
+    ══════════════════════════════════════════════ */
+    .areas-section { background: var(--near-black); padding: 80px 60px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .areas-section .sec-kicker { color: rgba(46,138,113,0.8); }
+    .areas-section h2 { color: var(--white); }
+    .areas-section h2 em { color: rgba(255,255,255,0.4); }
+    .areas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 52px; }
+    .areas-col h4 { font-size: 9px; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .areas-list { display: flex; flex-direction: column; gap: 0; }
+    .area-row { display: flex; justify-content: space-between; align-items: center; padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+    .area-name { font-size: 12px; color: rgba(255,255,255,0.7); }
+    .area-badge { font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; padding: 3px 10px; border: 1px solid rgba(46,138,113,0.4); color: rgba(46,138,113,0.8); }
+
+    /* ══════════════════════════════════════════════
+       CONTACT — with service selector & email form
+    ══════════════════════════════════════════════ */
+    .contact-layout { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--rule-thick); }
+    .contact-left { padding: 80px 60px; border-right: 1px solid var(--rule-thick); background: var(--near-black); color: var(--white); }
+    .contact-left .sec-kicker { color: rgba(46,138,113,0.8); }
+    .contact-left h2 { color: var(--white); margin-bottom: 20px; }
+    .contact-left h2 em { color: rgba(255,255,255,0.4); }
+    .contact-left p { font-size: 13px; line-height: 1.9; color: rgba(255,255,255,0.5); margin-bottom: 40px; }
+    .c-list { display: flex; flex-direction: column; gap: 0; border-top: 1px solid rgba(255,255,255,0.08); }
+    .c-row { padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; gap: 16px; }
+    .c-row-icon { width: 32px; height: 32px; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .c-row-icon svg { width: 14px; height: 14px; stroke: rgba(255,255,255,0.4); fill: none; }
+    .c-row-content { flex: 1; }
+    .c-row-label { font-size: 8px; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(255,255,255,0.25); margin-bottom: 3px; }
+    .c-row a, .c-row span { font-size: 12px; color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; }
+    .c-row a:hover { color: rgba(46,138,113,0.9); }
+    .social-strip { display: flex; gap: 8px; margin-top: 32px; }
+    .soc-btn { padding: 9px 18px; border: 1px solid rgba(255,255,255,0.1); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); text-decoration: none; transition: all 0.25s; display: flex; align-items: center; gap: 7px; }
+    .soc-btn:hover { border-color: var(--teal-light); color: var(--teal-light); }
+    .soc-btn svg { width: 13px; height: 13px; stroke: currentColor; fill: none; }
+
+    /* FORM */
+    .contact-right { padding: 80px 60px; }
+    .form-service-select { margin-bottom: 32px; }
+    .form-service-select p { font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--faint); margin-bottom: 16px; }
+    .form-svc-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .form-svc-pill {
+      padding: 9px 16px; border: 1px solid var(--rule-thick);
+      font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--mid); cursor: pointer; transition: all 0.22s;
+      background: transparent; display: flex; align-items: center; gap: 7px;
+      user-select: none;
     }
-
-    .chip:hover {
-      border-color: var(--yellow);
-      color: var(--yellow);
-      background: rgba(245,196,0,0.05);
+    .form-svc-pill:hover { border-color: var(--teal); color: var(--teal); }
+    .form-svc-pill.active { background: var(--teal); border-color: var(--teal); color: var(--white); }
+    .form-svc-pill svg { width: 12px; height: 12px; stroke: currentColor; fill: none; stroke-width: 1.8; flex-shrink: 0; }
+    .cform { display: flex; flex-direction: column; gap: 18px; }
+    .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .fg { display: flex; flex-direction: column; gap: 6px; }
+    .fg label { font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--faint); }
+    .fg input, .fg select, .fg textarea {
+      background: transparent; border: none; border-bottom: 1px solid var(--rule-thick);
+      padding: 11px 0; color: var(--ink); font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 300;
+      outline: none; transition: border-color 0.25s; width: 100%;
     }
+    .fg input:focus, .fg select:focus, .fg textarea:focus { border-color: var(--teal); }
+    .fg textarea { resize: none; height: 88px; }
+    .form-actions { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+    .btn-sub { padding: 15px 44px; background: var(--teal); color: var(--white); font-family: 'Outfit', sans-serif; font-size: 10px; font-weight: 400; letter-spacing: 0.22em; text-transform: uppercase; border: none; cursor: pointer; transition: background 0.25s; }
+    .btn-sub:hover { background: var(--near-black); }
+    .form-note { font-size: 10px; color: var(--faint); }
+    .form-success { display: none; padding: 16px 24px; background: var(--teal-pale); border: 1px solid rgba(27,94,80,0.2); color: var(--teal); font-size: 12px; letter-spacing: 0.05em; margin-top: 12px; }
 
-    .chip.active {
-      border-color: var(--yellow);
-      color: var(--yellow);
-    }
+    /* ══════════════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════════════ */
+    footer { background: var(--near-black); color: rgba(255,255,255,0.4); }
+    .footer-body { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; padding: 60px; gap: 48px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .footer-brand { font-family: 'Bodoni Moda', serif; font-size: 18px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+    .footer-brand-dot { width: 6px; height: 6px; background: var(--teal); border-radius: 50%; }
+    .footer-tagline { font-size: 11px; line-height: 1.75; margin-bottom: 20px; }
+    .footer-soc { display: flex; gap: 8px; }
+    .fs { width: 32px; height: 32px; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 10px; color: rgba(255,255,255,0.4); text-decoration: none; transition: all 0.25s; }
+    .fs:hover { border-color: var(--teal-light); color: var(--teal-light); }
+    .fcol h4 { font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--white); margin-bottom: 16px; }
+    .fcol ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .fcol ul li a { font-size: 11px; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+    .fcol ul li a:hover { color: var(--teal-light); }
+    .footer-base { padding: 20px 60px; display: flex; justify-content: space-between; font-size: 10px; letter-spacing: 0.05em; }
+    .footer-seo { padding: 0 60px 24px; font-size: 9.5px; color: rgba(255,255,255,0.2); line-height: 1.7; max-width: 800px; }
 
-    .chip.active::before {
-      content: '';
-      display: inline-block;
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: var(--yellow);
-      margin-right: 8px;
-      box-shadow: 0 0 6px var(--yellow);
-      animation: pulse 1.4s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50%       { opacity: 0.3; }
-    }
-
-    /* Corner brackets */
-    .corner {
-      position: fixed;
-      width: 32px; height: 32px;
-      z-index: 3;
-      opacity: 0.4;
-    }
-    .corner.tl { top: 28px; left: 16px; border-top: 1px solid var(--yellow); border-left: 1px solid var(--yellow); }
-    .corner.tr { top: 28px; right: 16px; border-top: 1px solid var(--yellow); border-right: 1px solid var(--yellow); }
-    .corner.bl { bottom: 28px; left: 16px; border-bottom: 1px solid var(--yellow); border-left: 1px solid var(--yellow); }
-    .corner.br { bottom: 28px; right: 16px; border-bottom: 1px solid var(--yellow); border-right: 1px solid var(--yellow); }
-
-    /* Footer line */
-    .footer {
-      position: fixed;
-      bottom: 28px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 9px;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: rgba(240,236,228,0.2);
-      white-space: nowrap;
-      z-index: 3;
+    /* ══════════════════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════════════════ */
+    @media (max-width: 960px) {
+      .header-top { padding: 0 24px; }
+      .header-contact { display: none; }
+      .header-nav { padding: 0 24px; }
+      .nav-list { display: none; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .hero-text { padding: 60px 24px; border-right: none; }
+      .feature-strip { grid-template-columns: repeat(2,1fr); }
+      .sec-head { padding: 60px 24px 0; flex-direction: column; align-items: flex-start; gap: 16px; }
+      .about-layout { grid-template-columns: 1fr; }
+      .about-right { display: none; }
+      .about-left { padding: 60px 24px; border-right: none; }
+      .services-layout { padding: 0 24px 0; }
+      .svc-table { grid-template-columns: 1fr; }
+      .svc-cell { border-right: none; }
+      .svc-cell:nth-child(4), .svc-cell:nth-child(5), .svc-cell:nth-child(6) { border-bottom: 1px solid var(--rule); }
+      .svc-cell:last-child { border-bottom: none; }
+      .svc-selector { padding: 40px 24px; }
+      .projects-layout { padding: 0 24px 60px; }
+      .proj-table { grid-template-columns: 1fr 1fr; }
+      .proj-cell.double { grid-row: span 1; }
+      .testi-layout { padding: 60px 24px; }
+      .testi-grid { grid-template-columns: 1fr; }
+      .testi-cell { border-right: none; border-bottom: 1px solid var(--rule); }
+      .testi-cell:last-child { border-bottom: none; }
+      .process-section { padding: 60px 24px; }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      .proc-step:nth-child(2), .proc-step:nth-child(4) { border-right: none; }
+      .proc-step { border-bottom: 1px solid var(--rule); }
+      .areas-section { padding: 60px 24px; }
+      .areas-grid { grid-template-columns: 1fr; gap: 32px; }
+      .contact-layout { grid-template-columns: 1fr; }
+      .contact-left { padding: 60px 24px; }
+      .contact-right { padding: 60px 24px; }
+      .frow { grid-template-columns: 1fr; }
+      .footer-body { grid-template-columns: 1fr 1fr; padding: 40px 24px; }
+      .footer-base { padding: 16px 24px; flex-direction: column; gap: 8px; text-align: center; }
+      .footer-seo { padding: 0 24px 20px; }
     }
   </style>
 </head>
 <body>
 
-  <div class="tape"></div>
-  <div class="tape bottom"></div>
-
-  <div class="corner tl"></div>
-  <div class="corner tr"></div>
-  <div class="corner bl"></div>
-  <div class="corner br"></div>
-
-  <main>
-    <div class="icon">🚧</div>
-
-    <h1>Under<br>Construction</h1>
-
-    <p class="subtitle">Something bold is being built</p>
-
-    <div class="progress-wrap">
-      <div class="progress-label">
-        <span>Build progress</span>
-        <span id="pct">0%</span>
+  <!-- ══════════════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════════════ -->
+  <header id="site-header">
+    <div class="header-top">
+      <a href="#" class="logo">
+        <span class="logo-dot"></span>Fabrico
+      </a>
+      <div class="header-contact">
+        <a href="tel:07940219219">07940 219 219</a>
+        <span class="sep">·</span>
+        <a href="tel:02038838288">0203 883 8288</a>
+        <span class="sep">·</span>
+        <a href="mailto:info@byfabrico.com">info@byfabrico.com</a>
       </div>
-      <div class="progress-track">
-        <div class="progress-fill" id="fill"></div>
+    </div>
+    <div class="header-nav">
+      <ul class="nav-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#areas">Areas</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#enquire" class="nav-cta">Book Consultation</a>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════ -->
+  <section class="hero" id="top">
+    <div class="hero-text">
+      <div class="hero-kicker">Fabrico Design & Build — London & Berkshire — Est. 2017</div>
+      <div class="hero-main">
+        <div class="hero-num">01 — London's Premier Studio</div>
+        <h1>High&#8209;End<br>Construction<br>&amp; <em>Design</em></h1>
+        <p class="hero-lead">Founded in 2017, Fabrico delivers exceptional construction and interior design across London and Berkshire. New builds, full renovations, extensions — all managed by specialist trades with rigorous sign-off at every stage.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-solid">View Projects</a>
+          <a href="#enquire" class="btn-line">Start a Project</a>
+        </div>
+      </div>
+      <div class="hero-footer-row">
+        <div class="hero-stat"><div class="hero-stat-n">2017</div><div class="hero-stat-l">Founded</div></div>
+        <div class="hero-stat"><div class="hero-stat-n">200+</div><div class="hero-stat-l">Projects</div></div>
+        <div class="hero-stat"><div class="hero-stat-n">£50M+</div><div class="hero-stat-l">Value Delivered</div></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="IMG_2514.jpg" alt="Fabrico high-end renovation project Chelsea London SW3"/>
+      <div class="hero-visual-badge">Chelsea, SW3</div>
+      <div class="hero-visual-label">
+        <span>Full Renovation & Extension</span>
+        <span>New Basement · Loft · Bespoke Fit-Out</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       AREAS TICKER
+  ══════════════════════════════════════════════ -->
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker-inner">
+      <span>Chelsea</span><span class="dot">·</span><span>Kensington</span><span class="dot">·</span>
+      <span>Mayfair</span><span class="dot">·</span><span>Notting Hill</span><span class="dot">·</span>
+      <span>Fulham</span><span class="dot">·</span><span>Battersea</span><span class="dot">·</span>
+      <span>Berkshire</span><span class="dot">·</span><span>Maidenhead</span><span class="dot">·</span>
+      <span>Windsor</span><span class="dot">·</span><span>Marlow</span><span class="dot">·</span>
+      <span>Knightsbridge</span><span class="dot">·</span><span>Belgravia</span><span class="dot">·</span>
+      <span>Wandsworth</span><span class="dot">·</span><span>Richmond</span><span class="dot">·</span>
+      <!-- repeat for seamless loop -->
+      <span>Chelsea</span><span class="dot">·</span><span>Kensington</span><span class="dot">·</span>
+      <span>Mayfair</span><span class="dot">·</span><span>Notting Hill</span><span class="dot">·</span>
+      <span>Fulham</span><span class="dot">·</span><span>Battersea</span><span class="dot">·</span>
+      <span>Berkshire</span><span class="dot">·</span><span>Maidenhead</span><span class="dot">·</span>
+      <span>Windsor</span><span class="dot">·</span><span>Marlow</span><span class="dot">·</span>
+      <span>Knightsbridge</span><span class="dot">·</span><span>Belgravia</span><span class="dot">·</span>
+      <span>Wandsworth</span><span class="dot">·</span><span>Richmond</span><span class="dot">·</span>
+    </div>
+  </div>
+
+  <!-- FEATURE STRIP -->
+  <div class="feature-strip">
+    <div class="feat"><div class="feat-num">15+</div><div class="feat-label">Years Combined Experience</div></div>
+    <div class="feat"><div class="feat-num">200+</div><div class="feat-label">Projects Completed</div></div>
+    <div class="feat"><div class="feat-num">£50M+</div><div class="feat-label">Construction Value</div></div>
+    <div class="feat"><div class="feat-num">100%</div><div class="feat-label">Client Satisfaction</div></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════════════ -->
+  <section id="about">
+    <div class="about-layout">
+      <div class="about-left">
+        <div class="sec-kicker">About Fabrico</div>
+        <h2>Built on<br><em>Excellence</em></h2>
+        <p>Founded in 2017, Fabrico is a high-end construction company known for delivering excellence in every project. Our journey began with small extensions and refurbishment jobs, and we have since expanded to specialise in new build homes across London and Berkshire.</p>
+        <p>Over the years we have grown to collaborate with developers and expanded into the homeowner market, aiming to deliver the highest quality results directly to our clients.</p>
+        <p>We pride ourselves on having a team of specialist trades who oversee every aspect of the project. Our rigorous sign-off process ensures quality at every stage. We've partnered with a leading construction software company, allowing clients to track every step of their project — from planning to completion — with full transparency.</p>
+        <blockquote>"Delivering the highest quality results directly to our clients — at every stage, on every project."</blockquote>
+        <div class="about-awards">
+          <div class="award-cell">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+            <span>5-Star Rated</span>
+          </div>
+          <div class="award-cell">
+            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+            <span>Fully Insured</span>
+          </div>
+          <div class="award-cell">
+            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            <span>CHAS Compliant</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-right">
+        <img src="IMG_2443.jpg" alt="Fabrico craftmanship and quality construction"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SERVICES — Icon grid
+  ══════════════════════════════════════════════ -->
+  <section id="services" class="services-section">
+    <div class="sec-head">
+      <div>
+        <div class="sec-kicker">What We Do</div>
+        <h2>Our <em>Services</em></h2>
+      </div>
+    </div>
+    <div class="services-layout">
+      <div class="svc-table">
+
+        <div class="svc-cell" onclick="selectService('New Build')">
+          <div class="svc-icon">
+            <svg viewBox="0 0 48 48">
+              <path d="M4 42h40M8 42V20M40 42V20M24 8L8 20h32L24 8z"/>
+              <rect x="18" y="30" width="12" height="12"/>
+              <path d="M14 26h4M30 26h4M14 34h2M32 34h2"/>
+            </svg>
+          </div>
+          <div class="svc-idx">— 01</div>
+          <div class="svc-title">New Builds</div>
+          <div class="svc-desc">Bespoke new build homes designed and constructed to exacting standards. German kitchens, handmade doors, porcelain bathrooms — every specification managed by Fabrico from first foundation to final finish.</div>
+          <a href="#enquire" class="svc-cta">Start Your Build →</a>
+        </div>
+
+        <div class="svc-cell" onclick="selectService('Full Renovation')">
+          <div class="svc-icon">
+            <svg viewBox="0 0 48 48">
+              <rect x="6" y="10" width="36" height="28" rx="1"/>
+              <path d="M6 18h36M18 18v20M6 26h12"/>
+              <circle cx="36" cy="30" r="5"/>
+              <path d="M36 27v3l2 2"/>
+            </svg>
+          </div>
+          <div class="svc-idx">— 02</div>
+          <div class="svc-title">Full Renovations</div>
+          <div class="svc-desc">Complete back-to-brick refurbishments. New M&E, wet underfloor heating, bespoke carpentry, drop ceilings with LED strips, Lutron AV systems — every trade coordinated, every detail considered.</div>
+          <a href="#enquire" class="svc-cta">Enquire Now →</a>
+        </div>
+
+        <div class="svc-cell" onclick="selectService('Rear / Side Extension')">
+          <div class="svc-icon">
+            <svg viewBox="0 0 48 48">
+              <path d="M6 42h36M6 42V22l14-12 14 12v20M20 42V30h8v12"/>
+              <path d="M34 22v20h8V26l-8-4z"/>
+              <path d="M10 30h6M10 36h6"/>
+            </svg>
+          </div>
+          <div class="svc-idx">— 03</div>
+          <div class="svc-title">Extensions</div>
+          <div class="svc-desc">Rear, side and kitchen extensions that transform the way you live — opening homes to garden and light, creating open-plan living spaces of architectural clarity and purpose.</div>
+          <a href="#enquire" class="svc-cta">Enquire Now →</a>
+        </div>
+
+        <div class="svc-cell" onclick="selectService('Loft Conversion')">
+          <div class="svc-icon">
+            <svg viewBox="0 0 48 48">
+              <path d="M6 42h36M10 42V24M38 42V24M24 8L6 24h36L24 8z"/>
+              <path d="M18 24v18M30 24v18"/>
+              <rect x="19" y="12" width="10" height="8" rx="1"/>
+              <line x1="24" y1="10" x2="24" y2="8"/>
+            </svg>
+          </div>
+          <div class="svc-idx">— 04</div>
+          <div class="svc-title">Loft Conversions</div>
+          <div class="svc-desc">Dormer and mansard loft conversions that create premium master suites, home studies, and living spaces — managed from planning consent through to final handover.</div>
+          <a href="#enquire" class="svc-cta">Enquire Now →</a>
+        </div>
+
+        <div class="svc-cell" onclick="selectService('Basement Conversion')">
+          <div class="svc-icon">
+            <svg viewBox="0 0 48 48">
+              <rect x="6" y="6" width="36" height="14" rx="1"/>
+              <rect x="6" y="26" width="36" height="16" rx="1"/>
+              <path d="M24 20v6M18 26v16M30 26v16"/>
+              <path d="M12 32h6M30 32h6M12 38h6M30 38h6"/>
+            </svg>
+          </div>
+          <div class="svc-idx">— 05</div>
+          <div class="svc-title">Basement Conversions</div>
+          <div class="svc-desc">Full underpinning, tanking, and waterproofing. Transforming underutilised basements into cinema rooms, private gyms, and premium living spaces of lasting value.</div>
+          <a href="#enquire" class="svc-cta">Enquire Now →</a>
+        </div>
+
+        <div class="svc-cell" onclick="selectService('M&E / Project Management')">
+          <div class="svc-icon">
+            <svg viewBox="0 0 48 48">
+              <circle cx="24" cy="24" r="6"/>
+              <path d="M24 8v4M24 36v4M8 24h4M36 24h4"/>
+              <path d="M13.5 13.5l2.8 2.8M31.7 31.7l2.8 2.8M13.5 34.5l2.8-2.8M31.7 16.3l2.8-2.8"/>
+              <circle cx="24" cy="24" r="2" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+          <div class="svc-idx">— 06</div>
+          <div class="svc-title">M&E & Project Management</div>
+          <div class="svc-desc">Full mechanical, electrical, plumbing, and project management services. One trusted point of contact. All trades coordinated. All milestones tracked. Complete transparency throughout.</div>
+          <a href="#enquire" class="svc-cta">Enquire Now →</a>
+        </div>
+
       </div>
     </div>
 
-    <div class="status-row">
-      <div class="chip active">In development</div>
-      <div class="chip">Design</div>
-      <div class="chip">Testing</div>
-      <div class="chip">Launch</div>
+    <!-- Quick-select service strip above the form -->
+    <div class="svc-selector" id="enquire">
+      <div class="svc-selector-title">Select your service to enquire — then complete the form below</div>
+      <div class="svc-pills">
+        <div class="svc-pill" data-svc="New Build" onclick="selectService('New Build')">
+          <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-6 7 6v12M10 21v-6h4v6"/></svg>
+          New Build
+        </div>
+        <div class="svc-pill" data-svc="Full Renovation" onclick="selectService('Full Renovation')">
+          <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="1"/><path d="M2 9h20M9 9v11"/></svg>
+          Full Renovation
+        </div>
+        <div class="svc-pill" data-svc="Rear / Side Extension" onclick="selectService('Rear / Side Extension')">
+          <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V11l7-5 7 5v10M17 11v10h4V13l-4-2z"/></svg>
+          Extension
+        </div>
+        <div class="svc-pill" data-svc="Loft Conversion" onclick="selectService('Loft Conversion')">
+          <svg viewBox="0 0 24 24"><path d="M3 12L12 4l9 8M5 12v9h14v-9M10 12v9M14 12v9"/></svg>
+          Loft Conversion
+        </div>
+        <div class="svc-pill" data-svc="Basement Conversion" onclick="selectService('Basement Conversion')">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="8" rx="1"/><rect x="2" y="13" width="20" height="8" rx="1"/><path d="M12 11v2"/></svg>
+          Basement
+        </div>
+        <div class="svc-pill" data-svc="Interior Design & Fit-Out" onclick="selectService('Interior Design & Fit-Out')">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"/></svg>
+          Interior Design
+        </div>
+        <div class="svc-pill" data-svc="M&E / Project Management" onclick="selectService('M&E / Project Management')">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M4.93 4.93l1.41 1.41M12 2v2M12 20v2M20 12h2M2 12h2M19.07 19.07l-1.41-1.41M4.93 19.07l1.41-1.41"/></svg>
+          M&E & PM
+        </div>
+        <div class="svc-pill" data-svc="Other" onclick="selectService('Other')">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+          Other
+        </div>
+      </div>
     </div>
-  </main>
+  </section>
 
-  <div class="footer">© 2026 — Check back soon</div>
+  <!-- ══════════════════════════════════════════════
+       PROJECTS
+  ══════════════════════════════════════════════ -->
+  <section id="projects">
+    <div class="sec-head">
+      <div>
+        <div class="sec-kicker">Portfolio</div>
+        <h2>Selected <em>Projects</em></h2>
+      </div>
+      <a href="#enquire" class="sec-link">Enquire About a Project →</a>
+    </div>
+    <div class="projects-layout">
+      <div class="proj-table">
+        <div class="proj-cell double">
+          <div class="proj-img-wrap">
+            <img src="IMG_2514.jpg" alt="Chelsea SW3 full renovation and basement extension by Fabrico London"/>
+          </div>
+          <div class="proj-cell-label">
+            <div class="proj-cell-tag">Full Renovation & Extension</div>
+            <div class="proj-cell-title">Chelsea, SW3</div>
+            <div class="proj-cell-sub">New Basement · Loft · Rear Extension · Bespoke Fit-Out</div>
+          </div>
+        </div>
+        <div class="proj-cell">
+          <div class="proj-img-wrap">
+            <img src="IMG_2443.jpg" alt="The Little Boltons SW5 apartment refurbishment by Fabrico"/>
+          </div>
+          <div class="proj-cell-label">
+            <div class="proj-cell-tag">Apartment Refurbishment</div>
+            <div class="proj-cell-title">The Little Boltons</div>
+            <div class="proj-cell-sub">London SW5 — 1,500 sqft</div>
+          </div>
+        </div>
+        <div class="proj-cell">
+          <div class="proj-img-wrap">
+            <img src="IMG_2514.jpg" alt="George Street Mayfair luxury refurbishment by Fabrico"/>
+          </div>
+          <div class="proj-cell-label">
+            <div class="proj-cell-tag">Luxury Refurbishment</div>
+            <div class="proj-cell-title">George Street, Mayfair</div>
+            <div class="proj-cell-sub">W1S — 1,958 sqft · Stone Baths · Lutron AV</div>
+          </div>
+        </div>
+        <div class="proj-cell">
+          <div class="proj-img-wrap">
+            <img src="IMG_2443.jpg" alt="Cookham Berkshire new build home by Fabrico"/>
+          </div>
+          <div class="proj-cell-label">
+            <div class="proj-cell-tag">New Build</div>
+            <div class="proj-cell-title">Cookham, Berkshire</div>
+            <div class="proj-cell-sub">Maidenhead SL6 — 2,500 sqft Design & Build</div>
+          </div>
+        </div>
+        <div class="proj-cell">
+          <div class="proj-img-wrap">
+            <img src="IMG_2514.jpg" alt="Bespoke joinery and German kitchen interior fit-out by Fabrico"/>
+          </div>
+          <div class="proj-cell-label">
+            <div class="proj-cell-tag">Interior Fit-Out</div>
+            <div class="proj-cell-title">Bespoke Joinery</div>
+            <div class="proj-cell-sub">German Kitchens · Custom Cabinetry · Handmade Doors</div>
+          </div>
+        </div>
+        <div class="proj-cell">
+          <div class="proj-img-wrap">
+            <img src="IMG_2443.jpg" alt="Structural works underpinning and foundations by Fabrico"/>
+          </div>
+          <div class="proj-cell-label">
+            <div class="proj-cell-tag">Structural Works</div>
+            <div class="proj-cell-title">Structural Services</div>
+            <div class="proj-cell-sub">Underpinning · Foundations · RSJ · Piling</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ══════════════════════════════════════════════
+       TESTIMONIALS
+  ══════════════════════════════════════════════ -->
+  <section class="testi-layout">
+    <div class="sec-kicker">Client Testimonials</div>
+    <h2>What Our <em>Clients Say</em></h2>
+    <div class="testi-grid">
+      <div class="testi-cell">
+        <div class="testi-stars">★★★★★</div>
+        <blockquote>"I cannot recommend Fabrico enough — absolutely fantastic. At all times they were super professional and knowledgeable. I was delighted with the results."</blockquote>
+        <div class="testi-name">Mr. J. Reynolds</div>
+        <div class="testi-loc">Chelsea, London</div>
+        <div class="testi-verified">
+          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          Verified Client
+        </div>
+      </div>
+      <div class="testi-cell">
+        <div class="testi-stars">★★★★★</div>
+        <blockquote>"Their combined construction and design capability has been particularly useful. A real eye for detail — delivered exactly as envisioned, on time and on budget."</blockquote>
+        <div class="testi-name">Mr & Mrs Thornton</div>
+        <div class="testi-loc">Notting Hill, London</div>
+        <div class="testi-verified">
+          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          Verified Client
+        </div>
+      </div>
+      <div class="testi-cell">
+        <div class="testi-stars">★★★★★</div>
+        <blockquote>"Fabrico came up with innovative solutions for maximising space, and worked extremely closely with all trades to ensure the end result was exactly what we wanted."</blockquote>
+        <div class="testi-name">Mr & Mrs Hartley</div>
+        <div class="testi-loc">Kensington, London</div>
+        <div class="testi-verified">
+          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          Verified Client
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       PROCESS
+  ══════════════════════════════════════════════ -->
+  <section class="process-section" id="process">
+    <div class="sec-kicker">How We Work</div>
+    <h2>Our <em>Process</em></h2>
+    <div class="process-grid">
+      <div class="proc-step">
+        <div class="proc-num">01</div>
+        <div class="proc-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+        <div class="proc-title">Consultation</div>
+        <div class="proc-desc">Free initial consultation to understand your vision, site, and budget. We listen first.</div>
+        <div class="proc-arrow"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></div>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">02</div>
+        <div class="proc-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
+        <div class="proc-title">Design & Planning</div>
+        <div class="proc-desc">Detailed drawings, specification, planning consent where required, and full cost plan.</div>
+        <div class="proc-arrow"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></div>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">03</div>
+        <div class="proc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
+        <div class="proc-title">Procurement</div>
+        <div class="proc-desc">Materials, specialist trades, and timelines locked in before a single tool is lifted.</div>
+        <div class="proc-arrow"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></div>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">04</div>
+        <div class="proc-icon"><svg viewBox="0 0 24 24"><polygon points="2 20 22 20 12 4 2 20"/><line x1="12" y1="12" x2="12" y2="16"/><circle cx="12" cy="18" r="0.5" fill="currentColor"/></svg></div>
+        <div class="proc-title">Build & Track</div>
+        <div class="proc-desc">Live progress tracking via our client app. Weekly sign-offs. Full transparency at every milestone.</div>
+        <div class="proc-arrow"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></div>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">05</div>
+        <div class="proc-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <div class="proc-title">Handover</div>
+        <div class="proc-desc">Snag-free handover, full documentation, warranties, and aftercare. Your home, perfected.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       AREAS SERVED
+  ══════════════════════════════════════════════ -->
+  <section class="areas-section" id="areas">
+    <div class="sec-kicker">Where We Work</div>
+    <h2>London &amp; <em>Berkshire</em></h2>
+    <div class="areas-grid">
+      <div class="areas-col">
+        <h4>Central & West London</h4>
+        <div class="areas-list">
+          <div class="area-row"><span class="area-name">Chelsea, SW3</span><span class="area-badge">Active</span></div>
+          <div class="area-row"><span class="area-name">Kensington, W8</span><span class="area-badge">Active</span></div>
+          <div class="area-row"><span class="area-name">Mayfair, W1</span><span class="area-badge">Active</span></div>
+          <div class="area-row"><span class="area-name">Notting Hill, W11</span><span class="area-badge">Active</span></div>
+          <div class="area-row"><span class="area-name">Belgravia, SW1</span><span class="area-badge">Active</span></div>
+          <div class="area-row"><span class="area-name">Fulham, SW6</span><span class="area-badge">Active</span></div>
+          <div class="area-row"><span class="area-name">Battersea, SW11</span><span class="area-badge">Active</span></div>
+          <div class="area-row"><span class="area-name">Wandsworth, SW18</span><span class="area-badge">Active</span></div>
+        </div>
+      </div>
+      <div class="areas-col">
+        <h4>Berkshire & Home Counties</h4>
+        <div class="areas-list">
+          <div class="area-row"><span class="area-name">Maidenhead, SL6</span><span class="area-badge">Active</span></div>
+          <div class="area-row"><span class="area-name">Windsor, SL4</span><span class="area-badge">Active</span></div>
+          <div class="area-row"><span class="area-name">Marlow, SL7</span><span class="area-badge">Active</span></div>
+          <div class="area-row"><span class="area-name">Cookham</span><span class="area-badge">Active</span></div>
+          <div class="area-row"><span class="area-name">Henley-on-Thames</span><span class="area-badge">Active</span></div>
+          <div class="area-row"><span class="area-name">Ascot, SL5</span><span class="area-badge">Active</span></div>
+          <div class="area-row"><span class="area-name">Reading, RG1</span><span class="area-badge">Enquire</span></div>
+          <div class="area-row"><span class="area-name">Richmond, TW10</span><span class="area-badge">Active</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       CONTACT & FORM
+  ══════════════════════════════════════════════ -->
+  <section class="contact-layout" id="contact">
+    <div class="contact-left">
+      <div class="sec-kicker">Get In Touch</div>
+      <h2>Start Your<br><em>Project</em></h2>
+      <p>If you are thinking of renovating, extending or completely transforming your home, we can help you maximise your project's potential. We work with a select number of clients each year — get in touch early to secure your place.</p>
+      <div class="c-list">
+        <div class="c-row">
+          <div class="c-row-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div class="c-row-content"><div class="c-row-label">Mobile</div><a href="tel:07940219219">07940 219 219</a></div>
+        </div>
+        <div class="c-row">
+          <div class="c-row-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div class="c-row-content"><div class="c-row-label">Office</div><a href="tel:02038838288">0203 883 8288</a></div>
+        </div>
+        <div class="c-row">
+          <div class="c-row-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div class="c-row-content"><div class="c-row-label">Email</div><a href="mailto:info@byfabrico.com">info@byfabrico.com</a></div>
+        </div>
+        <div class="c-row">
+          <div class="c-row-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+          <div class="c-row-content"><div class="c-row-label">Instagram</div><a href="https://instagram.com/fabrico_design_build" target="_blank" rel="noopener">@fabrico_design_build</a></div>
+        </div>
+        <div class="c-row">
+          <div class="c-row-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="c-row-content"><div class="c-row-label">Location</div><span>London & Berkshire, UK</span></div>
+        </div>
+      </div>
+      <div class="social-strip">
+        <a href="https://instagram.com/fabrico_design_build" class="soc-btn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          Instagram
+        </a>
+        <a href="#" class="soc-btn">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          Houzz
+        </a>
+        <a href="#" class="soc-btn">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+
+    <!-- FORM — sends via Formspree / EmailJS -->
+    <div class="contact-right">
+      <div class="form-service-select">
+        <p>I am interested in — (select all that apply)</p>
+        <div class="form-svc-pills" id="form-pills">
+          <div class="form-svc-pill" data-val="New Build" onclick="togglePill(this)">
+            <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-6 7 6v12M10 21v-6h4v6"/></svg>New Build
+          </div>
+          <div class="form-svc-pill" data-val="Full Renovation" onclick="togglePill(this)">
+            <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="1"/><path d="M2 9h20M9 9v11"/></svg>Renovation
+          </div>
+          <div class="form-svc-pill" data-val="Extension" onclick="togglePill(this)">
+            <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V11l7-5 7 5v10M17 11v10h4V13l-4-2z"/></svg>Extension
+          </div>
+          <div class="form-svc-pill" data-val="Loft Conversion" onclick="togglePill(this)">
+            <svg viewBox="0 0 24 24"><path d="M3 12L12 4l9 8M5 12v9h14v-9"/></svg>Loft
+          </div>
+          <div class="form-svc-pill" data-val="Basement" onclick="togglePill(this)">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="8" rx="1"/><rect x="2" y="13" width="20" height="8" rx="1"/></svg>Basement
+          </div>
+          <div class="form-svc-pill" data-val="Interior Design" onclick="togglePill(this)">
+            <svg viewBox="0 0 24 24"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"/></svg>Interior Design
+          </div>
+          <div class="form-svc-pill" data-val="M&E" onclick="togglePill(this)">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M4.93 19.07l1.41-1.41M12 2v2M12 20v2M20 12h2M2 12h2"/></svg>M&E
+          </div>
+          <div class="form-svc-pill" data-val="Other" onclick="togglePill(this)">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>Other
+          </div>
+        </div>
+      </div>
+
+      <!-- Formspree integration — replace YOUR_FORM_ID with your Formspree ID -->
+      <form class="cform" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="hidden" name="_subject" value="New Enquiry — Fabrico Design & Build"/>
+        <input type="hidden" name="_cc" value="info@byfabrico.com"/>
+        <input type="hidden" name="services_selected" id="hidden-services" value=""/>
+        <div class="frow">
+          <div class="fg"><label>First Name *</label><input type="text" name="first_name" placeholder="John" required/></div>
+          <div class="fg"><label>Last Name *</label><input type="text" name="last_name" placeholder="Smith" required/></div>
+        </div>
+        <div class="fg"><label>Email Address *</label><input type="email" name="email" placeholder="john@example.com" required/></div>
+        <div class="fg"><label>Phone Number</label><input type="tel" name="phone" placeholder="07700 000 000"/></div>
+        <div class="fg"><label>Project Location (postcode or area)</label><input type="text" name="location" placeholder="SW3 / Chelsea / Berkshire"/></div>
+        <div class="fg"><label>Approximate Budget</label>
+          <select name="budget">
+            <option value="">Please select...</option>
+            <option>Under £100k</option>
+            <option>£100k – £250k</option>
+            <option>£250k – £500k</option>
+            <option>£500k – £1M</option>
+            <option>£1M+</option>
+          </select>
+        </div>
+        <div class="fg"><label>Tell Us About Your Project</label><textarea name="message" placeholder="Describe your vision, location, rough budget and timeline..."></textarea></div>
+        <div class="form-actions">
+          <button type="submit" class="btn-sub">Send Enquiry</button>
+          <span class="form-note">We respond within 24 hours</span>
+        </div>
+        <div class="form-success" id="form-success">
+          ✓ Thank you — your enquiry has been sent. Gurminder will be in touch within 24 hours.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-body">
+      <div>
+        <div class="footer-brand"><span class="footer-brand-dot"></span>Fabrico</div>
+        <p class="footer-tagline">London's premier high-end construction and design studio. Creating exceptional homes across London and Berkshire since 2017.</p>
+        <div class="footer-soc">
+          <a href="https://instagram.com/fabrico_design_build" class="fs" target="_blank" rel="noopener" aria-label="Instagram">Ig</a>
+          <a href="#" class="fs" aria-label="Houzz">Hz</a>
+          <a href="#" class="fs" aria-label="LinkedIn">In</a>
+        </div>
+      </div>
+      <div class="fcol">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">New Builds</a></li>
+          <li><a href="#services">Full Renovations</a></li>
+          <li><a href="#services">Extensions</a></li>
+          <li><a href="#services">Loft Conversions</a></li>
+          <li><a href="#services">Basement Conversions</a></li>
+          <li><a href="#services">M&E & Project Management</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#areas">Areas Covered</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:07940219219">07940 219 219</a></li>
+          <li><a href="tel:02038838288">0203 883 8288</a></li>
+          <li><a href="mailto:info@byfabrico.com">info@byfabrico.com</a></li>
+          <li><a href="https://instagram.com/fabrico_design_build" target="_blank" rel="noopener">@fabrico_design_build</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Hidden SEO text for local search -->
+    <div class="footer-seo">
+      Fabrico Design & Build — High-end construction company serving London and Berkshire. Specialists in luxury new builds, full renovations, loft conversions, basement conversions, extensions, and interior design. Areas served: Chelsea, Kensington, Mayfair, Notting Hill, Belgravia, Fulham, Battersea, Knightsbridge, Wandsworth, Richmond, Maidenhead, Windsor, Marlow, Ascot, Cookham, Henley-on-Thames.
+    </div>
+    <div class="footer-base">
+      <span>© 2026 Fabrico Design & Build Ltd. All rights reserved.</span>
+      <span>High-End Construction & Interior Design — London & Berkshire</span>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════
+       JAVASCRIPT
+  ══════════════════════════════════════════════ -->
   <script>
-    // Animate percentage counter to match CSS animation
-    const pct = document.getElementById('pct');
-    const target = 74;
-    const duration = 3500;
-    const start = performance.now();
+    // ── Scroll header shadow
+    const hdr = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      hdr.classList.toggle('scrolled', window.scrollY > 40);
+    });
 
-    function easeOut(t) {
-      return 1 - Math.pow(1 - t, 3);
+    // ── Service pill selection (top selector strip)
+    function selectService(name) {
+      document.querySelectorAll('.svc-pill').forEach(p => {
+        p.classList.toggle('active', p.dataset.svc === name);
+      });
+      // Also activate in the form pills
+      document.querySelectorAll('#form-pills .form-svc-pill').forEach(p => {
+        if (p.dataset.val && name.toLowerCase().includes(p.dataset.val.toLowerCase().split(' ')[0].toLowerCase())) {
+          p.classList.add('active');
+        }
+      });
+      updateHiddenServices();
+      // Scroll to form
+      const el = document.getElementById('enquire');
+      if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
     }
 
-    function update(now) {
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / duration, 1);
-      const value = Math.round(easeOut(progress) * target);
-      pct.textContent = value + '%';
-      if (progress < 1) requestAnimationFrame(update);
+    // ── Form pills (multi-select)
+    function togglePill(el) {
+      el.classList.toggle('active');
+      updateHiddenServices();
     }
 
-    requestAnimationFrame(update);
+    function updateHiddenServices() {
+      const selected = [];
+      document.querySelectorAll('#form-pills .form-svc-pill.active').forEach(p => selected.push(p.dataset.val));
+      const hidden = document.getElementById('hidden-services');
+      if(hidden) hidden.value = selected.join(', ') || 'Not specified';
+    }
+
+    // ── Formspree AJAX submit
+    const form = document.getElementById('contact-form');
+    if(form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        updateHiddenServices();
+        const btn = form.querySelector('.btn-sub');
+        btn.textContent = 'Sending…';
+        btn.disabled = true;
+        try {
+          const data = new FormData(form);
+          const resp = await fetch(form.action, { method:'POST', body:data, headers:{Accept:'application/json'} });
+          if(resp.ok) {
+            form.style.opacity = '0.4';
+            document.getElementById('form-success').style.display = 'block';
+            btn.textContent = 'Sent ✓';
+          } else {
+            btn.textContent = 'Try Again';
+            btn.disabled = false;
+            alert('There was a problem sending your enquiry. Please call us directly on 07940 219 219.');
+          }
+        } catch(err) {
+          btn.textContent = 'Try Again';
+          btn.disabled = false;
+          alert('There was a problem sending your enquiry. Please call us directly on 07940 219 219.');
+        }
+      });
+    }
+
+    // ── Intersection observer — fade in elements
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if(e.isIntersecting){
+          e.target.style.opacity='1';
+          e.target.style.transform='translateY(0)';
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.06 });
+
+    document.querySelectorAll('.feat,.svc-cell,.proj-cell,.testi-cell,.proc-step,.area-row').forEach((el,i) => {
+      el.style.opacity='0';
+      el.style.transform='translateY(20px)';
+      el.style.transition=`opacity 0.65s ease ${(i%4)*0.08}s, transform 0.65s ease ${(i%4)*0.08}s`;
+      obs.observe(el);
+    });
   </script>
 </body>
 </html>
