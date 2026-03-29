@@ -12,8 +12,12 @@
   <meta name="robots" content="index, follow"/>
   <meta name="author" content="Fabrico Design & Build"/>
   <link rel="canonical" href="https://www.byfabrico.com/"/>
-  <!-- Google Search Console Verification -->
-  <meta name="google-site-verification" content="l5Ef7IyQsGnR6DtPVmwk0Dmv2jVxK8q93cDfxtPIAfM" />
+  <!-- Sitemap reference for Googlebot -->
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+  <!-- hreflang: UK English targeting -->
+  <link rel="alternate" hreflang="en-gb" href="https://www.byfabrico.com/"/>
+  <!-- Theme colour for mobile browsers -->
+  <meta name="theme-color" content="#1b5e50"/>
   <!-- Disable Cloudflare email obfuscation -->
   <meta name="cf-2fa-verify" content="disable"/>
   <meta http-equiv="x-cloudflare-email" content="off"/>
@@ -42,8 +46,11 @@
     "foundingDate": "2017",
     "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" },
     "areaServed": ["London", "Berkshire", "Kensington", "Chelsea", "Mayfair", "Notting Hill", "Maidenhead"],
-    "sameAs": ["https://www.instagram.com/fabrico_design_build"],
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "47" }
+    "sameAs": [
+      "https://www.instagram.com/fabrico_design_build",
+      "https://www.google.com/maps/search/Fabrico+Design+Build+London"
+    ],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "47", "bestRating": "5", "worstRating": "1" }
   }
   </script>
 
@@ -96,6 +103,9 @@
   }
   </script>
 
+  <!-- Preconnect to Google Fonts for faster load -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,300;0,6..96,400;1,6..96,300;1,6..96,400&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet"/>
 
   <style>
@@ -587,7 +597,7 @@
       </div>
     </div>
     <div class="header-nav">
-      <ul class="nav-list">
+      <ul class="nav-list" role="navigation" aria-label="Main navigation">
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -595,7 +605,7 @@
         <li><a href="#process">Process</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="#contact" class="nav-cta">Book Consultation</a>
+      <a href="#contact" class="nav-cta" aria-label="Book a free consultation with Fabrico">Book Consultation</a>
     </div>
   </header>
 
@@ -617,7 +627,7 @@
 
     </div>
     <div class="hero-visual">
-      <img src="chelsea_01.jpg" alt="Fabrico high-end renovation project Chelsea London SW3"/>
+      <img src="chelsea_01.jpg" alt="Fabrico high-end renovation project Chelsea London SW3" fetchpriority="high" width="1200" height="900"/>
       <div class="hero-visual-badge">Chelsea, SW3</div>
       <div class="hero-visual-label">
         <span>Full Renovation & Extension</span>
@@ -656,7 +666,7 @@
         </div>
       </div>
       <div class="about-right">
-        <img src="cookham_01.jpg" alt="Fabrico craftmanship and quality construction"/>
+        <img src="cookham_01.jpg" alt="Fabrico craftmanship and quality construction" loading="lazy" width="800" height="1000"/>
       </div>
     </div>
   </section>
@@ -825,13 +835,13 @@
       </div>
       <div class="proj-grid">
         <div class="proj-cell">
-          <div class="proj-img-wrap"><img src="chelsea_01.jpg" alt="Chelsea SW3 renovation by Fabrico"/></div>
+          <div class="proj-img-wrap"><img src="chelsea_01.jpg" alt="Chelsea SW3 renovation by Fabrico" loading="lazy" width="800" height="520"/></div>
         </div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="chelsea_02.jpg" alt="Chelsea SW3 renovation by Fabrico"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="chelsea_03.jpg" alt="Chelsea SW3 renovation by Fabrico"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="chelsea_04.jpg" alt="Chelsea SW3 renovation by Fabrico"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="chelsea_05.jpg" alt="Chelsea SW3 renovation by Fabrico"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="chelsea_06.jpg" alt="Chelsea SW3 renovation by Fabrico"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="chelsea_02.jpg" alt="Chelsea SW3 renovation by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="chelsea_03.jpg" alt="Chelsea SW3 renovation by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="chelsea_04.jpg" alt="Chelsea SW3 renovation by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="chelsea_05.jpg" alt="Chelsea SW3 renovation by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="chelsea_06.jpg" alt="Chelsea SW3 renovation by Fabrico" loading="lazy" width="800" height="520"/></div></div>
       </div>
 
       <!-- GEORGE STREET MAYFAIR -->
@@ -842,12 +852,12 @@
       </div>
       <div class="proj-grid">
         <div class="proj-cell">
-          <div class="proj-img-wrap"><img src="georgestreet.jpg" alt="George Street Mayfair by Fabrico"/></div>
+          <div class="proj-img-wrap"><img src="georgestreet.jpg" alt="George Street Mayfair by Fabrico" loading="lazy" width="800" height="520"/></div>
         </div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="georgestreet01.jpg" alt="George Street Mayfair by Fabrico"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="georgestreet02.jpg" alt="George Street Mayfair by Fabrico"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="georgestreet03.jpg" alt="George Street Mayfair by Fabrico"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="georgestreet04.jpg" alt="George Street Mayfair by Fabrico"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="georgestreet01.jpg" alt="George Street Mayfair by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="georgestreet02.jpg" alt="George Street Mayfair by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="georgestreet03.jpg" alt="George Street Mayfair by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="georgestreet04.jpg" alt="George Street Mayfair by Fabrico" loading="lazy" width="800" height="520"/></div></div>
       </div>
 
       <!-- THE LITTLE BOLTONS -->
@@ -858,10 +868,10 @@
       </div>
       <div class="proj-grid">
         <div class="proj-cell">
-          <div class="proj-img-wrap"><img src="thelittleboltons_01.jpg" alt="The Little Boltons SW5 by Fabrico"/></div>
+          <div class="proj-img-wrap"><img src="thelittleboltons_01.jpg" alt="The Little Boltons SW5 by Fabrico" loading="lazy" width="800" height="520"/></div>
         </div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="thelittleboltons_02.jpg" alt="The Little Boltons SW5 by Fabrico"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="thelittleboltons_03.jpg" alt="The Little Boltons SW5 by Fabrico"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="thelittleboltons_02.jpg" alt="The Little Boltons SW5 by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="thelittleboltons_03.jpg" alt="The Little Boltons SW5 by Fabrico" loading="lazy" width="800" height="520"/></div></div>
       </div>
 
       <!-- COOKHAM NEW BUILD -->
@@ -872,15 +882,15 @@
       </div>
       <div class="proj-grid">
         <div class="proj-cell">
-          <div class="proj-img-wrap"><img src="cookham_01.jpg" alt="Cookham Berkshire new build by Fabrico"/></div>
+          <div class="proj-img-wrap"><img src="cookham_01.jpg" alt="Cookham Berkshire new build by Fabrico" loading="lazy" width="800" height="520"/></div>
         </div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="cookham_02.jpg" alt="Cookham new build by Fabrico"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="cookham_03.jpg" alt="Cookham new build by Fabrico"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="cookham_04.jpg" alt="Cookham new build by Fabrico"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="cookham_05.jpg" alt="Cookham new build by Fabrico"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="cookham_06.jpg" alt="Cookham new build by Fabrico"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="cookham_07.jpg" alt="Cookham new build by Fabrico"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="cookham_08.jpg" alt="Cookham new build by Fabrico"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="cookham_02.jpg" alt="Cookham new build by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="cookham_03.jpg" alt="Cookham new build by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="cookham_04.jpg" alt="Cookham new build by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="cookham_05.jpg" alt="Cookham new build by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="cookham_06.jpg" alt="Cookham new build by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="cookham_07.jpg" alt="Cookham new build by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="cookham_08.jpg" alt="Cookham new build by Fabrico" loading="lazy" width="800" height="520"/></div></div>
       </div>
 
       <!-- RENOVATIONS -->
@@ -891,11 +901,11 @@
       </div>
       <div class="proj-grid">
         <div class="proj-cell">
-          <div class="proj-img-wrap"><img src="Renovations.jpg" alt="Fabrico renovation project"/></div>
+          <div class="proj-img-wrap"><img src="Renovations.jpg" alt="Fabrico renovation project" loading="lazy" width="800" height="520"/></div>
         </div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="Renovations_01.jpg" alt="Fabrico renovation project"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="Renovations_02.jpg" alt="Fabrico renovation project"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="Renovations_03.jpg" alt="Fabrico renovation project"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="Renovations_01.jpg" alt="Fabrico renovation project" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="Renovations_02.jpg" alt="Fabrico renovation project" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="Renovations_03.jpg" alt="Fabrico renovation project" loading="lazy" width="800" height="520"/></div></div>
       </div>
 
       <!-- NEW BUILDS -->
@@ -906,7 +916,7 @@
       </div>
       <div class="proj-grid">
         <div class="proj-cell">
-          <div class="proj-img-wrap"><img src="NewBuilds.jpg" alt="Fabrico new build home"/></div>
+          <div class="proj-img-wrap"><img src="NewBuilds.jpg" alt="Fabrico new build home" loading="lazy" width="800" height="520"/></div>
         </div>
       </div>
 
@@ -917,11 +927,11 @@
         <div class="proj-group-sub">Underpinning · Foundations · RSJ · Piling</div>
       </div>
       <div class="proj-grid">
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="structural_01.jpg" alt="Fabrico structural works"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="structural_02.jpg" alt="Fabrico structural works"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="structural_03.jpg" alt="Fabrico structural works"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="structural_04.png" alt="Fabrico structural works"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="structural_05.png" alt="Fabrico structural works"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="structural_01.jpg" alt="Fabrico structural works" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="structural_02.jpg" alt="Fabrico structural works" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="structural_03.jpg" alt="Fabrico structural works" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="structural_04.png" alt="Fabrico structural works" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="structural_05.png" alt="Fabrico structural works" loading="lazy" width="800" height="520"/></div></div>
       </div>
 
       <!-- END TO END SERVICE — BEFORE / AFTER -->
@@ -933,7 +943,7 @@
       <div class="before-after-wrap">
         <div class="ba-panel">
           <div class="ba-img-wrap">
-            <img src="end_to_end_before.png" alt="Before — Fabrico project"/>
+            <img src="end_to_end_before.png" alt="Before — Fabrico project" loading="lazy" width="800" height="420"/>
           </div>
           <div class="ba-label ba-label--before">
             <span class="ba-pill">Before</span>
@@ -951,7 +961,7 @@
         </div>
         <div class="ba-panel">
           <div class="ba-img-wrap">
-            <img src="end_to_end_after.png" alt="After — Fabrico project"/>
+            <img src="end_to_end_after.png" alt="After — Fabrico project" loading="lazy" width="800" height="420"/>
           </div>
           <div class="ba-label ba-label--after">
             <span class="ba-pill ba-pill--after">After</span>
@@ -1166,7 +1176,7 @@
         <div class="footer-brand"><span class="footer-brand-dot"></span>Fabrico</div>
         <p class="footer-tagline">London's premier high-end construction and design studio. Creating exceptional homes across London and Berkshire since 2017.</p>
         <div class="footer-soc">
-          <a href="https://instagram.com/fabrico_design_build" class="fs" target="_blank" rel="noopener" aria-label="Instagram">Ig</a>
+          <a href="https://instagram.com/fabrico_design_build" class="fs" target="_blank" rel="noopener" aria-label="Follow Fabrico on Instagram">Ig</a>
         </div>
       </div>
       <div class="fcol">
@@ -1187,7 +1197,7 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#process">Our Process</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
         </ul>
       </div>
       <div class="fcol">
