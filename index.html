@@ -201,16 +201,15 @@
     .proj-group-title { font-family: 'Bodoni Moda', serif; font-size: 28px; font-weight: 300; color: var(--ink); margin-bottom: 4px; }
     .proj-group-sub { font-size: 11px; color: var(--faint); }
     .proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--rule-thick); border-left: 1px solid var(--rule-thick); margin: 0 60px 0; }
-    .proj-grid .proj-cell { border-right: 1px solid var(--rule-thick); border-bottom: 1px solid var(--rule-thick); }
-    .proj-grid .proj-cell.double { grid-row: span 2; }
-    .proj-grid .proj-img-wrap { min-height: 240px; }
-    .proj-grid .proj-cell.double .proj-img-wrap { min-height: 480px; }
+    .proj-grid .proj-cell { border-right: 1px solid var(--rule-thick); border-bottom: 1px solid var(--rule-thick); overflow: hidden; position: relative; }
+    .proj-grid .proj-img-wrap { width: 100%; height: 260px; overflow: hidden; }
+    .proj-grid .proj-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.92) saturate(0.8); transition: transform 0.6s ease; }
+    .proj-grid .proj-cell:hover .proj-img-wrap img { transform: scale(1.04); }
     #projects { padding-bottom: 80px; }
     @media (max-width: 960px) {
       .proj-group-label { padding: 40px 24px 16px; }
       .proj-grid { grid-template-columns: 1fr 1fr; margin: 0 24px; }
-      .proj-grid .proj-cell.double { grid-row: span 1; }
-      .proj-grid .proj-img-wrap { min-height: 180px; }
+      .proj-grid .proj-img-wrap { height: 180px; }
     }
     .sec-head { padding: 80px 60px 0; display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 52px; }
     .sec-kicker { font-size: 9px; letter-spacing: 0.45em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
@@ -486,7 +485,7 @@
         <span class="logo-dot"></span>Fabrico
       </a>
       <div class="header-contact">
-        <a href="/cdn-cgi/l/email-protection#d3babdb5bc93b1aab5b2b1a1bab0bcfdb0bcbe"><span class="__cf_email__" data-cfemail="274e49414867455e414645554e44480944484a">[email&#160;protected]</span></a>
+        <a href="mailto:info@byfabrico.com" id="hdr-email">info@byfabrico.com</a>
       </div>
     </div>
     <div class="header-nav">
@@ -726,7 +725,7 @@
         <div class="proj-group-sub">New Basement · Loft · Rear Extension · Bespoke Fit-Out</div>
       </div>
       <div class="proj-grid">
-        <div class="proj-cell double">
+        <div class="proj-cell">
           <div class="proj-img-wrap"><img src="chelsea_01.jpg" alt="Chelsea SW3 renovation by Fabrico"/></div>
         </div>
         <div class="proj-cell"><div class="proj-img-wrap"><img src="chelsea_02.jpg" alt="Chelsea SW3 renovation by Fabrico"/></div></div>
@@ -743,7 +742,7 @@
         <div class="proj-group-sub">W1S — 1,958 sqft · Stone Baths · Lutron AV</div>
       </div>
       <div class="proj-grid">
-        <div class="proj-cell double">
+        <div class="proj-cell">
           <div class="proj-img-wrap"><img src="georgestreet.jpg" alt="George Street Mayfair by Fabrico"/></div>
         </div>
         <div class="proj-cell"><div class="proj-img-wrap"><img src="georgestreet01.jpg" alt="George Street Mayfair by Fabrico"/></div></div>
@@ -759,7 +758,7 @@
         <div class="proj-group-sub">London SW5 — 1,500 sqft</div>
       </div>
       <div class="proj-grid">
-        <div class="proj-cell double">
+        <div class="proj-cell">
           <div class="proj-img-wrap"><img src="thelittleboltons_01.jpg" alt="The Little Boltons SW5 by Fabrico"/></div>
         </div>
         <div class="proj-cell"><div class="proj-img-wrap"><img src="thelittleboltons_02.jpg" alt="The Little Boltons SW5 by Fabrico"/></div></div>
@@ -773,7 +772,7 @@
         <div class="proj-group-sub">Maidenhead SL6 — 2,500 sqft Design & Build</div>
       </div>
       <div class="proj-grid">
-        <div class="proj-cell double">
+        <div class="proj-cell">
           <div class="proj-img-wrap"><img src="cookham_01.jpg" alt="Cookham Berkshire new build by Fabrico"/></div>
         </div>
         <div class="proj-cell"><div class="proj-img-wrap"><img src="cookham_02.jpg" alt="Cookham new build by Fabrico"/></div></div>
@@ -792,7 +791,7 @@
         <div class="proj-group-sub">Back-to-brick refurbishments across London</div>
       </div>
       <div class="proj-grid">
-        <div class="proj-cell double">
+        <div class="proj-cell">
           <div class="proj-img-wrap"><img src="Renovations.jpg" alt="Fabrico renovation project"/></div>
         </div>
         <div class="proj-cell"><div class="proj-img-wrap"><img src="Renovations_01.jpg" alt="Fabrico renovation project"/></div></div>
@@ -807,7 +806,7 @@
         <div class="proj-group-sub">Bespoke homes designed and built to exacting standards</div>
       </div>
       <div class="proj-grid">
-        <div class="proj-cell double">
+        <div class="proj-cell">
           <div class="proj-img-wrap"><img src="NewBuilds.jpg" alt="Fabrico new build home"/></div>
         </div>
       </div>
@@ -833,10 +832,10 @@
         <div class="proj-group-sub">From planning to handover — complete transparency throughout</div>
       </div>
       <div class="proj-grid">
-        <div class="proj-cell double">
-          <div class="proj-img-wrap"><img src="end_to_end_before.png" alt="Fabrico end to end project management"/></div>
+        <div class="proj-cell">
+          <div class="proj-img-wrap"><img src="end_to_end_service_01.png" alt="Fabrico end to end project management"/></div>
         </div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="end_to_end_after.png" alt="Fabrico end to end project management"/></div></div>
+        <div class="proj-cell"><div class="proj-img-wrap"><img src="end_to_end_service_02.png" alt="Fabrico end to end project management"/></div></div>
       </div>
 
     </div>
@@ -905,7 +904,7 @@
         </div>
         <div class="c-row">
           <div class="c-row-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div class="c-row-content"><div class="c-row-label">Email</div><a href="/cdn-cgi/l/email-protection#5831363e37183a213e393a2a313b37763b3735"><span class="__cf_email__" data-cfemail="bcd5d2dad3fcdec5dadddeced5dfd392dfd3d1">[email&#160;protected]</span></a></div>
+          <div class="c-row-content"><div class="c-row-label">Email</div><a href="mailto:info@byfabrico.com">info@byfabrico.com</a></div>
         </div>
         <div class="c-row">
           <div class="c-row-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
@@ -1028,7 +1027,7 @@
         <ul>
           <li><a href="tel:07940219219">07940 219 219</a></li>
           <li><a href="tel:02038838288">0203 883 8288</a></li>
-          <li><a href="/cdn-cgi/l/email-protection#afc6c1c9c0efcdd6c9cecdddc6ccc081ccc0c2"><span class="__cf_email__" data-cfemail="a2cbccc4cde2c0dbc4c3c0d0cbc1cd8cc1cdcf">[email&#160;protected]</span></a></li>
+          <li><a href="mailto:info@byfabrico.com">info@byfabrico.com</a></li>
           <li><a href="https://instagram.com/fabrico_design_build" target="_blank" rel="noopener">@fabrico_design_build</a></li>
         </ul>
       </div>
@@ -1046,7 +1045,7 @@
   <!-- ══════════════════════════════════════════════
        JAVASCRIPT
   ══════════════════════════════════════════════ -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     // ── Scroll header shadow
     const hdr = document.getElementById('site-header');
     window.addEventListener('scroll', () => {
