@@ -44,7 +44,7 @@
     "telephone": "+447940219219",
     "email": "info@byfabrico.com",
     "foundingDate": "2017",
-    "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" },
+    "address": { "@type": "PostalAddress", "streetAddress": "54 Poland Street", "addressLocality": "London", "addressRegion": "Soho", "postalCode": "W1F 7NJ", "addressCountry": "GB" },
     "areaServed": ["London", "Berkshire", "Kensington", "Chelsea", "Mayfair", "Notting Hill", "Maidenhead"],
     "sameAs": [
       "https://www.instagram.com/fabrico_design_build",
@@ -593,7 +593,7 @@
         <span class="logo-dot"></span>Fabrico
       </a>
       <div class="header-contact">
-        <a href="mailto:info@byfabrico.com">info@byfabrico.com</a>
+        <a href="/cdn-cgi/l/email-protection#c7aea9a1a887a5bea1a6a5b5aea4a8e9a4a8aa"><span class="__cf_email__" data-cfemail="8ce5e2eae3cceef5eaedeefee5efe3a2efe3e1">[email&#160;protected]</span></a>
       </div>
     </div>
     <div class="header-nav">
@@ -1083,11 +1083,15 @@
         </div>
         <div class="c-row">
           <div class="c-row-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div class="c-row-content"><div class="c-row-label">Email</div><a href="mailto:info@byfabrico.com">info@byfabrico.com</a></div>
+          <div class="c-row-content"><div class="c-row-label">Email</div><a href="/cdn-cgi/l/email-protection#721b1c141d32100b141310001b111d5c111d1f"><span class="__cf_email__" data-cfemail="c7aea9a1a887a5bea1a6a5b5aea4a8e9a4a8aa">[email&#160;protected]</span></a></div>
         </div>
         <div class="c-row">
           <div class="c-row-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
           <div class="c-row-content"><div class="c-row-label">Instagram</div><a href="https://instagram.com/fabrico_design_build" target="_blank" rel="noopener">@fabrico_design_build</a></div>
+        </div>
+        <div class="c-row">
+          <div class="c-row-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="c-row-content"><div class="c-row-label">Address</div><a href="https://maps.google.com/?q=54+Poland+Street+London+W1F+7NJ" target="_blank" rel="noopener">54 Poland Street, Soho, London W1F 7NJ</a></div>
         </div>
         <div class="c-row">
           <div class="c-row-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
@@ -1205,8 +1209,9 @@
         <ul>
           <li><a href="tel:07940219219">07940 219 219</a></li>
           <li><a href="tel:02038838288">0203 883 8288</a></li>
-          <li><a href="mailto:info@byfabrico.com">info@byfabrico.com</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#80e9eee6efc0e2f9e6e1e2f2e9e3efaee3efed"><span class="__cf_email__" data-cfemail="472e29212807253e212625352e24286924282a">[email&#160;protected]</span></a></li>
           <li><a href="https://instagram.com/fabrico_design_build" target="_blank" rel="noopener">@fabrico_design_build</a></li>
+          <li><a href="https://maps.google.com/?q=54+Poland+Street+London+W1F+7NJ" target="_blank" rel="noopener" style="line-height:1.6">54 Poland Street, Soho<br>London W1F 7NJ</a></li>
         </ul>
       </div>
     </div>
@@ -1223,7 +1228,7 @@
   <!-- ══════════════════════════════════════════════
        JAVASCRIPT
   ══════════════════════════════════════════════ -->
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // ── Scroll header shadow
     const hdr = document.getElementById('site-header');
     window.addEventListener('scroll', () => {
@@ -1296,20 +1301,4 @@
       entries.forEach(e => {
         if (e.isIntersecting) {
           e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.proc-step, .svc-cell, .testi-cell, .feat').forEach(el => {
-      el.classList.add('fade-in-el');
-      observer.observe(el);
-    });
-  </script>
-
-  <style>
-    /* ── Fade-in animation for observer */
-    .fade-in-el { opacity: 0; transform: translateY(16px); transition: opacity 0.55s ease, transform 0.55s ease; }
-    .fade-in-el.visible { opacity: 1; transform: translateY(0); }
-  </style>
-</body>
-</html>
+          observer.unobs
