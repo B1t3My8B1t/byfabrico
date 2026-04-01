@@ -1,0 +1,13 @@
+# robots.txt — Fabrico Design & Build
+# https://www.byfabrico.com
+
+User-agent: *
+Allow: /
+
+# Point all crawlers to the sitemap
+Sitemap: https://www.byfabrico.com/sitemap.xml
+
+# Block access to any future admin or private paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.env
