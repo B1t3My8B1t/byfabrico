@@ -159,7 +159,7 @@ git push origin main
 3. [ ] Optimise large images (chelsea_01.jpg and Patio.jpg are 7MB+ — need compressing)
 4. [ ] Switch Git auth from HTTPS token to SSH key (`id_ed25519` already exists)
 5. [ ] Add `og-image.jpg` (referenced in meta but missing from repo)
-6. [ ] Add `privacy-policy` page (linked in footer)
+6. [x] Add `privacy-policy` page (linked in footer)
 7. [ ] Await Google Business Profile verification
 8. [ ] Consider adding Google Analytics (GA4)
 
