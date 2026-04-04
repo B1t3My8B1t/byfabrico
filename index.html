@@ -538,19 +538,6 @@
 
     /* FORM */
     .contact-right { padding: 80px 60px; }
-    .form-service-select { margin-bottom: 32px; }
-    .form-service-select p { font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--faint); margin-bottom: 16px; }
-    .form-svc-pills { display: flex; flex-wrap: wrap; gap: 8px; }
-    .form-svc-pill {
-      padding: 9px 16px; border: 1px solid var(--rule-thick);
-      font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase;
-      color: var(--mid); cursor: pointer; transition: all 0.22s;
-      background: transparent; display: flex; align-items: center; gap: 7px;
-      user-select: none;
-    }
-    .form-svc-pill:hover { border-color: var(--teal); color: var(--teal); }
-    .form-svc-pill.active { background: var(--teal); border-color: var(--teal); color: var(--white); }
-    .form-svc-pill svg { width: 12px; height: 12px; stroke: currentColor; fill: none; stroke-width: 1.8; flex-shrink: 0; }
     .cform { display: flex; flex-direction: column; gap: 18px; }
     .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .fg { display: flex; flex-direction: column; gap: 6px; }
@@ -1138,41 +1125,10 @@
 
     <!-- FORM — sends via Formspree / EmailJS -->
     <div class="contact-right">
-      <div class="form-service-select">
-        <p>I am interested in — (select all that apply)</p>
-        <div class="form-svc-pills" id="form-pills">
-          <div class="form-svc-pill" data-val="New Build" onclick="togglePill(this)">
-            <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-6 7 6v12M10 21v-6h4v6"/></svg>New Build
-          </div>
-          <div class="form-svc-pill" data-val="Full Renovation" onclick="togglePill(this)">
-            <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="1"/><path d="M2 9h20M9 9v11"/></svg>Renovation
-          </div>
-          <div class="form-svc-pill" data-val="Extension" onclick="togglePill(this)">
-            <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V11l7-5 7 5v10M17 11v10h4V13l-4-2z"/></svg>Extension
-          </div>
-          <div class="form-svc-pill" data-val="Loft Conversion" onclick="togglePill(this)">
-            <svg viewBox="0 0 24 24"><path d="M3 12L12 4l9 8M5 12v9h14v-9"/></svg>Loft
-          </div>
-          <div class="form-svc-pill" data-val="Basement" onclick="togglePill(this)">
-            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="8" rx="1"/><rect x="2" y="13" width="20" height="8" rx="1"/></svg>Basement
-          </div>
-          <div class="form-svc-pill" data-val="Interior Design" onclick="togglePill(this)">
-            <svg viewBox="0 0 24 24"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"/></svg>Interior Design
-          </div>
-          <div class="form-svc-pill" data-val="M&E" onclick="togglePill(this)">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M4.93 19.07l1.41-1.41M12 2v2M12 20v2M20 12h2M2 12h2"/></svg>M&E
-          </div>
-          <div class="form-svc-pill" data-val="Other" onclick="togglePill(this)">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>Other
-          </div>
-        </div>
-      </div>
-
       <form class="cform" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="2984b81e-fd14-4e9d-92e9-4ae661b43999"/>
         <input type="hidden" name="subject" value="New Enquiry — Fabrico Design & Build"/>
         <input type="hidden" name="from_name" value="Fabrico Website"/>
-        <input type="hidden" name="services_selected" id="hidden-services" value=""/>
         <div class="frow">
           <div class="fg"><label>First Name *</label><input type="text" name="first_name" placeholder="John" required/></div>
           <div class="fg"><label>Last Name *</label><input type="text" name="last_name" placeholder="Smith" required/></div>
