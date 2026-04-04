@@ -172,6 +172,71 @@
     }
     .nav-cta:hover { background: var(--near-black); }
 
+    /* Hamburger button */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 36px;
+      height: 36px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: var(--ink);
+      transition: transform 0.3s, opacity 0.3s;
+      transform-origin: center;
+    }
+    .hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    /* Mobile menu overlay */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 99;
+      background: var(--white);
+      flex-direction: column;
+      padding: 100px 24px 48px;
+    }
+    .mobile-menu.is-open { display: flex; }
+    .mobile-menu ul { list-style: none; flex: 1; }
+    .mobile-menu ul li { border-bottom: 1px solid var(--rule-thick); }
+    .mobile-menu ul li a {
+      display: block;
+      padding: 20px 0;
+      font-family: 'Bodoni Moda', serif;
+      font-size: 28px;
+      font-weight: 300;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      transition: color 0.2s;
+    }
+    .mobile-menu ul li a:hover { color: var(--teal); }
+    .mobile-menu-cta {
+      display: block;
+      margin-top: 36px;
+      text-align: center;
+      padding: 16px;
+      background: var(--teal);
+      color: var(--white);
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.25s;
+    }
+    .mobile-menu-cta:hover { background: var(--near-black); }
+
     /* ══════════════════════════════════════════════
        HERO
     ══════════════════════════════════════════════ */
@@ -529,6 +594,8 @@
       .header-contact { display: none; }
       .header-nav { padding: 0 24px; }
       .nav-list { display: none; }
+      .nav-cta { display: none; }
+      .hamburger { display: flex; }
       .hero { grid-template-columns: 1fr; }
       .hero-visual { display: none; }
       .hero-text { padding: 60px 24px; border-right: none; }
@@ -589,8 +656,23 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
       <a href="#contact" class="nav-cta" aria-label="Book a free consultation with Fabrico">Book Consultation</a>
+      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
+
+  <!-- Mobile menu -->
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="mobile-menu-cta">Book Consultation</a>
+  </nav>
 
   <!-- ══════════════════════════════════════════════
        HERO
@@ -1177,3 +1259,32 @@
       <span>High-End Construction & Interior Design — London & Berkshire</span>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var btn = document.querySelector('.hamburger');
+      var menu = document.getElementById('mobile-menu');
+      if (!btn || !menu) return;
+
+      function openMenu() {
+        menu.classList.add('is-open');
+        btn.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMenu() {
+        menu.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+
+      btn.addEventListener('click', function () {
+        var isOpen = menu.classList.contains('is-open');
+        isOpen ? closeMenu() : openMenu();
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+    })();
+  </script>
