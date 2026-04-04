@@ -117,7 +117,6 @@
       --teal: #1b5e50;
       --teal-light: #2e8a71;
       --teal-pale: #e8f0ee;
-      --gold: #c9a96e;
       --rule: rgba(15,15,13,0.08);
       --rule-thick: rgba(15,15,13,0.14);
     }
@@ -420,18 +419,6 @@
     /* ══════════════════════════════════════════════
        TESTIMONIALS
     ══════════════════════════════════════════════ */
-    .testi-layout { background: var(--off); border-top: 1px solid var(--rule-thick); border-bottom: 1px solid var(--rule-thick); padding: 80px 60px; }
-    .testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; border: 1px solid var(--rule); margin-top: 52px; }
-    .testi-cell { padding: 40px 32px; border-right: 1px solid var(--rule); transition: background 0.25s; }
-    .testi-cell:last-child { border-right: none; }
-    .testi-cell:hover { background: var(--white); }
-    .testi-stars { font-size: 12px; letter-spacing: 2px; color: var(--gold); margin-bottom: 18px; }
-    .testi-cell blockquote { font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 14.5px; line-height: 1.78; color: var(--ink); margin-bottom: 22px; }
-    .testi-name { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink); font-weight: 400; }
-    .testi-loc { font-size: 10px; color: var(--faint); margin-top: 3px; }
-    .testi-verified { font-size: 8.5px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-top: 8px; display: flex; align-items: center; gap: 5px; }
-    .testi-verified svg { width: 12px; height: 12px; stroke: var(--teal); fill: none; }
-
     /* ══════════════════════════════════════════════
        PROCESS STRIP
     ══════════════════════════════════════════════ */
@@ -598,7 +585,6 @@
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#reviews">Reviews</a></li>
         <li><a href="#process">Process</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -1010,37 +996,6 @@
         <div class="proc-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
         <div class="proc-title">Handover</div>
         <div class="proc-desc">Snag-free handover, full documentation, warranties, and aftercare. Your home, perfected.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════════
-       TESTIMONIALS
-  ══════════════════════════════════════════════ -->
-  <section class="testi-layout" id="reviews">
-    <div class="sec-kicker">Client Reviews</div>
-    <h2>What Our <em>Clients Say</em></h2>
-    <div class="testi-grid">
-      <div class="testi-cell">
-        <div class="testi-stars">★★★★★</div>
-        <blockquote>"Fabrico transformed our Chelsea townhouse completely. The attention to detail in the bespoke joinery and speed of the project was remarkable. Truly the best builders we have ever worked with."</blockquote>
-        <div class="testi-name">James & Sarah T.</div>
-        <div class="testi-loc">Chelsea, SW3 — Full Renovation & Loft</div>
-        <div class="testi-verified"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> Verified Client</div>
-      </div>
-      <div class="testi-cell">
-        <div class="testi-stars">★★★★★</div>
-        <blockquote>"From planning through to handover, Fabrico were professional, transparent and delivered exactly what they promised. The live tracking app kept us informed at every stage."</blockquote>
-        <div class="testi-name">Marcus L.</div>
-        <div class="testi-loc">Mayfair, W1 — Luxury Apartment Refurbishment</div>
-        <div class="testi-verified"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> Verified Client</div>
-      </div>
-      <div class="testi-cell">
-        <div class="testi-stars">★★★★★</div>
-        <blockquote>"Our Cookham new build came in on budget and on time. The German kitchen, underfloor heating, and landscaping are all to an incredibly high standard. Could not recommend Fabrico more highly."</blockquote>
-        <div class="testi-name">The Hartley Family</div>
-        <div class="testi-loc">Cookham, Berkshire — 2,500 sqft New Build</div>
-        <div class="testi-verified"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> Verified Client</div>
       </div>
     </div>
   </section>
