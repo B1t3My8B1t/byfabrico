@@ -1235,4 +1235,15 @@
         link.addEventListener('click', closeMenu);
       });
     })();
+
+    function selectService(name) {
+      // Highlight active pill in both the svc-selector strip and the services grid
+      document.querySelectorAll('.svc-pill, .svc-cell').forEach(function (el) {
+        el.classList.toggle('active', el.dataset.svc === name || el.getAttribute('onclick') === "selectService('" + name + "')");
+      });
+
+      // Scroll to the contact form
+      var form = document.getElementById('contact');
+      if (form) form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   </script>
