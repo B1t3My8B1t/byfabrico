@@ -323,12 +323,12 @@
        BEFORE / AFTER
     ══════════════════════════════════════════════ */
     .ba-slider {
-      position: relative; overflow: hidden; height: 420px;
+      position: relative; overflow: hidden; height: 580px;
       margin: 0 60px; border: 1px solid var(--rule-thick);
       background: var(--near-black); cursor: ew-resize;
       user-select: none; -webkit-user-select: none;
     }
-    .ba-slider img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
+    .ba-slider img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; display: block; pointer-events: none; }
     .ba-after { z-index: 1; }
     .ba-before { z-index: 2; clip-path: inset(0 50% 0 0); }
     .ba-label {
@@ -336,8 +336,8 @@
       padding: 24px 28px;
       background: linear-gradient(to top, rgba(15,15,13,0.92) 0%, transparent 100%);
     }
-    .ba-label--before { left: 0; right: 50%; }
-    .ba-label--after { left: 50%; right: 0; }
+    .ba-label--before { left: 28px; right: auto; }
+    .ba-label--after { right: 28px; left: auto; text-align: right; }
     .ba-pill {
       display: inline-block; font-size: 8px; letter-spacing: 0.35em;
       text-transform: uppercase; padding: 5px 14px;
@@ -368,7 +368,7 @@
     }
     .ba-handle-icon svg { width: 18px; height: 18px; }
     @media (max-width: 960px) {
-      .ba-slider { height: 260px; margin: 0 24px; }
+      .ba-slider { height: 360px; margin: 0 24px; }
     }
     .proj-group-label { padding: 48px 60px 20px; }
     .proj-group-tag { font-size: 8px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--teal); margin-bottom: 6px; }
@@ -395,11 +395,11 @@
     /* ══════════════════════════════════════════════
        ABOUT
     ══════════════════════════════════════════════ */
-    .about-layout { display: grid; grid-template-columns: 5fr 7fr; border-top: 1px solid var(--rule-thick); border-bottom: 1px solid var(--rule-thick); }
+    .about-layout { display: grid; grid-template-columns: 7fr 5fr; border-top: 1px solid var(--rule-thick); border-bottom: 1px solid var(--rule-thick); }
     .about-left { padding: 80px 60px; border-right: 1px solid var(--rule); }
-    .about-left p { font-size: 13px; line-height: 1.9; color: var(--mid); margin-bottom: 16px; }
-    .about-left blockquote { font-family: 'Playfair Display', serif; font-style: italic; font-size: 17px; line-height: 1.65; color: var(--ink); border-left: 2px solid var(--teal); padding-left: 20px; margin-top: 32px; }
-    .about-right { position: relative; }
+    .about-left p { font-size: 15px; line-height: 1.85; color: var(--mid); margin-bottom: 18px; }
+    .about-left blockquote { font-family: 'Playfair Display', serif; font-style: italic; font-size: 18px; line-height: 1.65; color: var(--ink); border-left: 2px solid var(--teal); padding-left: 20px; margin-top: 32px; }
+    .about-right { position: relative; max-height: 700px; overflow: hidden; }
     .about-right img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(0.75); }
     .about-awards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--rule); border-top: 1px solid var(--rule); margin-top: 40px; }
     .award-cell { background: var(--off); padding: 18px 0; text-align: center; }
@@ -733,6 +733,7 @@
       <div class="about-left">
         <div class="sec-kicker">About Fabrico</div>
         <h2>Built on<br><em>Excellence</em></h2>
+        <br>
         <p>Founded in 2017, Fabrico is a high-end construction company known for delivering excellence in every project. Our journey began with small extensions and refurbishment jobs, and we have since expanded to specialise in new build homes across London and Berkshire.</p>
         <p>Over the years we have grown to collaborate with developers and expanded into the homeowner market, aiming to deliver the highest quality results directly to our clients.</p>
         <p>We pride ourselves on having a team of specialist trades who oversee every aspect of the project. Our rigorous sign-off process ensures quality at every stage. We've partnered with a leading construction software company, allowing clients to track every step of their project — from planning to completion — with full transparency.</p>
