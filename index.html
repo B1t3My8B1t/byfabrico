@@ -103,7 +103,7 @@
   <!-- Preconnect to Google Fonts for faster load -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,300;0,6..96,400;1,6..96,300;1,6..96,400&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet"/>
 
   <style>
     :root {
@@ -149,19 +149,19 @@
       border-bottom: 1px solid var(--rule);
     }
     .logo {
-      font-family: 'Bodoni Moda', serif;
-      font-size: 18px; font-weight: 400; letter-spacing: 0.15em;
+      font-family: 'Playfair Display', serif;
+      font-size: 20px; font-weight: 400; letter-spacing: 0.12em;
       text-transform: uppercase; color: var(--ink); text-decoration: none;
       display: flex; align-items: center; gap: 10px;
     }
     .logo-dot { width: 6px; height: 6px; background: var(--teal); border-radius: 50%; display: inline-block; }
-    .header-contact { display: flex; gap: 28px; font-size: 11px; letter-spacing: 0.05em; color: var(--mid); align-items: center; }
+    .header-contact { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.05em; color: var(--mid); align-items: center; }
     .header-contact a { color: var(--mid); text-decoration: none; transition: color 0.2s; }
     .header-contact a:hover { color: var(--teal); }
     .header-contact .sep { color: var(--rule-thick); }
     .header-nav { padding: 0 60px; height: 48px; display: flex; align-items: center; justify-content: space-between; }
     .nav-list { display: flex; gap: 44px; list-style: none; }
-    .nav-list a { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--mid); text-decoration: none; transition: color 0.2s; position: relative; padding-bottom: 2px; }
+    .nav-list a { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink); text-decoration: none; transition: color 0.2s; position: relative; padding-bottom: 2px; }
     .nav-list a::after { content:''; position:absolute; bottom:0; left:0; right:0; height:1px; background:var(--teal); transform:scaleX(0); transform-origin:left; transition:transform 0.25s; }
     .nav-list a:hover { color: var(--ink); }
     .nav-list a:hover::after { transform:scaleX(1); }
@@ -213,7 +213,7 @@
     .mobile-menu ul li a {
       display: block;
       padding: 20px 0;
-      font-family: 'Bodoni Moda', serif;
+      font-family: 'Playfair Display', serif;
       font-size: 28px;
       font-weight: 300;
       color: var(--ink);
@@ -252,10 +252,10 @@
     }
     .hero-kicker { font-size: 9px; letter-spacing: 0.5em; text-transform: uppercase; color: var(--faint); display: flex; align-items: center; gap: 10px; margin-bottom: 48px; }
     .hero-kicker::before { content:''; display:block; width:24px; height:1px; background:var(--faint); flex-shrink: 0; }
-    .hero-num { font-family: 'Bodoni Moda', serif; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--teal); margin-bottom: 16px; animation: fadeUp 0.8s ease 0.2s both; }
+    .hero-num { font-family: 'Playfair Display', serif; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--teal); margin-bottom: 16px; animation: fadeUp 0.8s ease 0.2s both; }
     h1 {
-      font-family: 'Bodoni Moda', serif;
-      font-size: clamp(52px, 6.5vw, 104px); font-weight: 300;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(52px, 6.5vw, 104px); font-weight: 400;
       line-height: 0.96; letter-spacing: -0.01em;
       margin-bottom: 36px;
       animation: fadeUp 0.8s ease 0.4s both;
@@ -269,7 +269,7 @@
     .btn-line:hover { border-color: var(--ink); color: var(--ink); }
     .hero-footer-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--rule); border-top: 1px solid var(--rule); }
     .hero-stat { background: var(--white); padding: 22px 0; }
-    .hero-stat-n { font-family: 'Bodoni Moda', serif; font-size: 32px; color: var(--ink); line-height: 1; }
+    .hero-stat-n { font-family: 'Playfair Display', serif; font-size: 32px; color: var(--ink); line-height: 1; }
     .hero-stat-l { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--faint); margin-top: 4px; }
 
     .hero-visual { position: relative; overflow: hidden; background: var(--off); }
@@ -316,26 +316,28 @@
     .feat { padding: 40px 32px; border-right: 1px solid var(--rule); transition: background 0.25s; }
     .feat:last-child { border-right: none; }
     .feat:hover { background: var(--off); }
-    .feat-num { font-family: 'Bodoni Moda', serif; font-size: 44px; color: var(--ink); line-height: 1; margin-bottom: 6px; }
+    .feat-num { font-family: 'Playfair Display', serif; font-size: 44px; color: var(--ink); line-height: 1; margin-bottom: 6px; }
     .feat-label { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--faint); }
 
     /* ══════════════════════════════════════════════
        BEFORE / AFTER
     ══════════════════════════════════════════════ */
-    .before-after-wrap {
-      display: grid; grid-template-columns: 1fr auto 1fr;
-      margin: 0 60px 0; border: 1px solid var(--rule-thick);
-      background: var(--near-black); overflow: hidden;
+    .ba-slider {
+      position: relative; overflow: hidden; height: 420px;
+      margin: 0 60px; border: 1px solid var(--rule-thick);
+      background: var(--near-black); cursor: ew-resize;
+      user-select: none; -webkit-user-select: none;
     }
-    .ba-panel { position: relative; overflow: hidden; }
-    .ba-img-wrap { width: 100%; height: 420px; overflow: hidden; }
-    .ba-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.7s ease; }
-    .ba-panel:hover .ba-img-wrap img { transform: scale(1.03); }
+    .ba-slider img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
+    .ba-after { z-index: 1; }
+    .ba-before { z-index: 2; clip-path: inset(0 50% 0 0); }
     .ba-label {
-      position: absolute; bottom: 0; left: 0; right: 0;
+      position: absolute; bottom: 0; z-index: 4;
       padding: 24px 28px;
       background: linear-gradient(to top, rgba(15,15,13,0.92) 0%, transparent 100%);
     }
+    .ba-label--before { left: 0; right: 50%; }
+    .ba-label--after { left: 50%; right: 0; }
     .ba-pill {
       display: inline-block; font-size: 8px; letter-spacing: 0.35em;
       text-transform: uppercase; padding: 5px 14px;
@@ -347,27 +349,30 @@
       background: rgba(27,94,80,0.2);
     }
     .ba-text { font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 0.05em; }
-    .ba-divider {
-      width: 56px; display: flex; flex-direction: column;
-      align-items: center; justify-content: center; gap: 0;
-      background: var(--near-black); position: relative; z-index: 2;
+    .ba-handle {
+      position: absolute; top: 0; bottom: 0; left: 50%; z-index: 5;
+      width: 3px; background: rgba(255,255,255,0.6);
+      transform: translateX(-50%); cursor: ew-resize;
     }
-    .ba-divider-line { flex: 1; width: 1px; background: rgba(255,255,255,0.08); }
-    .ba-divider-icon {
-      width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.15);
+    .ba-handle::before {
+      content: ''; position: absolute; top: 0; bottom: 0;
+      left: -20px; width: 43px; /* invisible touch target */
+    }
+    .ba-handle-icon {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.3);
       border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      color: rgba(255,255,255,0.4); flex-shrink: 0; margin: 16px 0;
+      background: rgba(15,15,13,0.6); backdrop-filter: blur(4px);
+      color: rgba(255,255,255,0.7); flex-shrink: 0;
     }
-    .ba-divider-icon svg { width: 18px; height: 18px; }
+    .ba-handle-icon svg { width: 18px; height: 18px; }
     @media (max-width: 960px) {
-      .before-after-wrap { grid-template-columns: 1fr; margin: 0 24px; }
-      .ba-divider { width: 100%; height: 48px; flex-direction: row; }
-      .ba-divider-line { flex: 1; width: auto; height: 1px; }
-      .ba-img-wrap { height: 260px; }
+      .ba-slider { height: 260px; margin: 0 24px; }
     }
     .proj-group-label { padding: 48px 60px 20px; }
     .proj-group-tag { font-size: 8px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--teal); margin-bottom: 6px; }
-    .proj-group-title { font-family: 'Bodoni Moda', serif; font-size: 28px; font-weight: 300; color: var(--ink); margin-bottom: 4px; }
+    .proj-group-title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 300; color: var(--ink); margin-bottom: 4px; }
     .proj-group-sub { font-size: 11px; color: var(--faint); }
     .proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--rule-thick); border-left: 1px solid var(--rule-thick); margin: 0 60px 0; }
     .proj-grid .proj-cell { border-right: 1px solid var(--rule-thick); border-bottom: 1px solid var(--rule-thick); overflow: hidden; position: relative; }
@@ -382,7 +387,7 @@
     }
     .sec-head { padding: 80px 60px 0; display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 52px; }
     .sec-kicker { font-size: 9px; letter-spacing: 0.45em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
-    h2 { font-family: 'Bodoni Moda', serif; font-size: clamp(34px, 4.2vw, 56px); font-weight: 300; line-height: 1.05; }
+    h2 { font-family: 'Playfair Display', serif; font-size: clamp(34px, 4.2vw, 56px); font-weight: 300; line-height: 1.05; }
     h2 em { font-style: italic; }
     .sec-link { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mid); text-decoration: none; border-bottom: 1px solid var(--faint); padding-bottom: 3px; white-space: nowrap; transition: all 0.25s; }
     .sec-link:hover { color: var(--teal); border-color: var(--teal); }
@@ -393,7 +398,7 @@
     .about-layout { display: grid; grid-template-columns: 5fr 7fr; border-top: 1px solid var(--rule-thick); border-bottom: 1px solid var(--rule-thick); }
     .about-left { padding: 80px 60px; border-right: 1px solid var(--rule); }
     .about-left p { font-size: 13px; line-height: 1.9; color: var(--mid); margin-bottom: 16px; }
-    .about-left blockquote { font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 17px; line-height: 1.65; color: var(--ink); border-left: 2px solid var(--teal); padding-left: 20px; margin-top: 32px; }
+    .about-left blockquote { font-family: 'Playfair Display', serif; font-style: italic; font-size: 17px; line-height: 1.65; color: var(--ink); border-left: 2px solid var(--teal); padding-left: 20px; margin-top: 32px; }
     .about-right { position: relative; }
     .about-right img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(0.75); }
     .about-awards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--rule); border-top: 1px solid var(--rule); margin-top: 40px; }
@@ -425,7 +430,7 @@
     .svc-icon { width: 48px; height: 48px; margin-bottom: 20px; }
     .svc-icon svg { width: 100%; height: 100%; stroke: var(--teal); fill: none; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
     .svc-idx { font-size: 9px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--faint); margin-bottom: 12px; }
-    .svc-title { font-family: 'Bodoni Moda', serif; font-size: 20px; margin-bottom: 12px; color: var(--ink); }
+    .svc-title { font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 12px; color: var(--ink); }
     .svc-desc { font-size: 11px; line-height: 1.85; color: var(--mid); margin-bottom: 16px; }
     .svc-cta { font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--teal); text-decoration: none; transition: opacity 0.2s; }
     .svc-cta:hover { opacity: 0.7; }
@@ -471,7 +476,7 @@
     }
     .proj-cell:hover .proj-cell-label { transform: translateY(0); }
     .proj-cell-tag { font-size: 8px; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(46,138,113,0.9); margin-bottom: 5px; }
-    .proj-cell-title { font-family: 'Bodoni Moda', serif; font-size: 16px; color: var(--white); }
+    .proj-cell-title { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--white); }
     .proj-cell-sub { font-size: 9px; color: rgba(255,255,255,0.5); margin-top: 3px; }
 
     /* Video cell */
@@ -480,6 +485,38 @@
     .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 56px; height: 56px; border: 1px solid rgba(255,255,255,0.6); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.25s; }
     .play-btn svg { width: 20px; height: 20px; fill: white; margin-left: 3px; }
     .proj-cell-video:hover .play-btn { background: var(--teal); border-color: var(--teal); transform: translate(-50%,-50%) scale(1.1); }
+
+    /* ══════════════════════════════════════════════
+       LIGHTBOX
+    ══════════════════════════════════════════════ */
+    .lightbox { display:none; position:fixed; inset:0; z-index:200; align-items:center; justify-content:center; }
+    .lightbox.is-open { display:flex; }
+    .lightbox-backdrop { position:absolute; inset:0; background:rgba(15,15,13,0.95); }
+    .lightbox-img-wrap { position:relative; z-index:1; max-width:90vw; max-height:85vh; display:flex; align-items:center; justify-content:center; }
+    .lightbox-img { max-width:90vw; max-height:85vh; object-fit:contain; display:block; transition:opacity 0.2s; }
+    .lightbox-close {
+      position:absolute; top:20px; right:20px; z-index:3;
+      width:44px; height:44px; background:none; border:1px solid rgba(255,255,255,0.2);
+      color:rgba(255,255,255,0.7); cursor:pointer; display:flex; align-items:center; justify-content:center;
+      font-size:20px; transition:all 0.2s;
+    }
+    .lightbox-close:hover { border-color:rgba(255,255,255,0.5); color:#fff; }
+    .lightbox-nav {
+      position:absolute; top:50%; z-index:3; transform:translateY(-50%);
+      width:48px; height:48px; background:none; border:1px solid rgba(255,255,255,0.2);
+      border-radius:50%; color:rgba(255,255,255,0.7); cursor:pointer;
+      display:flex; align-items:center; justify-content:center; transition:all 0.2s;
+    }
+    .lightbox-nav:hover { border-color:rgba(255,255,255,0.5); color:#fff; background:rgba(255,255,255,0.05); }
+    .lightbox-prev { left:20px; }
+    .lightbox-next { right:20px; }
+    .lightbox-caption {
+      position:absolute; bottom:20px; left:50%; transform:translateX(-50%); z-index:3;
+      font-size:10px; letter-spacing:0.25em; text-transform:uppercase;
+      color:rgba(255,255,255,0.5); text-align:center;
+    }
+    .lightbox-nav svg { width:20px; height:20px; }
+    [data-lightbox] { cursor:pointer; }
 
     /* ══════════════════════════════════════════════
        TESTIMONIALS
@@ -491,10 +528,10 @@
     .process-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 0; border: 1px solid var(--rule); margin-top: 52px; }
     .proc-step { padding: 36px 28px; border-right: 1px solid var(--rule); position: relative; }
     .proc-step:last-child { border-right: none; }
-    .proc-num { font-family: 'Bodoni Moda', serif; font-size: 42px; color: var(--off2); line-height: 1; margin-bottom: 16px; }
+    .proc-num { font-family: 'Playfair Display', serif; font-size: 42px; color: var(--faint); line-height: 1; margin-bottom: 16px; }
     .proc-icon { margin-bottom: 16px; }
     .proc-icon svg { width: 28px; height: 28px; stroke: var(--teal); fill: none; stroke-width: 1.4; }
-    .proc-title { font-family: 'Bodoni Moda', serif; font-size: 15px; color: var(--ink); margin-bottom: 8px; }
+    .proc-title { font-family: 'Playfair Display', serif; font-size: 15px; color: var(--ink); margin-bottom: 8px; }
     .proc-desc { font-size: 10.5px; line-height: 1.8; color: var(--mid); }
     .proc-arrow { position: absolute; right: -12px; top: 50%; transform: translateY(-50%); z-index: 2; background: var(--white); border: 1px solid var(--rule); width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; }
     .proc-arrow svg { width: 10px; height: 10px; stroke: var(--faint); fill: none; }
@@ -560,7 +597,7 @@
     ══════════════════════════════════════════════ */
     footer { background: var(--near-black); color: rgba(255,255,255,0.4); }
     .footer-body { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; padding: 60px; gap: 48px; border-bottom: 1px solid rgba(255,255,255,0.06); }
-    .footer-brand { font-family: 'Bodoni Moda', serif; font-size: 18px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+    .footer-brand { font-family: 'Playfair Display', serif; font-size: 18px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
     .footer-brand-dot { width: 6px; height: 6px; background: var(--teal); border-radius: 50%; }
     .footer-tagline { font-size: 11px; line-height: 1.75; margin-bottom: 20px; }
     .footer-soc { display: flex; gap: 8px; }
@@ -637,6 +674,7 @@
       <ul class="nav-list" role="navigation" aria-label="Main navigation">
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="/basement-conversions">Basements</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#process">Process</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -650,6 +688,7 @@
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
+      <li><a href="/basement-conversions">Basements</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#process">Process</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -802,7 +841,7 @@
           <div class="svc-idx">— 05</div>
           <div class="svc-title">Basement Conversions</div>
           <div class="svc-desc">Full underpinning, tanking, and waterproofing. Transforming underutilised basements into cinema rooms, private gyms, and premium living spaces of lasting value.</div>
-          <a href="#enquire" class="svc-cta">Enquire Now →</a>
+          <a href="/basement-conversions" class="svc-cta">View Our Work →</a>
         </div>
 
         <div class="svc-cell" onclick="selectService('M&E / Project Management')">
@@ -882,14 +921,14 @@
         <div class="proj-group-sub">New Basement · Loft · Rear Extension · Bespoke Fit-Out</div>
       </div>
       <div class="proj-grid">
-        <div class="proj-cell">
+        <div class="proj-cell" data-lightbox="chelsea">
           <div class="proj-img-wrap"><img src="assets/images/projects/chelsea/chelsea_01.jpg" alt="Chelsea SW3 renovation by Fabrico" loading="lazy" width="800" height="520"/></div>
         </div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/chelsea/chelsea_02.jpg" alt="Chelsea SW3 renovation by Fabrico" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/chelsea/chelsea_03.jpg" alt="Chelsea SW3 renovation by Fabrico" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/chelsea/chelsea_04.jpg" alt="Chelsea SW3 renovation by Fabrico" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/chelsea/chelsea_05.jpg" alt="Chelsea SW3 renovation by Fabrico" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/chelsea/chelsea_06.jpg" alt="Chelsea SW3 renovation by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="chelsea"><div class="proj-img-wrap"><img src="assets/images/projects/chelsea/chelsea_02.jpg" alt="Chelsea SW3 renovation by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="chelsea"><div class="proj-img-wrap"><img src="assets/images/projects/chelsea/chelsea_03.jpg" alt="Chelsea SW3 renovation by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="chelsea"><div class="proj-img-wrap"><img src="assets/images/projects/chelsea/chelsea_04.jpg" alt="Chelsea SW3 renovation by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="chelsea"><div class="proj-img-wrap"><img src="assets/images/projects/chelsea/chelsea_05.jpg" alt="Chelsea SW3 renovation by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="chelsea"><div class="proj-img-wrap"><img src="assets/images/projects/chelsea/chelsea_06.jpg" alt="Chelsea SW3 renovation by Fabrico" loading="lazy" width="800" height="520"/></div></div>
       </div>
 
       <!-- GEORGE STREET MAYFAIR -->
@@ -899,13 +938,13 @@
         <div class="proj-group-sub">W1S — 1,958 sqft · Stone Baths · Lutron AV</div>
       </div>
       <div class="proj-grid">
-        <div class="proj-cell">
+        <div class="proj-cell" data-lightbox="georgestreet">
           <div class="proj-img-wrap"><img src="assets/images/projects/georgestreet/georgestreet.jpg" alt="George Street Mayfair by Fabrico" loading="lazy" width="800" height="520"/></div>
         </div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/georgestreet/georgestreet01.jpg" alt="George Street Mayfair by Fabrico" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/georgestreet/georgestreet02.jpg" alt="George Street Mayfair by Fabrico" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/georgestreet/georgestreet03.jpg" alt="George Street Mayfair by Fabrico" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/georgestreet/georgestreet04.jpg" alt="George Street Mayfair by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="georgestreet"><div class="proj-img-wrap"><img src="assets/images/projects/georgestreet/georgestreet01.jpg" alt="George Street Mayfair by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="georgestreet"><div class="proj-img-wrap"><img src="assets/images/projects/georgestreet/georgestreet02.jpg" alt="George Street Mayfair by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="georgestreet"><div class="proj-img-wrap"><img src="assets/images/projects/georgestreet/georgestreet03.jpg" alt="George Street Mayfair by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="georgestreet"><div class="proj-img-wrap"><img src="assets/images/projects/georgestreet/georgestreet04.jpg" alt="George Street Mayfair by Fabrico" loading="lazy" width="800" height="520"/></div></div>
       </div>
 
       <!-- THE LITTLE BOLTONS -->
@@ -915,11 +954,11 @@
         <div class="proj-group-sub">London SW5 — 1,500 sqft</div>
       </div>
       <div class="proj-grid">
-        <div class="proj-cell">
+        <div class="proj-cell" data-lightbox="littleboltons">
           <div class="proj-img-wrap"><img src="assets/images/projects/thelittleboltons/thelittleboltons_01.jpg" alt="The Little Boltons SW5 by Fabrico" loading="lazy" width="800" height="520"/></div>
         </div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/thelittleboltons/thelittleboltons_02.jpg" alt="The Little Boltons SW5 by Fabrico" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/thelittleboltons/thelittleboltons_03.jpg" alt="The Little Boltons SW5 by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="littleboltons"><div class="proj-img-wrap"><img src="assets/images/projects/thelittleboltons/thelittleboltons_02.jpg" alt="The Little Boltons SW5 by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="littleboltons"><div class="proj-img-wrap"><img src="assets/images/projects/thelittleboltons/thelittleboltons_03.jpg" alt="The Little Boltons SW5 by Fabrico" loading="lazy" width="800" height="520"/></div></div>
       </div>
 
       <!-- COOKHAM NEW BUILD -->
@@ -929,16 +968,16 @@
         <div class="proj-group-sub">Maidenhead SL6 — 2,500 sqft Design & Build</div>
       </div>
       <div class="proj-grid">
-        <div class="proj-cell">
+        <div class="proj-cell" data-lightbox="cookham">
           <div class="proj-img-wrap"><img src="assets/images/projects/cookham/cookham_01.jpg" alt="Cookham Berkshire new build by Fabrico" loading="lazy" width="800" height="520"/></div>
         </div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/cookham/cookham_02.jpg" alt="Cookham new build by Fabrico" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/cookham/cookham_03.jpg" alt="Cookham new build by Fabrico" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/cookham/cookham_04.jpg" alt="Cookham new build by Fabrico" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/cookham/cookham_05.jpg" alt="Cookham new build by Fabrico" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/cookham/cookham_06.jpg" alt="Cookham new build by Fabrico" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/cookham/cookham_07.jpg" alt="Cookham new build by Fabrico" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/cookham/cookham_08.jpg" alt="Cookham new build by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="cookham"><div class="proj-img-wrap"><img src="assets/images/projects/cookham/cookham_02.jpg" alt="Cookham new build by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="cookham"><div class="proj-img-wrap"><img src="assets/images/projects/cookham/cookham_03.jpg" alt="Cookham new build by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="cookham"><div class="proj-img-wrap"><img src="assets/images/projects/cookham/cookham_04.jpg" alt="Cookham new build by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="cookham"><div class="proj-img-wrap"><img src="assets/images/projects/cookham/cookham_05.jpg" alt="Cookham new build by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="cookham"><div class="proj-img-wrap"><img src="assets/images/projects/cookham/cookham_06.jpg" alt="Cookham new build by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="cookham"><div class="proj-img-wrap"><img src="assets/images/projects/cookham/cookham_07.jpg" alt="Cookham new build by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="cookham"><div class="proj-img-wrap"><img src="assets/images/projects/cookham/cookham_08.jpg" alt="Cookham new build by Fabrico" loading="lazy" width="800" height="520"/></div></div>
       </div>
 
       <!-- RENOVATIONS -->
@@ -948,12 +987,12 @@
         <div class="proj-group-sub">Back-to-brick refurbishments across London</div>
       </div>
       <div class="proj-grid">
-        <div class="proj-cell">
+        <div class="proj-cell" data-lightbox="renovations">
           <div class="proj-img-wrap"><img src="assets/images/projects/renovations/Renovations.jpg" alt="Fabrico renovation project" loading="lazy" width="800" height="520"/></div>
         </div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/renovations/Renovations_01.jpg" alt="Fabrico renovation project" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/renovations/Renovations_02.jpg" alt="Fabrico renovation project" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/renovations/Renovations_03.jpg" alt="Fabrico renovation project" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="renovations"><div class="proj-img-wrap"><img src="assets/images/projects/renovations/Renovations_01.jpg" alt="Fabrico renovation project" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="renovations"><div class="proj-img-wrap"><img src="assets/images/projects/renovations/Renovations_02.jpg" alt="Fabrico renovation project" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="renovations"><div class="proj-img-wrap"><img src="assets/images/projects/renovations/Renovations_03.jpg" alt="Fabrico renovation project" loading="lazy" width="800" height="520"/></div></div>
       </div>
 
       <!-- NEW BUILDS -->
@@ -963,7 +1002,7 @@
         <div class="proj-group-sub">Bespoke homes designed and built to exacting standards</div>
       </div>
       <div class="proj-grid">
-        <div class="proj-cell">
+        <div class="proj-cell" data-lightbox="newbuilds">
           <div class="proj-img-wrap"><img src="assets/images/projects/newbuilds/NewBuilds.jpg" alt="Fabrico new build home" loading="lazy" width="800" height="520"/></div>
         </div>
       </div>
@@ -975,11 +1014,11 @@
         <div class="proj-group-sub">Underpinning · Foundations · RSJ · Piling</div>
       </div>
       <div class="proj-grid">
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/structural/structural_01.jpg" alt="Fabrico structural works" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/structural/structural_02.jpg" alt="Fabrico structural works" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/structural/structural_03.jpg" alt="Fabrico structural works" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/structural/structural_04.jpg" alt="Fabrico structural works" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell"><div class="proj-img-wrap"><img src="assets/images/projects/structural/structural_05.jpg" alt="Fabrico structural works" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="structural"><div class="proj-img-wrap"><img src="assets/images/projects/structural/structural_01.jpg" alt="Fabrico structural works" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="structural"><div class="proj-img-wrap"><img src="assets/images/projects/structural/structural_02.jpg" alt="Fabrico structural works" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="structural"><div class="proj-img-wrap"><img src="assets/images/projects/structural/structural_03.jpg" alt="Fabrico structural works" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="structural"><div class="proj-img-wrap"><img src="assets/images/projects/structural/structural_04.jpg" alt="Fabrico structural works" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="structural"><div class="proj-img-wrap"><img src="assets/images/projects/structural/structural_05.jpg" alt="Fabrico structural works" loading="lazy" width="800" height="520"/></div></div>
       </div>
 
       <!-- END TO END SERVICE — BEFORE / AFTER -->
@@ -988,32 +1027,22 @@
         <div class="proj-group-title">Before &amp; <em style="font-style:italic;color:var(--teal)">After</em></div>
         <div class="proj-group-sub">From planning to handover — complete transparency throughout</div>
       </div>
-      <div class="before-after-wrap">
-        <div class="ba-panel">
-          <div class="ba-img-wrap">
-            <img src="assets/images/general/end_to_end_before.jpg" alt="Before — Fabrico project" loading="lazy" width="800" height="420"/>
-          </div>
-          <div class="ba-label ba-label--before">
-            <span class="ba-pill">Before</span>
-            <div class="ba-text">The property as we found it</div>
-          </div>
+      <div class="ba-slider" id="ba-slider" role="slider" aria-label="Before and after comparison" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
+        <img class="ba-after" src="assets/images/general/end_to_end_after.jpg" alt="After — Fabrico project" loading="lazy" width="800" height="420"/>
+        <img class="ba-before" src="assets/images/general/end_to_end_before.jpg" alt="Before — Fabrico project" loading="lazy" width="800" height="420"/>
+        <div class="ba-label ba-label--before">
+          <span class="ba-pill">Before</span>
+          <div class="ba-text">The property as we found it</div>
         </div>
-        <div class="ba-divider">
-          <div class="ba-divider-line"></div>
-          <div class="ba-divider-icon">
+        <div class="ba-label ba-label--after">
+          <span class="ba-pill ba-pill--after">After</span>
+          <div class="ba-text">Transformed by Fabrico</div>
+        </div>
+        <div class="ba-handle" id="ba-handle">
+          <div class="ba-handle-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <path d="M8 12h8M5 8l-3 4 3 4M19 8l3 4-3 4"/>
             </svg>
-          </div>
-          <div class="ba-divider-line"></div>
-        </div>
-        <div class="ba-panel">
-          <div class="ba-img-wrap">
-            <img src="assets/images/general/end_to_end_after.jpg" alt="After — Fabrico project" loading="lazy" width="800" height="420"/>
-          </div>
-          <div class="ba-label ba-label--after">
-            <span class="ba-pill ba-pill--after">After</span>
-            <div class="ba-text">Transformed by Fabrico</div>
           </div>
         </div>
       </div>
@@ -1069,7 +1098,7 @@
   <div class="ig-banner">
     <div>
       <div style="font-size:9px; letter-spacing:0.4em; text-transform:uppercase; color:rgba(46,138,113,0.8); margin-bottom:10px;">Follow Our Work</div>
-      <div style="font-family:'Bodoni Moda',serif; font-size:clamp(22px,3vw,36px); color:var(--white); font-weight:300;">See every project on <em style="color:rgba(255,255,255,0.35)">Instagram</em></div>
+      <div style="font-family:'Playfair Display',serif; font-size:clamp(22px,3vw,36px); color:var(--white); font-weight:300;">See every project on <em style="color:rgba(255,255,255,0.35)">Instagram</em></div>
       <div style="font-size:12px; color:rgba(255,255,255,0.4); margin-top:8px;">Live site updates, before &amp; afters, and design inspiration daily</div>
     </div>
     <a href="https://instagram.com/fabrico_design_build" target="_blank" rel="noopener" class="ig-cta">
@@ -1177,7 +1206,7 @@
           <li><a href="#services">Full Renovations</a></li>
           <li><a href="#services">Extensions</a></li>
           <li><a href="#services">Loft Conversions</a></li>
-          <li><a href="#services">Basement Conversions</a></li>
+          <li><a href="/basement-conversions">Basement Conversions</a></li>
           <li><a href="#services">M&E & Project Management</a></li>
         </ul>
       </div>
@@ -1208,6 +1237,22 @@
     </div>
   </footer>
 
+  <!-- LIGHTBOX OVERLAY -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-backdrop"></div>
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox-nav lightbox-prev" aria-label="Previous">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 19l-7-7 7-7"/></svg>
+    </button>
+    <button class="lightbox-nav lightbox-next" aria-label="Next">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+    <div class="lightbox-img-wrap">
+      <img class="lightbox-img" src="" alt=""/>
+    </div>
+    <div class="lightbox-caption"></div>
+  </div>
+
   <script>
     (function () {
       var btn = document.querySelector('.hamburger');
@@ -1236,6 +1281,44 @@
       });
     })();
 
+    /* Before/After Slider */
+    (function () {
+      var slider = document.getElementById('ba-slider');
+      var handle = document.getElementById('ba-handle');
+      if (!slider || !handle) return;
+      var before = slider.querySelector('.ba-before');
+      var dragging = false;
+
+      function setPosition(pct) {
+        pct = Math.max(0, Math.min(100, pct));
+        before.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+        handle.style.left = pct + '%';
+        slider.setAttribute('aria-valuenow', Math.round(pct));
+      }
+
+      function getPct(e) {
+        var rect = slider.getBoundingClientRect();
+        var x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+        return (x / rect.width) * 100;
+      }
+
+      handle.addEventListener('mousedown', function (e) { e.preventDefault(); dragging = true; });
+      handle.addEventListener('touchstart', function (e) { e.preventDefault(); dragging = true; }, { passive: false });
+
+      document.addEventListener('mousemove', function (e) { if (dragging) setPosition(getPct(e)); });
+      document.addEventListener('touchmove', function (e) { if (dragging) setPosition(getPct(e)); }, { passive: true });
+
+      document.addEventListener('mouseup', function () { dragging = false; });
+      document.addEventListener('touchend', function () { dragging = false; });
+
+      slider.addEventListener('click', function (e) { setPosition(getPct(e)); });
+
+      slider.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') { setPosition(parseFloat(handle.style.left || 50) - 5); e.preventDefault(); }
+        if (e.key === 'ArrowRight') { setPosition(parseFloat(handle.style.left || 50) + 5); e.preventDefault(); }
+      });
+    })();
+
     function selectService(name) {
       // Highlight active pill in both the svc-selector strip and the services grid
       document.querySelectorAll('.svc-pill, .svc-cell').forEach(function (el) {
@@ -1246,4 +1329,68 @@
       var form = document.getElementById('contact');
       if (form) form.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+
+    /* Lightbox */
+    (function () {
+      var lb = document.getElementById('lightbox');
+      if (!lb) return;
+      var img = lb.querySelector('.lightbox-img');
+      var caption = lb.querySelector('.lightbox-caption');
+      var groups = {};
+      var curGroup = null;
+      var curIdx = 0;
+
+      document.querySelectorAll('[data-lightbox]').forEach(function (el) {
+        var g = el.getAttribute('data-lightbox');
+        if (!groups[g]) groups[g] = [];
+        groups[g].push(el);
+      });
+
+      function show(group, idx) {
+        curGroup = group; curIdx = idx;
+        var items = groups[group];
+        var src = items[idx].querySelector('img');
+        if (!src) return;
+        img.src = src.src;
+        img.alt = src.alt;
+        caption.textContent = (idx + 1) + ' / ' + items.length;
+        lb.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function close() {
+        lb.classList.remove('is-open');
+        document.body.style.overflow = '';
+        img.src = '';
+      }
+
+      function nav(dir) {
+        var items = groups[curGroup];
+        curIdx = (curIdx + dir + items.length) % items.length;
+        var src = items[curIdx].querySelector('img');
+        if (src) { img.src = src.src; img.alt = src.alt; }
+        caption.textContent = (curIdx + 1) + ' / ' + items.length;
+      }
+
+      Object.keys(groups).forEach(function (g) {
+        groups[g].forEach(function (el, i) {
+          el.addEventListener('click', function (e) {
+            e.preventDefault();
+            show(g, i);
+          });
+        });
+      });
+
+      lb.querySelector('.lightbox-backdrop').addEventListener('click', close);
+      lb.querySelector('.lightbox-close').addEventListener('click', close);
+      lb.querySelector('.lightbox-prev').addEventListener('click', function () { nav(-1); });
+      lb.querySelector('.lightbox-next').addEventListener('click', function () { nav(1); });
+
+      document.addEventListener('keydown', function (e) {
+        if (!lb.classList.contains('is-open')) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowLeft') nav(-1);
+        if (e.key === 'ArrowRight') nav(1);
+      });
+    })();
   </script>
