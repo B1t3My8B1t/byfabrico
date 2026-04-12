@@ -1,0 +1,6 @@
+# Claude Code context — never commit to public repo
+CLAUDE.md
+.claude/
+
+# Studio-internal
+branding.html
