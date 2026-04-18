@@ -4,3 +4,7 @@ CLAUDE.md
 
 # Studio-internal
 branding.html
+
+# Utility scripts
+serve.py
+watermark.py
