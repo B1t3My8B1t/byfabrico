@@ -32,7 +32,7 @@
   <meta property="og:url" content="https://www.byfabrico.com/"/>
   <meta property="og:title" content="Fabrico — High-End Construction & Design | London & Berkshire"/>
   <meta property="og:description" content="London's premier construction and interior design studio. 200+ projects. £50M+ delivered. New builds, renovations, extensions."/>
-  <meta property="og:image" content="https://www.byfabrico.com/og-image.jpg"/>
+  <meta property="og:image" content="https://www.byfabrico.com/assets/images/og-image.jpg"/>
   <meta property="og:locale" content="en_GB"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Fabrico — High-End Construction & Design"/>
@@ -103,7 +103,14 @@
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.byfabrico.com/" },
       { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.byfabrico.com/#services" },
       { "@type": "ListItem", "position": 3, "name": "Projects", "item": "https://www.byfabrico.com/#projects" },
-      { "@type": "ListItem", "position": 4, "name": "Contact", "item": "https://www.byfabrico.com/#contact" }
+      { "@type": "ListItem", "position": 4, "name": "Contact", "item": "https://www.byfabrico.com/#contact" },
+      { "@type": "ListItem", "position": 5, "name": "Basements", "item": "https://www.byfabrico.com/basements" },
+      { "@type": "ListItem", "position": 6, "name": "Commercial", "item": "https://www.byfabrico.com/commercial" },
+      { "@type": "ListItem", "position": 7, "name": "New Builds", "item": "https://www.byfabrico.com/new-builds" },
+      { "@type": "ListItem", "position": 8, "name": "Renovations", "item": "https://www.byfabrico.com/renovations" },
+      { "@type": "ListItem", "position": 9, "name": "Extensions", "item": "https://www.byfabrico.com/extensions" },
+      { "@type": "ListItem", "position": 10, "name": "Lofts", "item": "https://www.byfabrico.com/lofts" },
+      { "@type": "ListItem", "position": 11, "name": "House-to-Flat", "item": "https://www.byfabrico.com/house-to-flat" }
     ]
   }
   </script>
@@ -167,15 +174,15 @@
     .header-contact a { color: var(--mid); text-decoration: none; transition: color 0.2s; }
     .header-contact a:hover { color: var(--teal); }
     .header-contact .sep { color: var(--rule-thick); }
-    .header-nav { padding: 0 60px; height: 48px; display: flex; align-items: center; justify-content: space-between; }
-    .nav-list { display: flex; gap: 44px; list-style: none; }
-    .nav-list a { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink); text-decoration: none; transition: color 0.2s; position: relative; padding-bottom: 2px; }
+    .header-nav { padding: 0 30px; height: 48px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-list { display: flex; gap: 14px; list-style: none; }
+    .nav-list a { font-size: 9.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); text-decoration: none; transition: color 0.2s; position: relative; padding-bottom: 2px; }
     .nav-list a::after { content:''; position:absolute; bottom:0; left:0; right:0; height:1px; background:var(--teal); transform:scaleX(0); transform-origin:left; transition:transform 0.25s; }
     .nav-list a:hover { color: var(--ink); }
     .nav-list a:hover::after { transform:scaleX(1); }
     .nav-cta {
-      font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
-      padding: 10px 22px; background: var(--teal);
+      font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase;
+      padding: 8px 16px; background: var(--teal);
       color: var(--white); text-decoration: none; transition: all 0.25s;
     }
     .nav-cta:hover { background: var(--near-black); }
@@ -382,15 +389,15 @@
     .proj-group-tag { font-size: 8px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--teal); margin-bottom: 6px; }
     .proj-group-title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 300; color: var(--ink); margin-bottom: 4px; }
     .proj-group-sub { font-size: 11px; color: var(--faint); }
-    .proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--rule-thick); border-left: 1px solid var(--rule-thick); margin: 0 60px 0; }
-    .proj-grid .proj-cell { border-right: 1px solid var(--rule-thick); border-bottom: 1px solid var(--rule-thick); overflow: hidden; position: relative; }
-    .proj-grid .proj-img-wrap { width: 100%; height: 260px; overflow: hidden; }
-    .proj-grid .proj-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.92) saturate(0.8); transition: transform 0.6s ease; }
+    .proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 0 60px 0; }
+    .proj-grid .proj-cell { overflow: hidden; position: relative; border-radius: 6px; background: var(--white); box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    .proj-grid .proj-img-wrap { width: 100%; height: 260px; overflow: hidden; padding: 6px; }
+    .proj-grid .proj-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.92) saturate(0.8); transition: transform 0.6s ease; border-radius: 4px; }
     .proj-grid .proj-cell:hover .proj-img-wrap img { transform: scale(1.04); }
     #projects { padding-bottom: 80px; }
     @media (max-width: 960px) {
       .proj-group-label { padding: 40px 24px 16px; }
-      .proj-grid { grid-template-columns: 1fr 1fr; margin: 0 24px; }
+      .proj-grid { grid-template-columns: 1fr 1fr; margin: 0 24px; gap: 12px; }
       .proj-grid .proj-img-wrap { height: 180px; }
     }
     .sec-head { padding: 80px 60px 0; display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 52px; }
@@ -435,6 +442,10 @@
     .svc-cell:hover { background: var(--off); }
     .svc-cell:nth-child(3), .svc-cell:nth-child(6) { border-right: none; }
     .svc-cell:nth-child(4), .svc-cell:nth-child(5), .svc-cell:nth-child(6) { border-bottom: none; }
+    a.svc-cell { text-decoration: none; color: inherit; display: block; }
+    .svc-table-7 { grid-template-columns: repeat(3, 1fr); }
+    .svc-cell-wide { grid-column: span 3; border-right: none !important; border-bottom: none !important; }
+    .svc-table-7 .svc-cell:nth-child(7) { border-bottom: none; }
     .svc-icon { width: 48px; height: 48px; margin-bottom: 20px; }
     .svc-icon svg { width: 100%; height: 100%; stroke: var(--teal); fill: none; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
     .svc-idx { font-size: 9px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--faint); margin-bottom: 12px; }
@@ -529,21 +540,6 @@
     /* ══════════════════════════════════════════════
        TESTIMONIALS
     ══════════════════════════════════════════════ */
-    /* ══════════════════════════════════════════════
-       PROCESS STRIP
-    ══════════════════════════════════════════════ */
-    .process-section { padding: 80px 60px; border-bottom: 1px solid var(--rule-thick); }
-    .process-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 0; border: 1px solid var(--rule); margin-top: 52px; }
-    .proc-step { padding: 36px 28px; border-right: 1px solid var(--rule); position: relative; }
-    .proc-step:last-child { border-right: none; }
-    .proc-num { font-family: 'Playfair Display', serif; font-size: 42px; color: var(--faint); line-height: 1; margin-bottom: 16px; }
-    .proc-icon { margin-bottom: 16px; }
-    .proc-icon svg { width: 28px; height: 28px; stroke: var(--teal); fill: none; stroke-width: 1.4; }
-    .proc-title { font-family: 'Playfair Display', serif; font-size: 15px; color: var(--ink); margin-bottom: 8px; }
-    .proc-desc { font-size: 10.5px; line-height: 1.8; color: var(--mid); }
-    .proc-arrow { position: absolute; right: -12px; top: 50%; transform: translateY(-50%); z-index: 2; background: var(--white); border: 1px solid var(--rule); width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; }
-    .proc-arrow svg { width: 10px; height: 10px; stroke: var(--faint); fill: none; }
-    .proc-step:last-child .proc-arrow { display: none; }
 
     /* ══════════════════════════════════════════════
        AREAS MAP / COVERAGE
@@ -646,11 +642,7 @@
       .testi-grid { grid-template-columns: 1fr; }
       .testi-cell { border-right: none; border-bottom: 1px solid var(--rule); }
       .testi-cell:last-child { border-bottom: none; }
-      .process-section { padding: 60px 24px; }
-      .process-grid { grid-template-columns: 1fr 1fr; }
-      .proc-step:nth-child(2), .proc-step:nth-child(4) { border-right: none; }
-      .proc-step { border-bottom: 1px solid var(--rule); }
-      .areas-section { padding: 60px 24px; }
+.areas-section { padding: 60px 24px; }
       .areas-grid { grid-template-columns: 1fr; gap: 32px; }
       .contact-layout { grid-template-columns: 1fr; }
       .contact-left { padding: 60px 24px; }
@@ -681,10 +673,14 @@
     <div class="header-nav">
       <ul class="nav-list" role="navigation" aria-label="Main navigation">
         <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
         <li><a href="/basement-conversions">Basements</a></li>
+        <li><a href="/commercial">Commercial</a></li>
+        <li><a href="/new-builds">New Builds</a></li>
+        <li><a href="/renovations">Renovations</a></li>
+        <li><a href="/extensions">Extensions</a></li>
+        <li><a href="/lofts">Lofts</a></li>
+        <li><a href="/house-to-flat">House-to-Flat</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#process">Process</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <a href="#contact" class="nav-cta" aria-label="Book a free consultation with Fabrico">Book Consultation</a>
@@ -695,10 +691,14 @@
   <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
     <ul>
       <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
       <li><a href="/basement-conversions">Basements</a></li>
+      <li><a href="/commercial">Commercial</a></li>
+      <li><a href="/new-builds">New Builds</a></li>
+      <li><a href="/renovations">Renovations</a></li>
+      <li><a href="/extensions">Extensions</a></li>
+      <li><a href="/lofts">Lofts</a></li>
+      <li><a href="/house-to-flat">House-to-Flat</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#process">Process</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <a href="#contact" class="mobile-menu-cta">Book Consultation</a>
@@ -778,67 +778,9 @@
       </div>
     </div>
     <div class="services-layout">
-      <div class="svc-table">
+      <div class="svc-table svc-table-7">
 
-        <div class="svc-cell" onclick="selectService('New Build')">
-          <div class="svc-icon">
-            <svg viewBox="0 0 48 48">
-              <path d="M4 42h40M8 42V20M40 42V20M24 8L8 20h32L24 8z"/>
-              <rect x="18" y="30" width="12" height="12"/>
-              <path d="M14 26h4M30 26h4M14 34h2M32 34h2"/>
-            </svg>
-          </div>
-          <div class="svc-idx">— 01</div>
-          <div class="svc-title">New Builds</div>
-          <div class="svc-desc">Bespoke new build homes designed and constructed to exacting standards. German kitchens, handmade doors, porcelain bathrooms — every specification managed by Fabrico from first foundation to final finish.</div>
-          <a href="#enquire" class="svc-cta">Start Your Build →</a>
-        </div>
-
-        <div class="svc-cell" onclick="selectService('Full Renovation')">
-          <div class="svc-icon">
-            <svg viewBox="0 0 48 48">
-              <rect x="6" y="10" width="36" height="28" rx="1"/>
-              <path d="M6 18h36M18 18v20M6 26h12"/>
-              <circle cx="36" cy="30" r="5"/>
-              <path d="M36 27v3l2 2"/>
-            </svg>
-          </div>
-          <div class="svc-idx">— 02</div>
-          <div class="svc-title">Full Renovations</div>
-          <div class="svc-desc">Complete back-to-brick refurbishments. New M&E, wet underfloor heating, bespoke carpentry, drop ceilings with LED strips, Lutron AV systems — every trade coordinated, every detail considered.</div>
-          <a href="#enquire" class="svc-cta">Enquire Now →</a>
-        </div>
-
-        <div class="svc-cell" onclick="selectService('Rear / Side Extension')">
-          <div class="svc-icon">
-            <svg viewBox="0 0 48 48">
-              <path d="M6 42h36M6 42V22l14-12 14 12v20M20 42V30h8v12"/>
-              <path d="M34 22v20h8V26l-8-4z"/>
-              <path d="M10 30h6M10 36h6"/>
-            </svg>
-          </div>
-          <div class="svc-idx">— 03</div>
-          <div class="svc-title">Extensions</div>
-          <div class="svc-desc">Rear, side and kitchen extensions that transform the way you live — opening homes to garden and light, creating open-plan living spaces of architectural clarity and purpose.</div>
-          <a href="#enquire" class="svc-cta">Enquire Now →</a>
-        </div>
-
-        <div class="svc-cell" onclick="selectService('Loft Conversion')">
-          <div class="svc-icon">
-            <svg viewBox="0 0 48 48">
-              <path d="M6 42h36M10 42V24M38 42V24M24 8L6 24h36L24 8z"/>
-              <path d="M18 24v18M30 24v18"/>
-              <rect x="19" y="12" width="10" height="8" rx="1"/>
-              <line x1="24" y1="10" x2="24" y2="8"/>
-            </svg>
-          </div>
-          <div class="svc-idx">— 04</div>
-          <div class="svc-title">Loft Conversions</div>
-          <div class="svc-desc">Dormer and mansard loft conversions that create premium master suites, home studies, and living spaces — managed from planning consent through to final handover.</div>
-          <a href="#enquire" class="svc-cta">Enquire Now →</a>
-        </div>
-
-        <div class="svc-cell" onclick="selectService('Basement Conversion')">
+        <a href="/basements" class="svc-cell">
           <div class="svc-icon">
             <svg viewBox="0 0 48 48">
               <rect x="6" y="6" width="36" height="14" rx="1"/>
@@ -847,26 +789,98 @@
               <path d="M12 32h6M30 32h6M12 38h6M30 38h6"/>
             </svg>
           </div>
-          <div class="svc-idx">— 05</div>
-          <div class="svc-title">Basement Conversions</div>
+          <div class="svc-idx">— 01</div>
+          <div class="svc-title">Basements</div>
           <div class="svc-desc">Full underpinning, tanking, and waterproofing. Transforming underutilised basements into cinema rooms, private gyms, and premium living spaces of lasting value.</div>
-          <a href="/basement-conversions" class="svc-cta">View Our Work →</a>
-        </div>
+          <span class="svc-cta">View Our Work →</span>
+        </a>
 
-        <div class="svc-cell" onclick="selectService('M&E / Project Management')">
+        <a href="/commercial" class="svc-cell">
           <div class="svc-icon">
             <svg viewBox="0 0 48 48">
-              <circle cx="24" cy="24" r="6"/>
-              <path d="M24 8v4M24 36v4M8 24h4M36 24h4"/>
-              <path d="M13.5 13.5l2.8 2.8M31.7 31.7l2.8 2.8M13.5 34.5l2.8-2.8M31.7 16.3l2.8-2.8"/>
-              <circle cx="24" cy="24" r="2" fill="currentColor" stroke="none"/>
+              <rect x="4" y="14" width="40" height="28" rx="1"/>
+              <path d="M16 14V8h16v6"/>
+              <path d="M4 24h40M20 24v8h8v-8"/>
+            </svg>
+          </div>
+          <div class="svc-idx">— 02</div>
+          <div class="svc-title">Commercial</div>
+          <div class="svc-desc">Office fit-outs, retail spaces, and commercial refurbishments delivered to the highest standards. Full project management from design through handover.</div>
+          <span class="svc-cta">Learn More →</span>
+        </a>
+
+        <a href="/new-builds" class="svc-cell">
+          <div class="svc-icon">
+            <svg viewBox="0 0 48 48">
+              <path d="M4 42h40M8 42V20M40 42V20M24 8L8 20h32L24 8z"/>
+              <rect x="18" y="30" width="12" height="12"/>
+              <path d="M14 26h4M30 26h4M14 34h2M32 34h2"/>
+            </svg>
+          </div>
+          <div class="svc-idx">— 03</div>
+          <div class="svc-title">New Builds</div>
+          <div class="svc-desc">Bespoke new build homes designed and constructed to exacting standards. German kitchens, handmade doors, porcelain bathrooms — every specification managed by Fabrico.</div>
+          <span class="svc-cta">Learn More →</span>
+        </a>
+
+        <a href="/renovations" class="svc-cell">
+          <div class="svc-icon">
+            <svg viewBox="0 0 48 48">
+              <rect x="6" y="10" width="36" height="28" rx="1"/>
+              <path d="M6 18h36M18 18v20M6 26h12"/>
+              <circle cx="36" cy="30" r="5"/>
+              <path d="M36 27v3l2 2"/>
+            </svg>
+          </div>
+          <div class="svc-idx">— 04</div>
+          <div class="svc-title">Renovations</div>
+          <div class="svc-desc">Complete back-to-brick refurbishments. New M&E, wet underfloor heating, bespoke carpentry, drop ceilings with LED strips — every trade coordinated, every detail considered.</div>
+          <span class="svc-cta">Learn More →</span>
+        </a>
+
+        <a href="/extensions" class="svc-cell">
+          <div class="svc-icon">
+            <svg viewBox="0 0 48 48">
+              <path d="M6 42h36M6 42V22l14-12 14 12v20M20 42V30h8v12"/>
+              <path d="M34 22v20h8V26l-8-4z"/>
+              <path d="M10 30h6M10 36h6"/>
+            </svg>
+          </div>
+          <div class="svc-idx">— 05</div>
+          <div class="svc-title">Extensions</div>
+          <div class="svc-desc">Rear, side and kitchen extensions that transform the way you live — opening homes to garden and light, creating open-plan living spaces of architectural clarity.</div>
+          <span class="svc-cta">Learn More →</span>
+        </a>
+
+        <a href="/lofts" class="svc-cell">
+          <div class="svc-icon">
+            <svg viewBox="0 0 48 48">
+              <path d="M6 42h36M10 42V24M38 42V24M24 8L6 24h36L24 8z"/>
+              <path d="M18 24v18M30 24v18"/>
+              <rect x="19" y="12" width="10" height="8" rx="1"/>
+              <line x1="24" y1="10" x2="24" y2="8"/>
             </svg>
           </div>
           <div class="svc-idx">— 06</div>
-          <div class="svc-title">M&E & Project Management</div>
-          <div class="svc-desc">Full mechanical, electrical, plumbing, and project management services. One trusted point of contact. All trades coordinated. All milestones tracked. Complete transparency throughout.</div>
-          <a href="#enquire" class="svc-cta">Enquire Now →</a>
-        </div>
+          <div class="svc-title">Lofts</div>
+          <div class="svc-desc">Dormer and mansard loft conversions that create premium master suites, home studies, and living spaces — managed from planning consent through to final handover.</div>
+          <span class="svc-cta">Learn More →</span>
+        </a>
+
+        <a href="/house-to-flat" class="svc-cell svc-cell-wide">
+          <div class="svc-icon">
+            <svg viewBox="0 0 48 48">
+              <path d="M4 42h40M4 42V14l20-10 20 10v28"/>
+              <path d="M16 42V26h16v16"/>
+              <path d="M24 26v16M16 34h16"/>
+              <path d="M10 20h4M34 20h4"/>
+            </svg>
+          </div>
+          <div class="svc-idx">— 07</div>
+          <div class="svc-title">House-to-Flat &amp; Permitted Development</div>
+          <div class="svc-desc">Converting single dwellings into multiple flats and permitted development projects. Full planning, building control, and construction management.</div>
+          <span class="svc-cta">Learn More →</span>
+        </a>
 
       </div>
     </div>
@@ -875,33 +889,33 @@
     <div class="svc-selector" id="enquire">
       <div class="svc-selector-title">Select your service to enquire — then complete the form below</div>
       <div class="svc-pills">
+        <div class="svc-pill" data-svc="Basements" onclick="selectService('Basements')">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="8" rx="1"/><rect x="2" y="13" width="20" height="8" rx="1"/><path d="M12 11v2"/></svg>
+          Basements
+        </div>
+        <div class="svc-pill" data-svc="Commercial" onclick="selectService('Commercial')">
+          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="1"/><path d="M8 7V4h8v3"/><path d="M2 12h20"/></svg>
+          Commercial
+        </div>
         <div class="svc-pill" data-svc="New Build" onclick="selectService('New Build')">
           <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-6 7 6v12M10 21v-6h4v6"/></svg>
           New Build
         </div>
-        <div class="svc-pill" data-svc="Full Renovation" onclick="selectService('Full Renovation')">
+        <div class="svc-pill" data-svc="Renovation" onclick="selectService('Renovation')">
           <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="1"/><path d="M2 9h20M9 9v11"/></svg>
-          Full Renovation
+          Renovation
         </div>
-        <div class="svc-pill" data-svc="Rear / Side Extension" onclick="selectService('Rear / Side Extension')">
+        <div class="svc-pill" data-svc="Extension" onclick="selectService('Extension')">
           <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V11l7-5 7 5v10M17 11v10h4V13l-4-2z"/></svg>
           Extension
         </div>
-        <div class="svc-pill" data-svc="Loft Conversion" onclick="selectService('Loft Conversion')">
+        <div class="svc-pill" data-svc="Loft" onclick="selectService('Loft')">
           <svg viewBox="0 0 24 24"><path d="M3 12L12 4l9 8M5 12v9h14v-9M10 12v9M14 12v9"/></svg>
-          Loft Conversion
+          Loft
         </div>
-        <div class="svc-pill" data-svc="Basement Conversion" onclick="selectService('Basement Conversion')">
-          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="8" rx="1"/><rect x="2" y="13" width="20" height="8" rx="1"/><path d="M12 11v2"/></svg>
-          Basement
-        </div>
-        <div class="svc-pill" data-svc="Interior Design & Fit-Out" onclick="selectService('Interior Design & Fit-Out')">
-          <svg viewBox="0 0 24 24"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"/></svg>
-          Interior Design
-        </div>
-        <div class="svc-pill" data-svc="M&E / Project Management" onclick="selectService('M&E / Project Management')">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M4.93 4.93l1.41 1.41M12 2v2M12 20v2M20 12h2M2 12h2M19.07 19.07l-1.41-1.41M4.93 19.07l1.41-1.41"/></svg>
-          M&E & PM
+        <div class="svc-pill" data-svc="House-to-Flat" onclick="selectService('House-to-Flat')">
+          <svg viewBox="0 0 24 24"><path d="M3 21h18M3 21V7l9-5 9 5v14M9 21v-8h6v8M9 17h6"/></svg>
+          House-to-Flat
         </div>
         <div class="svc-pill" data-svc="Other" onclick="selectService('Other')">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
@@ -989,45 +1003,20 @@
         <div class="proj-cell" data-lightbox="cookham"><div class="proj-img-wrap"><img src="assets/images/projects/cookham/cookham_08.jpg" alt="Cookham new build by Fabrico" loading="lazy" width="800" height="520"/></div></div>
       </div>
 
-      <!-- RENOVATIONS -->
+      <!-- MAYFAIR W1H -->
       <div class="proj-group-label">
-        <div class="proj-group-tag">Full Renovations</div>
-        <div class="proj-group-title">Renovations</div>
-        <div class="proj-group-sub">Back-to-brick refurbishments across London</div>
+        <div class="proj-group-tag">Luxury Refurbishment</div>
+        <div class="proj-group-title">Mayfair, W1H</div>
+        <div class="proj-group-sub">Full Refurbishment · Premium Finishes</div>
       </div>
       <div class="proj-grid">
-        <div class="proj-cell" data-lightbox="renovations">
-          <div class="proj-img-wrap"><img src="assets/images/projects/renovations/Renovations.jpg" alt="Fabrico renovation project" loading="lazy" width="800" height="520"/></div>
-        </div>
-        <div class="proj-cell" data-lightbox="renovations"><div class="proj-img-wrap"><img src="assets/images/projects/renovations/Renovations_01.jpg" alt="Fabrico renovation project" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell" data-lightbox="renovations"><div class="proj-img-wrap"><img src="assets/images/projects/renovations/Renovations_02.jpg" alt="Fabrico renovation project" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell" data-lightbox="renovations"><div class="proj-img-wrap"><img src="assets/images/projects/renovations/Renovations_03.jpg" alt="Fabrico renovation project" loading="lazy" width="800" height="520"/></div></div>
-      </div>
-
-      <!-- NEW BUILDS -->
-      <div class="proj-group-label">
-        <div class="proj-group-tag">New Builds</div>
-        <div class="proj-group-title">New Build Homes</div>
-        <div class="proj-group-sub">Bespoke homes designed and built to exacting standards</div>
-      </div>
-      <div class="proj-grid">
-        <div class="proj-cell" data-lightbox="newbuilds">
-          <div class="proj-img-wrap"><img src="assets/images/projects/newbuilds/NewBuilds.jpg" alt="Fabrico new build home" loading="lazy" width="800" height="520"/></div>
-        </div>
-      </div>
-
-      <!-- STRUCTURAL -->
-      <div class="proj-group-label">
-        <div class="proj-group-tag">Structural Works</div>
-        <div class="proj-group-title">Structural Services</div>
-        <div class="proj-group-sub">Underpinning · Foundations · RSJ · Piling</div>
-      </div>
-      <div class="proj-grid">
-        <div class="proj-cell" data-lightbox="structural"><div class="proj-img-wrap"><img src="assets/images/projects/structural/structural_01.jpg" alt="Fabrico structural works" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell" data-lightbox="structural"><div class="proj-img-wrap"><img src="assets/images/projects/structural/structural_02.jpg" alt="Fabrico structural works" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell" data-lightbox="structural"><div class="proj-img-wrap"><img src="assets/images/projects/structural/structural_03.jpg" alt="Fabrico structural works" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell" data-lightbox="structural"><div class="proj-img-wrap"><img src="assets/images/projects/structural/structural_04.jpg" alt="Fabrico structural works" loading="lazy" width="800" height="520"/></div></div>
-        <div class="proj-cell" data-lightbox="structural"><div class="proj-img-wrap"><img src="assets/images/projects/structural/structural_05.jpg" alt="Fabrico structural works" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="mayfair"><div class="proj-img-wrap"><img src="assets/images/projects/mayfair/mayfair_01.jpg" alt="Mayfair W1H refurbishment by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="mayfair"><div class="proj-img-wrap"><img src="assets/images/projects/mayfair/mayfair_02.jpg" alt="Mayfair W1H refurbishment by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="mayfair"><div class="proj-img-wrap"><img src="assets/images/projects/mayfair/mayfair_05.webp" alt="Mayfair W1H refurbishment by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="mayfair"><div class="proj-img-wrap"><img src="assets/images/projects/mayfair/mayfair_06.webp" alt="Mayfair W1H refurbishment by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="mayfair"><div class="proj-img-wrap"><img src="assets/images/projects/mayfair/mayfair_07.webp" alt="Mayfair W1H refurbishment by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="mayfair"><div class="proj-img-wrap"><img src="assets/images/projects/mayfair/mayfair_08.webp" alt="Mayfair W1H refurbishment by Fabrico" loading="lazy" width="800" height="520"/></div></div>
+        <div class="proj-cell" data-lightbox="mayfair"><div class="proj-img-wrap"><img src="assets/images/projects/mayfair/mayfair_09.webp" alt="Mayfair W1H refurbishment by Fabrico" loading="lazy" width="800" height="520"/></div></div>
       </div>
 
       <!-- END TO END SERVICE — BEFORE / AFTER -->
@@ -1059,49 +1048,6 @@
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════════
-       PROCESS
-  ══════════════════════════════════════════════ -->
-  <section class="process-section" id="process">
-    <div class="sec-kicker">How We Work</div>
-    <h2>Our <em>Process</em></h2>
-    <div class="process-grid">
-      <div class="proc-step">
-        <div class="proc-num">01</div>
-        <div class="proc-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
-        <div class="proc-title">Consultation</div>
-        <div class="proc-desc">Free initial consultation to understand your vision, site, and budget. We listen first.</div>
-        <div class="proc-arrow"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></div>
-      </div>
-      <div class="proc-step">
-        <div class="proc-num">02</div>
-        <div class="proc-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
-        <div class="proc-title">Design & Planning</div>
-        <div class="proc-desc">Detailed drawings, specification, planning consent where required, and full cost plan.</div>
-        <div class="proc-arrow"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></div>
-      </div>
-      <div class="proc-step">
-        <div class="proc-num">03</div>
-        <div class="proc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
-        <div class="proc-title">Procurement</div>
-        <div class="proc-desc">Materials, specialist trades, and timelines locked in before a single tool is lifted.</div>
-        <div class="proc-arrow"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></div>
-      </div>
-      <div class="proc-step">
-        <div class="proc-num">04</div>
-        <div class="proc-icon"><svg viewBox="0 0 24 24"><polygon points="2 20 22 20 12 4 2 20"/><line x1="12" y1="12" x2="12" y2="16"/><circle cx="12" cy="18" r="0.5" fill="currentColor"/></svg></div>
-        <div class="proc-title">Build & Track</div>
-        <div class="proc-desc">Live progress tracking via our client app. Weekly sign-offs. Full transparency at every milestone.</div>
-        <div class="proc-arrow"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></div>
-      </div>
-      <div class="proc-step">
-        <div class="proc-num">05</div>
-        <div class="proc-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-        <div class="proc-title">Handover</div>
-        <div class="proc-desc">Snag-free handover, full documentation, warranties, and aftercare. Your home, perfected.</div>
-      </div>
-    </div>
-  </section>
 
   <!-- Instagram CTA Banner -->
   <div class="ig-banner">
@@ -1211,12 +1157,13 @@
       <div class="fcol">
         <h4>Services</h4>
         <ul>
-          <li><a href="#services">New Builds</a></li>
-          <li><a href="#services">Full Renovations</a></li>
-          <li><a href="#services">Extensions</a></li>
-          <li><a href="#services">Loft Conversions</a></li>
-          <li><a href="/basement-conversions">Basement Conversions</a></li>
-          <li><a href="#services">M&E & Project Management</a></li>
+          <li><a href="/basements">Basements</a></li>
+          <li><a href="/commercial">Commercial</a></li>
+          <li><a href="/new-builds">New Builds</a></li>
+          <li><a href="/renovations">Renovations</a></li>
+          <li><a href="/extensions">Extensions</a></li>
+          <li><a href="/lofts">Lofts</a></li>
+          <li><a href="/house-to-flat">House-to-Flat</a></li>
         </ul>
       </div>
       <div class="fcol">
@@ -1224,7 +1171,6 @@
         <ul>
           <li><a href="#about">About Us</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#process">Our Process</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="/privacy-policy">Privacy Policy</a></li>
         </ul>
