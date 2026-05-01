@@ -1,4 +1,4 @@
-# Claude Code context — never commit to public repo
+# Claude Code — never commit to public repo
 CLAUDE.md
 .claude/
 
@@ -8,3 +8,47 @@ branding.html
 # Utility scripts
 serve.py
 watermark.py
+
+# Environment & secrets
+.env
+.env.*
+.env.local
+.env.production
+
+# OS junk
+Thumbs.db
+Desktop.ini
+.DS_Store
+._*
+
+# Editors & IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (if ever added)
+node_modules/
+npm-debug.log*
+yarn-error.log
+
+# Build artifacts
+dist/
+.cache/
+*.map
+
+# Logs
+*.log
+
+# Temp files
+*.tmp
+*.bak
+*.orig
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
