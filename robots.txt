@@ -1,11 +1,30 @@
 # robots.txt — Fabrico Design & Build
-# https://www.byfabrico.com
+# https://byfabrico.com
 
 User-agent: *
 Allow: /
 
+# AI search crawlers — explicitly allowed
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 # Point all crawlers to the sitemap
-Sitemap: https://www.byfabrico.com/sitemap.xml
+Sitemap: https://byfabrico.com/sitemap.xml
 
 # Block access to any future admin or private paths
 Disallow: /admin/

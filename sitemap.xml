@@ -6,7 +6,7 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://www.byfabrico.com/</loc>
+    <loc>https://byfabrico.com/</loc>
     <lastmod>2026-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,49 +14,49 @@
 
   <!-- Basement Conversions -->
   <url>
-    <loc>https://www.byfabrico.com/basement-conversions</loc>
+    <loc>https://byfabrico.com/basement-conversions</loc>
     <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.byfabrico.com/#about</loc>
+    <loc>https://byfabrico.com/#about</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.byfabrico.com/#services</loc>
+    <loc>https://byfabrico.com/#services</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.byfabrico.com/#projects</loc>
+    <loc>https://byfabrico.com/#projects</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.byfabrico.com/#reviews</loc>
+    <loc>https://byfabrico.com/#reviews</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://www.byfabrico.com/#process</loc>
+    <loc>https://byfabrico.com/#process</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://www.byfabrico.com/#contact</loc>
+    <loc>https://byfabrico.com/#contact</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
