@@ -1,5 +1,5 @@
 # · FABRICO ·
-### High-End Construction & Interior Design — London & Berkshire
+### High-End Construction & Interior Design — London & Home Counties
 
 ---
 
@@ -7,7 +7,7 @@
  ┌─────────────────────────────────────────────────────────────┐
  │                                                             │
  │   F A B R I C O   D E S I G N   &   B U I L D             │
- │   byfabrico.com  ·  Est. 2017  ·  London & Berkshire        │
+ │   byfabrico.com  ·  Est. 2017  ·  London & Home Counties        │
  │                                                             │
  └─────────────────────────────────────────────────────────────┘
 ```
@@ -16,7 +16,7 @@
 
 ## Overview
 
-Static marketing website for **Fabrico Design & Build** — a high-end construction and interior design company operating across London and Berkshire. The site showcases project portfolios, services, and handles client enquiries via an integrated contact form.
+Static marketing website for **Fabrico Design & Build** — a high-end construction and interior design company operating across London and the Home Counties. The site showcases project portfolios, services, and handles client enquiries via an integrated contact form.
 
 ---
 
