@@ -158,6 +158,11 @@
       transition: box-shadow 0.3s;
     }
     header.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.06); }
+    .trade-strip { display:flex; align-items:center; justify-content:center; gap:4px; background:var(--near-black); padding:9px 24px; text-decoration:none; font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.6); transition:background 0.2s; }
+    .trade-strip:hover { background:#111; }
+    .trade-strip-label { color:rgba(46,138,113,0.9); }
+    .trade-strip-sep { color:rgba(255,255,255,0.25); }
+    .trade-strip-arrow { color:var(--teal-light); }
     .header-top {
       display: flex; justify-content: space-between; align-items: center;
       padding: 0 60px; height: 60px;
@@ -685,6 +690,12 @@
        HEADER
   ══════════════════════════════════════════════ -->
   <header id="site-header">
+    <a href="#trade" class="trade-strip">
+      <span class="trade-strip-label">Architects &amp; Professionals</span>
+      <span class="trade-strip-sep">&nbsp;—&nbsp;</span>
+      Download our Trade Pack
+      <span class="trade-strip-arrow">&nbsp;→</span>
+    </a>
     <div class="header-top">
       <a href="#" class="logo">
         <span class="logo-dot"></span>Fabrico
