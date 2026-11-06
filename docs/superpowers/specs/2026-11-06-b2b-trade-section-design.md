@@ -37,7 +37,7 @@ Static site: standalone HTML files served by GitHub Pages. No build system. All 
     <div class="trade-eyebrow">Professionals & Trade</div>
     <div class="trade-heading">Working with Architects &amp; Design Professionals</div>
     <p class="trade-copy">We work directly with architects, surveyors, interior designers and project managers across London and Berkshire. Our team handles the entire build — from planning submission to handover — so you can focus on design.</p>
-    <div class="trade-trust">CHAS Accredited &nbsp;·&nbsp; Fully Insured &nbsp;·&nbsp; 200+ Projects Delivered</div>
+    <div class="trade-trust">Fully Insured &nbsp;·&nbsp; 200+ Projects Delivered</div>
     <div class="trade-ctas">
       <a href="/assets/ByFabrico.pdf" target="_blank" rel="noopener" class="trade-btn-primary">Download Trade Pack</a>
       <a href="mailto:info@byfabrico.com" class="trade-btn-secondary">Email the Trade Team</a>
