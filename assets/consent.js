@@ -2,7 +2,7 @@
   var KEY = 'fabrico_consent';
 
   // If already decided, no banner needed
-  if (localStorage.getItem(KEY) !== null) return;
+  try { if (localStorage.getItem(KEY) !== null) return; } catch(e) {}
 
   // Inject styles
   var style = document.createElement('style');
@@ -42,7 +42,7 @@
 
   // Accept
   document.getElementById('cb-ok').addEventListener('click', function () {
-    localStorage.setItem(KEY, 'granted');
+    try { localStorage.setItem(KEY, 'granted'); } catch(e) {}
     if (typeof gtag === 'function') {
       gtag('consent', 'update', {
         analytics_storage: 'granted',
@@ -54,7 +54,7 @@
 
   // Decline
   document.getElementById('cb-no').addEventListener('click', function () {
-    localStorage.setItem(KEY, 'denied');
+    try { localStorage.setItem(KEY, 'denied'); } catch(e) {}
     banner.remove();
   });
 })();
