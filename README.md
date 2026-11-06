@@ -102,7 +102,7 @@ Use these tagged URLs when sharing the site. They ensure GA4 correctly attribute
 | Channel | Copy this URL |
 |---------|---------------|
 | Instagram bio | `https://byfabrico.com?utm_source=instagram&utm_medium=social&utm_campaign=bio` |
-| WhatsApp message | `https://byfabrico.com?utm_source=whatsapp&utm_medium=referral` |
+| WhatsApp message | `https://byfabrico.com?utm_source=whatsapp&utm_medium=referral&utm_campaign=whatsapp` |
 | Email signature | `https://byfabrico.com?utm_source=email&utm_medium=email&utm_campaign=signature` |
 | Google Business Profile | `https://byfabrico.com?utm_source=google_business&utm_medium=organic` |
 | Checkatrade / Houzz | `https://byfabrico.com?utm_source=checkatrade&utm_medium=directory` |
