@@ -92,3 +92,22 @@ The site is a single `index.html` with anchor-linked sections:
 ---
 
 *© 2026 Fabrico Design & Build Ltd. All rights reserved.*
+
+---
+
+## UTM Links for Marketing
+
+Use these tagged URLs when sharing the site. They ensure GA4 correctly attributes the visit source instead of showing `(direct) / (none)`.
+
+| Channel | Copy this URL |
+|---------|---------------|
+| Instagram bio | `https://byfabrico.com?utm_source=instagram&utm_medium=social&utm_campaign=bio` |
+| WhatsApp message | `https://byfabrico.com?utm_source=whatsapp&utm_medium=referral` |
+| Email signature | `https://byfabrico.com?utm_source=email&utm_medium=email&utm_campaign=signature` |
+| Google Business Profile | `https://byfabrico.com?utm_source=google_business&utm_medium=organic` |
+| Checkatrade / Houzz | `https://byfabrico.com?utm_source=checkatrade&utm_medium=directory` |
+
+**How to build a custom UTM link:**  
+Append `?utm_source=X&utm_medium=Y&utm_campaign=Z` to any page URL.  
+Example for a specific campaign landing on the basements page:  
+`https://byfabrico.com/basement-conversions?utm_source=instagram&utm_medium=social&utm_campaign=basement_summer_2026`
